@@ -1,0 +1,62 @@
+@use "../app/variables.module.scss";
+
+.button {
+	background: none;
+	border: none;
+	color: variables.$ic-blue-70;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0 variables.$button-margin variables.$button-margin 0;
+	padding: 12px 20px;
+
+	&:focus-visible {
+		border-radius: 5px;
+		outline: 2.5px solid variables.$ic-blue-50;
+	}
+
+	span:last-of-type {
+		margin-left: 6px;
+	}
+
+	span:first-of-type {
+		margin-right: 6px;
+	}
+}
+
+.blue {
+	color: variables.$ic-blue-70;
+
+	&:hover {
+		color: variables.$ic-blue-50;
+	}
+}
+
+.green {
+	color: variables.$ic-green-70;
+
+	&:hover {
+		color: variables.$ic-green-80;
+	}
+}
+
+.red {
+	color: variables.$ic-red-50;
+
+	&:hover {
+		color: variables.$ic-red-70;
+	}
+}
+
+.blue:hover,
+.green:hover,
+.red:hover {
+	text-decoration: underline;
+}
+
+.small {
+	font-size: 14px;
+}
+
+.disabled {
+	color: variables.$ic-neutral-60;
+}

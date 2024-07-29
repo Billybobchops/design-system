@@ -1,0 +1,73 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.button {
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 variables.$button-margin variables.$button-margin 0;
+    padding: 12px 20px;
+
+    &:focus-visible {
+        outline: 2px solid variables.$ic-blue-50;
+    }
+
+    span:first-of-type {
+        margin-right: 6px;
+    }
+
+    span:last-of-type {
+        margin-left: 6px;
+    }
+
+    @include mobile-100-w;
+}
+
+.blue,
+.green,
+.red {
+    background-color: variables.$ic-neutral-0;
+}
+
+.blue:hover,
+.green:hover,
+.red:hover {
+    color: variables.$ic-neutral-0;
+}
+
+.blue {
+    border: 2px solid variables.$ic-blue-70;
+    color: variables.$ic-blue-70;
+
+    &:hover {
+        background-color: variables.$ic-blue-50;
+        border: 2px solid variables.$ic-blue-50;
+        color: variables.$ic-neutral-0;
+    }
+}
+
+.green {
+    border: 2px solid variables.$ic-green-70;
+    color: variables.$ic-green-70;
+
+    &:hover {
+        border: 2px solid variables.$ic-green-80;
+        background-color: variables.$ic-green-80;
+    }
+}
+
+.red {
+    border: 2px solid variables.$ic-red-50;
+    color: variables.$ic-red-50;
+
+    &:hover {
+        border: 2px solid variables.$ic-red-70;
+        background-color: variables.$ic-red-70;
+    }
+}
+
+.disabled {
+    background-color: variables.$ic-neutral-10;
+    color: variables.$ic-neutral-60;
+}

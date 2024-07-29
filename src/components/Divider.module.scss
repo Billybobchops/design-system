@@ -1,0 +1,14 @@
+@use "../app/variables.module.scss";
+
+.dividerLight,
+.dividerDark {
+	margin: 12px 0;
+}
+
+.dividerLight {
+	border: 1px solid variables.$ic-neutral-10;
+}
+
+.dividerDark {
+	border: 1px solid variables.$ic-neutral-20;
+}

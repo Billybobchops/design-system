@@ -1,0 +1,46 @@
+@use "../app/variables.module.scss";
+
+.section {
+	margin-bottom: 20px;
+}
+
+.title {
+	margin-bottom: 0;
+}
+
+.button {
+	background-color: variables.$ic-neutral-10;
+	border-radius: 6px;
+	border: none;
+	border-bottom: 2px solid variables.$ic-neutral-20;
+	color: variables.$ic-blue-70;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 14px 18px;
+	text-align: left;
+	width: 100%;
+
+	&:hover,
+	&:focus-visible {
+		background-color: variables.$ic-blue-10;
+		border-bottom: 2.5px solid variables.$ic-blue-50;
+		color: variables.$ic-blue-50;
+	}
+}
+
+.activeButton {
+	border-radius: 6px 6px 0 0;
+	border: 1px solid variables.$ic-blue-50;
+	border-bottom: none;
+}
+
+.activeIcon svg {
+	transform: rotate(90deg);
+}
+
+.content {
+	border-radius: 0 0 6px 6px;
+	border: 1px solid variables.$ic-blue-50;
+	padding: 20px;
+	text-align: left;
+}

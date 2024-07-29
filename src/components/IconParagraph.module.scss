@@ -1,0 +1,9 @@
+@use "../app/variables.module.scss";
+
+.grid {
+	align-items: center;
+	display: grid;
+	gap: 6px;
+	grid-template-columns: auto 1fr;
+	margin-bottom: 10px;
+}

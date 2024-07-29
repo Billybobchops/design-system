@@ -1,0 +1,13 @@
+@use "../app/variables.module.scss";
+
+.componentDisplayArea {
+	border-radius: 10px;
+	border: variables.$component-area-border;
+	margin: 25px auto;
+	max-width: 1170px;
+	padding: 25px;
+}
+
+.displayTitle {
+	margin-bottom: 15px;
+}

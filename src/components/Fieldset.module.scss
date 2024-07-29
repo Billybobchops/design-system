@@ -1,0 +1,12 @@
+@use "../app/variables.module.scss";
+
+.fieldset {
+	border-radius: 4px;
+	border: 2px solid variables.$ic-neutral-20;
+	padding-bottom: 20px;
+}
+
+.legend {
+	padding: 0 12px;
+	margin: 0 0 20px 15px;
+}

@@ -1,0 +1,26 @@
+@use "../app/variables.module.scss";
+
+.badge {
+	border-radius: 12px;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 6px;
+	margin-right: 12px;
+	padding: 5px 8px;
+}
+
+.default {
+	background-color: variables.$ic-blue-10;
+	color: variables.$ic-blue-70;
+}
+
+.error {
+	background-color: variables.$ic-red-10;
+	color: variables.$ic-red-60;
+}
+
+.success {
+	background-color: variables.$ic-green-10;
+	color: variables.$ic-green-70;
+}

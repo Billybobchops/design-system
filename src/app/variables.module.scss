@@ -1,0 +1,142 @@
+// PAYER PORTAL //
+
+// Display Vars: just for demo purposes
+$display-border: 3px dashed skyblue;
+$component-area-border: 2px dashed #b511b5;
+
+// IC Brand Colors
+$ic-brand-truegreen: #4db859;
+$ic-brand-mintgreen: #6dc38e;
+$ic-brand-deepteal: #085368;
+$ic-brand-skyblue: #18b4e9;
+$ic-brand-gradient: linear-gradient(270deg, #18b4e9 0%, #4db859 100%);
+
+// Theme (Primary) Colors
+$theme-green: #83ac52;
+$theme-green-hover: #6F9A3C;
+$theme-blue: #1b4170;
+$theme-blue-hover: #286090;
+$theme-grey: #7f7f7f;
+
+// IC Product Colors
+$ic-blue-10: #e9eff7;
+$ic-blue-20: #a5c0e1;
+$ic-blue-30: #79a0d1;
+$ic-blue-40: #4c81c2;
+$ic-blue-50: #1f61b3;
+$ic-blue-60: #194e8f;
+$ic-blue-70: #133a6b;
+$ic-blue-80: #0c2748;
+$ic-blue-90: #061324;
+
+$ic-green-10: #dbf1de;
+$ic-green-20: #b8e3bd;
+$ic-green-30: #94d49b;
+$ic-green-40: #71c67a;
+$ic-green-50: #4db859;
+$ic-green-60: #3e9347;
+$ic-green-70: #2e6e35;
+$ic-green-80: #1f4a24;
+$ic-green-90: #0f2512;
+
+$ic-red-10: #f3d4d4;
+$ic-red-20: #e7a9a9;
+$ic-red-30: #dc7e7d;
+$ic-red-40: #d05352;
+$ic-red-50: #c42827;
+$ic-red-60: #9d201f;
+$ic-red-70: #761817;
+$ic-red-80: #4e1010;
+$ic-red-90: #270808;
+
+$ic-orange-10: #fff5e5;
+$ic-orange-20: #ffd699;
+$ic-orange-30: #ffc266;
+$ic-orange-40: #ffad33;
+$ic-orange-50: #ff9900;
+$ic-orange-60: #cc7a00;
+$ic-orange-70: #995c00;
+$ic-orange-80: #663d00;
+$ic-orange-90: #331f00;
+
+$ic-neutral-0: #fff;
+$ic-neutral-05: #f3f3f3;
+$ic-neutral-10: #e8e8e8;
+$ic-neutral-20: #d1d1d1;
+$ic-neutral-30: #bababa;
+$ic-neutral-40: #a3a3a3;
+$ic-neutral-50: #a3a3a3;
+$ic-neutral-60: #707070;
+$ic-neutral-70: #545454;
+$ic-neutral-80: #383838;
+$ic-neutral-90: #1c1c1c;
+$ic-neutral-100: #000;
+
+$button-margin: 15px;
+
+// export for access within .tsx files so we don't have to harcode any vars!
+:export {
+	icBrandTrueGreen: $ic-brand-truegreen;
+	icBrandMintGreen: $ic-brand-mintgreen;
+	icBrandDeepTeal: $ic-brand-deepteal;
+	icBrandSkyBlue: $ic-brand-skyblue;
+	icBrandGradient: $ic-brand-gradient;
+
+	themeGreen: $theme-green;
+	themeGreenHover: $theme-green-hover;
+	themeBlue: $theme-blue;
+	themeBlueHover: $theme-blue-hover;
+	themeGrey: $theme-grey;
+
+	icBlue10: $ic-blue-10;
+	icBlue20: $ic-blue-20;
+	icBlue30: $ic-blue-30;
+	icBlue40: $ic-blue-40;
+	icBlue50: $ic-blue-50;
+	icBlue60: $ic-blue-60;
+	icBlue70: $ic-blue-70;
+	icBlue80: $ic-blue-80;
+	icBlue90: $ic-blue-90;
+	
+	icGreen10: $ic-green-10;
+	icGreen20: $ic-green-20;
+	icGreen30: $ic-green-30;
+	icGreen40: $ic-green-40;
+	icGreen50: $ic-green-50;
+	icGreen60: $ic-green-60;
+	icGreen70: $ic-green-70;
+	icGreen80: $ic-green-80;
+	icGreen90: $ic-green-90;
+
+	icRed10: $ic-red-10;
+	icRed20: $ic-red-20;
+	icRed30: $ic-red-30;
+	icRed40: $ic-red-40;
+	icRed50: $ic-red-50;
+	icRed60: $ic-red-60;
+	icRed70: $ic-red-70;
+	icRed80: $ic-red-80;
+	icRed90: $ic-red-90;
+
+	icOrange10: $ic-orange-10;
+	icOrange20: $ic-orange-20;
+	icOrange30: $ic-orange-30;
+	icOrange40: $ic-orange-40;
+	icOrange50: $ic-orange-50;
+	icOrange60: $ic-orange-60;
+	icOrange70: $ic-orange-70;
+	icOrange80: $ic-orange-80;
+	icOrange90: $ic-orange-90;
+
+	icNeutral0: $ic-neutral-10;
+	icNeutral10: $ic-neutral-10;
+	icNeutral20: $ic-neutral-20;
+	icNeutral30: $ic-neutral-30;
+	icNeutral40: $ic-neutral-40;
+	icNeutral50: $ic-neutral-50;
+	icNeutral60: $ic-neutral-60;
+	icNeutral70: $ic-neutral-70;
+	icNeutral80: $ic-neutral-80;
+	icNeutral90: $ic-neutral-90;
+	icNeutral100: $ic-neutral-100;
+}

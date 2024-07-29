@@ -1,0 +1,79 @@
+@use "../app/variables.module.scss";
+
+.list {
+	list-style-type: none;
+	padding: 0 0 0 25px;
+
+	label {
+		align-items: center;
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+}
+
+.radio {
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	margin: 6px;
+	padding: 0;
+	border: 2px solid variables.$ic-neutral-50;
+	border-radius: 50%;
+	appearance: none;
+	background-color: transparent;
+	outline: none;
+	transition: outline 0.1s;
+
+	&:not(:disabled):checked {
+		border-color: variables.$ic-blue-50;
+		background-color: variables.$ic-blue-50;
+		background-clip: content-box;
+		padding: 2px;
+		background-image: radial-gradient(
+			circle,
+			variables.$ic-blue-50 0%,
+			variables.$ic-blue-50 50%,
+			transparent 60%,
+			transparent 100%
+		);
+	}
+
+	&:disabled {
+		background-color: variables.$ic-neutral-50;
+	}
+
+	&:disabled:checked {
+		background-image: radial-gradient(
+			circle,
+			variables.$ic-neutral-50 0%,
+			variables.$ic-neutral-50 50%,
+			transparent 50%,
+			transparent 100%
+		);
+	}
+
+	&:focus-visible:not(:checked) {
+		outline: 2px solid variables.$ic-blue-50;
+		border: 2px solid variables.$ic-neutral-50;
+		transform: scale(1.05);
+	}
+
+	&:not(:disabled):hover {
+		border: 2px solid variables.$ic-blue-50;
+		transform: scale(1.05);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+
+		&:focus-visible {
+			transform: scale(1);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) and (hover: hover) {
+		&:not(:disabled):hover {
+			transform: scale(1);
+		}
+	}
+}

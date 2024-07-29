@@ -1,95 +1,87 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import Providers from '@/components/Providers';
+import Image from 'next/image';
+import styles from './page.module.css';
+import ComponentDisplayArea from '@/style-guide/ComponentDisplayArea';
+import ButtonPrimaryStory from '@/style-guide/ButtonPrimaryStory';
+import ButtonSecondaryStory from '@/style-guide/ButtonSecondaryStory';
+import ButtonTertiaryStory from '@/style-guide/ButtonTertiaryStory';
+import ActionButtonStory from '@/style-guide/ActionButtonStory';
+import IconButtonStory from '@/style-guide/IconButtonStory';
+import BadgeStory from '@/style-guide/BadgeStory';
+import AccordionStory from '@/style-guide/AccordionStory';
+import AlertStory from '@/style-guide/AlertStory';
+import CheckboxesStory from '@/style-guide/CheckboxesStory';
+import RadioGroupStory from '@/style-guide/RadioGroupStory';
+import DividerStory from '@/style-guide/DividerStory';
+import DatePickerInput from '@/components/DatePicker';
+import ModalStory from '@/style-guide/ModalStory';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className={styles.main}>
+            <Providers>
+                <ComponentDisplayArea title='Primary Buttons'>
+                    <ButtonPrimaryStory />
+                </ComponentDisplayArea>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                <ComponentDisplayArea title='Secondary Buttons'>
+                    <ButtonSecondaryStory />
+                </ComponentDisplayArea>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+                <ComponentDisplayArea title='Tertiary Buttons'>
+                    <ButtonTertiaryStory />
+                </ComponentDisplayArea>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+                <ComponentDisplayArea title='Action Buttons'>
+                    <ActionButtonStory />
+                </ComponentDisplayArea>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+                <ComponentDisplayArea title='Icon Buttons'>
+                    <IconButtonStory />
+                </ComponentDisplayArea>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                <ComponentDisplayArea title='Accordions'>
+                    <AccordionStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Badges'>
+                    <BadgeStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Alerts'>
+                    <AlertStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Date Picker'>
+                    <DatePickerInput />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Checkboxes'>
+                    <CheckboxesStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Radio Group'>
+                    <RadioGroupStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Dividers'>
+                    <DividerStory />
+                </ComponentDisplayArea>
+
+                <ComponentDisplayArea title='Modal'>
+					<ModalStory />
+				</ComponentDisplayArea>
+
+                <Image
+                    src='/vercel.svg'
+                    alt='Vercel Logo'
+                    className={styles.vercelLogo}
+                    width={100}
+                    height={24}
+                    priority
+                />
+            </Providers>
+        </main>
+    );
 }

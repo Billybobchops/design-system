@@ -1,0 +1,43 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.button {
+    border-radius: 5px;
+    border: none;
+    color: variables.$ic-neutral-0;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 variables.$button-margin variables.$button-margin 0;
+    padding: 12px 20px;
+
+    &:focus-visible {
+        outline: 2.5px solid variables.$ic-blue-50;
+    }
+
+    span:first-of-type {
+        margin-right: 6px;
+    }
+
+    @include mobile-100-w;
+}
+
+.danger {
+    background-color: variables.$ic-red-50;
+
+    &:hover {
+        background-color: variables.$ic-red-70;
+    }
+}
+
+.success {
+    background-color: variables.$ic-green-60;
+
+    &:hover {
+        background-color: variables.$ic-green-80;
+    }
+}
+
+.disabled {
+    background-color: variables.$ic-neutral-10;
+    color: variables.$ic-neutral-60;
+}

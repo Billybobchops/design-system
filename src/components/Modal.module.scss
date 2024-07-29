@@ -1,0 +1,67 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.dialog dialog {
+	max-height: 600px;
+    max-width: 1200px;
+    padding: 30px 30px 0px 30px;
+    width: calc(100% - 120px);
+}
+
+.dialog dialog::backdrop {
+    background-color: variables.$ic-neutral-80;
+    transition: display 0.7s allow-discrete, overlay 0.7s allow-discrete,
+        background-color 0.7s;
+    opacity: 0.8;
+}
+
+.dialogGrid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.modalTitle {
+    margin-bottom: 20px;
+}
+
+.actionBar {
+	background-color: variables.$ic-neutral-0;
+	border-top: 2px solid variables.$ic-neutral-30;
+	bottom: 0;
+	display: grid;
+	justify-content: end;
+	position: sticky;
+	width: 100%;
+
+	@media (max-width: 500px) {
+		justify-content: center;
+	}
+}
+
+.actions {
+    margin-top: 15px;
+
+    @include mobile-100-w;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.menuClose {
+    margin: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.buttonCenter {
+    justify-self: center;
+}

@@ -1,0 +1,40 @@
+@use "../app/variables.module.scss";
+
+.button {
+	background-color: transparent;
+	border: none;
+	color: variables.$ic-neutral-100;
+	font-size: 17px;
+	font-weight: 700;
+	// padding: 15px 25px;
+	margin: 0 25px 15px 25px;
+	text-decoration: underline;
+
+	&:focus-visible {
+		outline: 2.5px solid variables.$ic-blue-50;
+	}
+
+	span {
+		margin-left: 6px;
+	}
+}
+
+.blue {
+	color: variables.$ic-blue-70;
+
+	&:hover {
+		color: variables.$ic-blue-50;
+	}
+}
+
+.green {
+	color: variables.$ic-green-60;
+
+	&:hover {
+		color: variables.$ic-green-80;
+	}
+}
+
+.disabled {
+	color: variables.$ic-neutral-10;
+}
