@@ -2,6 +2,7 @@ import { useState } from "react";
 import classes from "./Alert.module.scss";
 import variables from '@/app/variables.module.scss';
 import { Info, MenuClose, Error, Success } from "./Symbols";
+import VisuallyHidden from "./VisuallyHidden";
 
 interface AlertProps {
 	content: string;
@@ -45,7 +46,7 @@ const Alert: React.FC<AlertProps> = ({ content, isDismissable, variant }) => {
 					{isDismissable && (
 						<button className={classes.button} onClick={() => setIsActive(false)}>
 							<MenuClose fill={getFillColor(variant)} />
-							<span className='sr-only'>close alert</span>
+							<VisuallyHidden>close alert</VisuallyHidden>
 						</button>
 					)}
 				</div>

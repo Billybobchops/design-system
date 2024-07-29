@@ -4,6 +4,7 @@ import variables from '@/app/variables.module.scss';
 import { MenuClose } from './Symbols';
 import ButtonSecondary from './ButtonSecondary';
 import ButtonSimple from './ButtonSimple';
+import VisuallyHidden from './VisuallyHidden';
 
 interface ModalProps {
     handleModalAction?: () => void;
@@ -72,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({
             <dialog ref={dialogRef}>
                 <button className={classes.menuClose} onClick={closeDialog}>
                     <span aria-hidden="true"><MenuClose fill={color} /></span>
-                    <span className='sr-only'>Close</span>
+                    <VisuallyHidden>Close modal</VisuallyHidden>
                 </button>
                 <div className={`${classes.dialogGrid} ${hasAction ? '' : classes.textCenter}`}>
                     <div>
