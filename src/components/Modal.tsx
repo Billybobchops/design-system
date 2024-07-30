@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import classes from './Modal.module.scss';
 import variables from '@/app/variables.module.scss';
-import { MenuClose } from './Symbols';
+import { MenuCloseLarge } from './Symbols';
 import ButtonSecondary from './ButtonSecondary';
 import ButtonSimple from './ButtonSimple';
 import VisuallyHidden from './VisuallyHidden';
@@ -72,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({
             <TriggerElement onClick={openDialog} />
             <dialog ref={dialogRef}>
                 <button className={classes.menuClose} onClick={closeDialog}>
-                    <span aria-hidden="true"><MenuClose fill={color} /></span>
+                    <span aria-hidden="true"><MenuCloseLarge fill={color} /></span>
                     <VisuallyHidden>Close modal</VisuallyHidden>
                 </button>
                 <div className={`${classes.dialogGrid} ${hasAction ? '' : classes.textCenter}`}>
