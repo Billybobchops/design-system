@@ -5,22 +5,34 @@
 	display: inline-block;
 	font-size: 12px;
 	font-weight: 700;
-	margin-bottom: 6px;
-	margin-right: 12px;
 	padding: 5px 8px;
+	margin: 0;
+}
+
+.hasMargin {
+	margin: 0 12px 6px 0;
 }
 
 .default {
 	background-color: variables.$ic-blue-10;
+	border: 1px solid variables.$ic-blue-30;
 	color: variables.$ic-blue-70;
 }
 
 .error {
 	background-color: variables.$ic-red-10;
-	color: variables.$ic-red-60;
+	border: 1px solid variables.$ic-red-20;
+	color: variables.$ic-red-70;
 }
 
 .success {
 	background-color: variables.$ic-green-10;
-	color: variables.$ic-green-70;
+	border: 1px solid variables.$ic-green-20;
+	color: variables.$ic-green-80;
+}
+
+.warning {
+	background-color: variables.$ic-yellow-10;
+	border: 1px solid variables.$ic-yellow-30;
+	color: variables.$ic-yellow-90;
 }

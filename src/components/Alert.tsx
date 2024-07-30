@@ -17,11 +17,11 @@ const Alert: React.FC<AlertProps> = ({ content, isDismissable, variant }) => {
 			case "default":
 				return variables.icBlue70;
 			case "warning":
-				return variables.icOrange80;
+				return variables.icYellow80;
 			case "error":
 				return variables.icRed60;
 			case "success":
-				return variables.icGreen70;
+				return variables.icGreen80;
 			default:
 				return variables.icBlue70;
 		}

@@ -1,15 +1,15 @@
 import classes from './ICLink.module.scss';
 
 interface LinkProps {
+	children: React.ReactNode;	
     onClick?: () => void;
-    linkText: string;
     href?: string;
     target?: string;
 }
 
 const ICLink: React.FC<LinkProps> = ({
+	children,
     onClick,
-    linkText,
     href = '#',
     target = '_blank',
 }) => {
@@ -20,7 +20,7 @@ const ICLink: React.FC<LinkProps> = ({
             onClick={onClick}
             target={target}
 		>
-            {linkText}
+            {children}
         </a>
     );
 };

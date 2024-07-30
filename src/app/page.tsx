@@ -17,6 +17,7 @@ import DividerStory from '@/style-guide/DividerStory';
 import DatePickerInput from '@/components/DatePicker';
 import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
+import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
 
 export default function Home() {
     return (
@@ -76,6 +77,10 @@ export default function Home() {
 
                 <ComponentDisplayArea title='Modals/Dialogs'>
 					<ModalStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Enrollment Status'>
+					<EnrollStatusStory />
 				</ComponentDisplayArea>
 
                 <Image
