@@ -16,6 +16,7 @@ import RadioGroupStory from '@/style-guide/RadioGroupStory';
 import DividerStory from '@/style-guide/DividerStory';
 import DatePickerInput from '@/components/DatePicker';
 import ModalStory from '@/style-guide/ModalStory';
+import TabsStory from '@/style-guide/TabsStory';
 
 export default function Home() {
     return (
@@ -45,6 +46,10 @@ export default function Home() {
                     <AccordionStory />
                 </ComponentDisplayArea>
 
+				<ComponentDisplayArea title='Tabs'>
+					<TabsStory />
+				</ComponentDisplayArea>
+
                 <ComponentDisplayArea title='Badges'>
                     <BadgeStory />
                 </ComponentDisplayArea>
@@ -69,7 +74,7 @@ export default function Home() {
                     <DividerStory />
                 </ComponentDisplayArea>
 
-                <ComponentDisplayArea title='Modal'>
+                <ComponentDisplayArea title='Modals/Dialogs'>
 					<ModalStory />
 				</ComponentDisplayArea>
 

@@ -1,6 +1,6 @@
 // PAYER PORTAL //
 
-// Display Vars: just for demo purposes
+// Display Vars: just for demo style guide purposes
 $display-border: 3px dashed skyblue;
 $component-area-border: 2px dashed #b511b5;
 
@@ -74,7 +74,7 @@ $ic-neutral-100: #000;
 
 $button-margin: 15px;
 
-// export for access within .tsx files so we don't have to harcode any vars!
+// export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {
 	icBrandTrueGreen: $ic-brand-truegreen;
 	icBrandMintGreen: $ic-brand-mintgreen;
