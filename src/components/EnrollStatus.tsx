@@ -60,51 +60,57 @@ const EnrollStatus: React.FC<EnrollStatusProps> = ({
     return (
         <div className={classes.grid}>
             <a href={autoPayLink} className={classes.gridRow}>
-                <div className={classes.gridItem1}>
-                    <AutoPay fill={variables.icBlue70} />
-                    <p className={classes.serviceTitle}>AutoPay</p>
-                </div>
-                <div className={classes.gridItem2}>
-                    {getEnrollmentIcon(autoPayStatus)}
-                    <p className={autoPayStatus === 'Enrolled' ? classes.enrolled : ''}>
-						{autoPayStatus}
-					</p>
-                </div>
-				<span className={classes.mobileBadge}><Badge hasMargin={false} content={autoPayStatus} variant={getBadgeVariant(autoPayStatus)} /></span>
+                <div className={classes.gridItems}>
+					<div className={classes.gridItem1}>
+						<AutoPay fill={variables.icBlue70} />
+						<p className={classes.serviceTitle}>AutoPay</p>
+					</div>
+					<div className={classes.gridItem2}>
+						{getEnrollmentIcon(autoPayStatus)}
+						<p className={autoPayStatus === 'Enrolled' ? classes.enrolled : ''}>
+							{autoPayStatus}
+						</p>
+					</div>
+					<span className={classes.mobileBadge}><Badge hasMargin={false} content={autoPayStatus} variant={getBadgeVariant(autoPayStatus)} /></span>
+				</div>
                 <div className={classes.chevron}>
                     <ChevronLarge fill={variables.icNeutral80} />
                 </div>
             </a>
 
             <a href={paperlessLink} className={classes.gridRow}>
-                <div className={classes.gridItem1}>
-                    <Paperless fill={variables.icBlue70} />
-                    <p className={classes.serviceTitle}>Paperless</p>
-                </div>
-                <div className={classes.gridItem2}>
-                    {getEnrollmentIcon(paperlessStatus)}
-                    <p className={paperlessStatus === 'Enrolled' ? classes.enrolled : ''}>
-						{paperlessStatus}
-					</p>
-                </div>
-				<span className={classes.mobileBadge}><Badge hasMargin={false} content={paperlessStatus} variant={getBadgeVariant(paperlessStatus)} /></span>
+				<div className={classes.gridItems}>
+					<div className={classes.gridItem1}>
+						<Paperless fill={variables.icBlue70} />
+						<p className={classes.serviceTitle}>Paperless</p>
+					</div>
+					<div className={classes.gridItem2}>
+						{getEnrollmentIcon(paperlessStatus)}
+						<p className={paperlessStatus === 'Enrolled' ? classes.enrolled : ''}>
+							{paperlessStatus}
+						</p>
+					</div>
+					<span className={classes.mobileBadge}><Badge hasMargin={false} content={paperlessStatus} variant={getBadgeVariant(paperlessStatus)} /></span>
+				</div>
                 <div className={classes.chevron}>
                     <ChevronLarge fill={variables.icNeutral80} />
                 </div>
             </a>
 
             <a href={payByTextLink} className={classes.gridRow}>
-                <div className={classes.gridItem1}>
-                    <PayByText fill={variables.icBlue70} />
-                    <p className={classes.serviceTitle}>Pay By Text</p>
-                </div>
-                <div className={classes.gridItem2}>
-                    {getEnrollmentIcon(payByTextStatus)}
-                    <p className={payByTextStatus === 'Enrolled' ? classes.enrolled : ''}>
-						{payByTextStatus}
-					</p>
-                </div>
-				<span className={classes.mobileBadge}><Badge hasMargin={false} content={payByTextStatus} variant={getBadgeVariant(payByTextStatus)} /></span>
+				<div className={classes.gridItems}>
+					<div className={classes.gridItem1}>
+						<PayByText fill={variables.icBlue70} />
+						<p className={classes.serviceTitle}>Pay By Text</p>
+					</div>
+					<div className={classes.gridItem2}>
+						{getEnrollmentIcon(payByTextStatus)}
+						<p className={payByTextStatus === 'Enrolled' ? classes.enrolled : ''}>
+							{payByTextStatus}
+						</p>
+					</div>
+					<span className={classes.mobileBadge}><Badge hasMargin={false} content={payByTextStatus} variant={getBadgeVariant(payByTextStatus)} /></span>
+				</div>
                 <div className={classes.chevron}>
                     <ChevronLarge fill={variables.icNeutral80} />
                 </div>

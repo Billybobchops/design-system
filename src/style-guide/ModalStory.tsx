@@ -41,7 +41,7 @@ const ModalStory = () => {
                 )}>
                 <IconParagraph
                     content='Text will be updated on the following pages:'
-                    icon={<Warning fill={variables.icOrange50} />}
+                    icon={<Warning fill={variables.icYellow60} />}
                 />
 				<UnorderedList items={['Scholarship Fund']} />
                 <IconParagraph

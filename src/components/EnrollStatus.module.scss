@@ -13,15 +13,26 @@
 	border-bottom: 1px solid variables.$ic-neutral-20;
 	color: variables.$ic-blue-70;
 	display: grid;
-	grid-template-columns: 170px auto min-content;
-	padding: 16px 12px;
+	grid-template-columns: auto min-content;
+	padding: 16px;
 
 	&:hover {
 		background-color: variables.$ic-blue-10;
 	}
 
 	@media (max-width: 500px) {
-		grid-template-columns: auto auto min-content;
+		grid-template-columns: auto 20px;
+	}
+}
+
+.gridItems {
+	display: grid;
+	grid-template-columns: 160px auto;
+
+	@media (max-width: 500px) {
+		// grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+		gap: 10px;
 	}
 }
 
@@ -57,5 +68,6 @@
 	@media (max-width: 500px) {
 		display: block;
 		margin-right: 10px;
+		justify-self: start;
 	}
 }
