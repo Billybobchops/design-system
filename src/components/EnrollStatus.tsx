@@ -13,108 +13,111 @@ import Badge from './Badge';
 
 type EnrollmentStatus = 'Not Enrolled' | 'Partially Enrolled' | 'Enrolled';
 
+type EnrollmentType = 'AutoPay' | 'Paperless' | 'Pay By Text';
+
+const getEnrollmentIcon = (status: EnrollmentStatus) => {
+    if (status === 'Not Enrolled') {
+        return <NotEnrolled fill={variables.icBlue70} />;
+    }
+    if (status === 'Partially Enrolled') {
+        return <PartiallyEnrolled fill={variables.icBlue70} />;
+    }
+    if (status === 'Enrolled') {
+        return <Enrolled fill={variables.icGreen70} />;
+    }
+};
+
+const getBadgeVariant = (status: EnrollmentStatus) => {
+    if (status === 'Not Enrolled') {
+        return 'error';
+    }
+    if (status === 'Partially Enrolled') {
+        return 'warning';
+    }
+    if (status === 'Enrolled') {
+        return 'success';
+    }
+    return 'default';
+};
+
+interface EnrollmentGridRowProps {
+    serviceType: EnrollmentType;
+    link: string;
+    status: EnrollmentStatus;
+}
+
+const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({
+    serviceType,
+    link,
+    status,
+}) => {
+    return (
+        <a href={link} className={classes.gridRow}>
+            <div className={classes.gridItems}>
+                <div className={classes.gridItem1}>
+                    {serviceType === 'AutoPay' && (<AutoPay fill={variables.icBlue70} />)}
+                    {serviceType === 'Paperless' && (<Paperless fill={variables.icBlue70} />)}
+                    {serviceType === 'Pay By Text' && (<PayByText fill={variables.icBlue70} />)}
+                    <p className={classes.serviceTitle}>{serviceType}</p>
+                </div>
+                <div className={classes.gridItem2}>
+                    {getEnrollmentIcon(status)}
+                    <p className={status === 'Enrolled' ? classes.enrolled : ''}>{status}</p>
+                </div>
+                <span className={classes.mobileBadge}>
+                    <Badge content={status} hasMargin={false} variant={getBadgeVariant(status)} />
+                </span>
+            </div>
+            <div className={classes.chevron}>
+                <ChevronLarge fill={variables.icNeutral80} />
+            </div>
+        </a>
+    );
+};
+
 interface EnrollStatusProps {
     autoPayStatus: EnrollmentStatus;
     paperlessStatus: EnrollmentStatus;
     payByTextStatus: EnrollmentStatus;
-	autoPayLink: string;
-	paperlessLink: string;
-	payByTextLink: string;
+    autoPayLink: string;
+    paperlessLink: string;
+    payByTextLink: string;
 }
+
+type Service = {
+    link: string;
+    serviceType: EnrollmentType;
+    status: EnrollmentStatus;
+};
+
+type ServicesArr = Service[];
 
 const EnrollStatus: React.FC<EnrollStatusProps> = ({
     autoPayStatus,
     paperlessStatus,
     payByTextStatus,
-	autoPayLink,
-	paperlessLink,
-	payByTextLink
+    autoPayLink,
+    paperlessLink,
+    payByTextLink,
 }) => {
-    const getEnrollmentIcon = (
-        status: EnrollmentStatus
-    ) => {
-        if (status === 'Not Enrolled') {
-            return <NotEnrolled fill={variables.icBlue70} />;
-        }
-        if (status === 'Partially Enrolled') {
-            return <PartiallyEnrolled fill={variables.icBlue70} />;
-        }
-        if (status === 'Enrolled') {
-            return <Enrolled fill={variables.icGreen70} />;
-        }
-    };
-
-	const getBadgeVariant = (status: EnrollmentStatus) => {
-		if (status === 'Not Enrolled') {
-            return 'error';
-        }
-        if (status === 'Partially Enrolled') {
-            return 'warning';
-        }
-        if (status === 'Enrolled') {
-            return 'success';
-        }
-		return 'default';
-	};
+    const services: ServicesArr = [
+        { serviceType: 'AutoPay', link: autoPayLink, status: autoPayStatus },
+        { serviceType: 'Paperless', link: paperlessLink, status: paperlessStatus },
+        { serviceType: 'Pay By Text', link: payByTextLink, status: payByTextStatus },
+    ];
 
     return (
         <div className={classes.grid}>
-            <a href={autoPayLink} className={classes.gridRow}>
-                <div className={classes.gridItems}>
-					<div className={classes.gridItem1}>
-						<AutoPay fill={variables.icBlue70} />
-						<p className={classes.serviceTitle}>AutoPay</p>
-					</div>
-					<div className={classes.gridItem2}>
-						{getEnrollmentIcon(autoPayStatus)}
-						<p className={autoPayStatus === 'Enrolled' ? classes.enrolled : ''}>
-							{autoPayStatus}
-						</p>
-					</div>
-					<span className={classes.mobileBadge}><Badge hasMargin={false} content={autoPayStatus} variant={getBadgeVariant(autoPayStatus)} /></span>
-				</div>
-                <div className={classes.chevron}>
-                    <ChevronLarge fill={variables.icNeutral80} />
-                </div>
-            </a>
-
-            <a href={paperlessLink} className={classes.gridRow}>
-				<div className={classes.gridItems}>
-					<div className={classes.gridItem1}>
-						<Paperless fill={variables.icBlue70} />
-						<p className={classes.serviceTitle}>Paperless</p>
-					</div>
-					<div className={classes.gridItem2}>
-						{getEnrollmentIcon(paperlessStatus)}
-						<p className={paperlessStatus === 'Enrolled' ? classes.enrolled : ''}>
-							{paperlessStatus}
-						</p>
-					</div>
-					<span className={classes.mobileBadge}><Badge hasMargin={false} content={paperlessStatus} variant={getBadgeVariant(paperlessStatus)} /></span>
-				</div>
-                <div className={classes.chevron}>
-                    <ChevronLarge fill={variables.icNeutral80} />
-                </div>
-            </a>
-
-            <a href={payByTextLink} className={classes.gridRow}>
-				<div className={classes.gridItems}>
-					<div className={classes.gridItem1}>
-						<PayByText fill={variables.icBlue70} />
-						<p className={classes.serviceTitle}>Pay By Text</p>
-					</div>
-					<div className={classes.gridItem2}>
-						{getEnrollmentIcon(payByTextStatus)}
-						<p className={payByTextStatus === 'Enrolled' ? classes.enrolled : ''}>
-							{payByTextStatus}
-						</p>
-					</div>
-					<span className={classes.mobileBadge}><Badge hasMargin={false} content={payByTextStatus} variant={getBadgeVariant(payByTextStatus)} /></span>
-				</div>
-                <div className={classes.chevron}>
-                    <ChevronLarge fill={variables.icNeutral80} />
-                </div>
-            </a>
+            {services.map((service) => {
+                return (
+                    <EnrollmentGridRow
+                        key={service.serviceType}
+                        serviceType={service.serviceType}
+                        link={service.link}
+                        status={service.status}
+                    />
+                );
+            })}
         </div>
     );
 };
