@@ -1,0 +1,33 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.label {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.input {
+	border: 1px solid variables.$ic-neutral-50;
+	border-radius: 4px;
+	display: block;
+	margin: 6px 6px 2px 0;
+	padding: 10px;
+	width: 250px;
+
+	&:focus-visible {
+		border: 1.5px solid variables.$ic-blue-50;
+	}
+}
+
+.input[aria-invalid='true'] {
+	border-color: variables.$ic-red-50;
+	border-left-width: 3px;
+}
+
+.helperText {
+	font-size: 12px;
+}
+
+.required {
+	color: variables.$ic-red-50;
+}

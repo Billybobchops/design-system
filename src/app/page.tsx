@@ -18,6 +18,7 @@ import DatePickerInput from '@/components/DatePicker';
 import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
 import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
+import InputStory from '@/style-guide/InputStory';
 
 export default function Home() {
     return (
@@ -58,6 +59,10 @@ export default function Home() {
                 <ComponentDisplayArea title='Alerts'>
                     <AlertStory />
                 </ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Input'>
+					<InputStory />
+				</ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Date Picker'>
                     <DatePickerInput />
