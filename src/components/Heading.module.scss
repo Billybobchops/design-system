@@ -1,0 +1,34 @@
+@use '../app/variables.module.scss';
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin: variables.$heading-margin;
+}
+
+.h1 {
+    font-size: variables.$h1-font-size;
+}
+
+.h2 {
+    font-size: variables.$h2-font-size;
+}
+
+.h3 {
+    font-size: variables.$h3-font-size;
+}
+
+.h4 {
+	font-size: variables.$h4-font-size;
+}
+
+.h5 {
+	font-size: variables.$h5-font-size;
+}
+
+.h6 {
+	font-size: variables.$h6-font-size;
+}

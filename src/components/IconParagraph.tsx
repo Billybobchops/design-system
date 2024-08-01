@@ -1,4 +1,5 @@
 import classes from './IconParagraph.module.scss';
+import Paragraph from './Paragraph';
 
 interface IconParagraphProps {
     content: string;
@@ -9,7 +10,7 @@ const IconParagraph: React.FC<IconParagraphProps> = ({ content, icon }) => {
     return (
         <div className={classes.grid}>
             <span aria-hidden="true">{icon}</span>
-            <p>{content}</p>
+            <Paragraph>{content}</Paragraph>
         </div>
     );
 };

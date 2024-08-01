@@ -1,11 +1,11 @@
 import classes from './Paragraph.module.scss';
 
 interface ParagraphProps {
-    content: string;
+    children: React.ReactNode;
 }
 
-const Paragraph: React.FC<ParagraphProps> = ({ content }) => {
-    return <p className={classes.paragraph}>{content}</p>;
+const Paragraph: React.FC<ParagraphProps> = ({ children }) => {
+    return <p className={classes.paragraph}>{children}</p>;
 };
 
 export default Paragraph;

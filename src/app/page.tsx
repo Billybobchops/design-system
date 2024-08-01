@@ -19,11 +19,16 @@ import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
 import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
 import InputStory from '@/style-guide/InputStory';
+import TypographyStory from '@/style-guide/TypographyStory';
 
 export default function Home() {
     return (
         <main className={styles.main}>
             <Providers>
+				<ComponentDisplayArea title='Typography (Fluid)'>
+					<TypographyStory />
+				</ComponentDisplayArea>
+
                 <ComponentDisplayArea title='Primary Buttons'>
                     <ButtonPrimaryStory />
                 </ComponentDisplayArea>

@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./ComponentDisplayArea.module.scss";
+import Heading from "@/components/Heading";
 
 interface ComponentDisplayAreaProps {
 	title: string;
@@ -9,7 +10,7 @@ interface ComponentDisplayAreaProps {
 const ComponentDisplayArea: React.FC<ComponentDisplayAreaProps> = ({ children, title }) => {
 	return (
 		<section className={classes.componentDisplayArea}>
-			<h2 className={classes.displayTitle}>{title}</h2>
+			<Heading level='h2'>{title}</Heading>
 			{children}
 		</section>
 	);

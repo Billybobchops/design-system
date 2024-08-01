@@ -19,11 +19,11 @@ const ModalStory = () => {
                         variant='blue'
                     />
                 )}>
-                <p>
+                <Paragraph>
                     This account has an active loan. This account is not
                     eligible to enroll in AutoPay and will be immediately
                     disenrolled upon signup.
-                </p>
+                </Paragraph>
             </Modal>
 
             <Modal
@@ -64,101 +64,10 @@ const ModalStory = () => {
                         variant='blue'
                     />
                 )}>
-                <Paragraph
-                    content='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur nihil soluta quidem animi obcaecati nam sequi aut
-                    delectus beatae reprehenderit. Rerum perferendis illum
-                    blanditiis minus et temporibus! Ad molestiae nesciunt iste
-                    modi quos debitis omnis. Ullam itaque, quisquam laudantium,
-                    eos ad amet, nostrum alias cupiditate maiores architecto non
-                    eaque nulla vero vitae animi reiciendis molestiae odio
-                    obcaecati earum reprehenderit eum! Fugit illum dignissimos,
-                    sed earum pariatur totam quasi cupiditate, eius facere
-                    animi, quo dolorem ab repudiandae et doloremque sunt ipsam?
-                    Aspernatur nesciunt quidem vitae, culpa quisquam corrupti
-                    tempora quam mollitia ipsa praesentium voluptate itaque
-                    officia dolorem. At consequatur dolorem, voluptate nihil
-                    laudantium error dolore quis ratione minima mollitia
-                    laboriosam tempora voluptas beatae inventore debitis porro
-                    et, illum possimus autem deleniti cumque temporibus ad.
-                    Debitis, eius.'
-                />
-                <Paragraph
-                    content='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur nihil soluta quidem animi obcaecati nam sequi aut
-                    delectus beatae reprehenderit. Rerum perferendis illum
-                    blanditiis minus et temporibus! Ad molestiae nesciunt iste
-                    modi quos debitis omnis. Ullam itaque, quisquam laudantium,
-                    eos ad amet, nostrum alias cupiditate maiores architecto non
-                    eaque nulla vero vitae animi reiciendis molestiae odio
-                    obcaecati earum reprehenderit eum! Fugit illum dignissimos,
-                    sed earum pariatur totam quasi cupiditate, eius facere
-                    animi, quo dolorem ab repudiandae et doloremque sunt ipsam?
-                    Aspernatur nesciunt quidem vitae, culpa quisquam corrupti
-                    tempora quam mollitia ipsa praesentium voluptate itaque
-                    officia dolorem. At consequatur dolorem, voluptate nihil
-                    laudantium error dolore quis ratione minima mollitia
-                    laboriosam tempora voluptas beatae inventore debitis porro
-                    et, illum possimus autem deleniti cumque temporibus ad.
-                    Debitis, eius.'
-                />
-                <Paragraph
-                    content='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur nihil soluta quidem animi obcaecati nam sequi aut
-                    delectus beatae reprehenderit. Rerum perferendis illum
-                    blanditiis minus et temporibus! Ad molestiae nesciunt iste
-                    modi quos debitis omnis. Ullam itaque, quisquam laudantium,
-                    eos ad amet, nostrum alias cupiditate maiores architecto non
-                    eaque nulla vero vitae animi reiciendis molestiae odio
-                    obcaecati earum reprehenderit eum! Fugit illum dignissimos,
-                    sed earum pariatur totam quasi cupiditate, eius facere
-                    animi, quo dolorem ab repudiandae et doloremque sunt ipsam?
-                    Aspernatur nesciunt quidem vitae, culpa quisquam corrupti
-                    tempora quam mollitia ipsa praesentium voluptate itaque
-                    officia dolorem. At consequatur dolorem, voluptate nihil
-                    laudantium error dolore quis ratione minima mollitia
-                    laboriosam tempora voluptas beatae inventore debitis porro
-                    et, illum possimus autem deleniti cumque temporibus ad.
-                    Debitis, eius.'
-                />
-                <Paragraph
-                    content='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur nihil soluta quidem animi obcaecati nam sequi aut
-                    delectus beatae reprehenderit. Rerum perferendis illum
-                    blanditiis minus et temporibus! Ad molestiae nesciunt iste
-                    modi quos debitis omnis. Ullam itaque, quisquam laudantium,
-                    eos ad amet, nostrum alias cupiditate maiores architecto non
-                    eaque nulla vero vitae animi reiciendis molestiae odio
-                    obcaecati earum reprehenderit eum! Fugit illum dignissimos,
-                    sed earum pariatur totam quasi cupiditate, eius facere
-                    animi, quo dolorem ab repudiandae et doloremque sunt ipsam?
-                    Aspernatur nesciunt quidem vitae, culpa quisquam corrupti
-                    tempora quam mollitia ipsa praesentium voluptate itaque
-                    officia dolorem. At consequatur dolorem, voluptate nihil
-                    laudantium error dolore quis ratione minima mollitia
-                    laboriosam tempora voluptas beatae inventore debitis porro
-                    et, illum possimus autem deleniti cumque temporibus ad.
-                    Debitis, eius.'
-                />
-                <Paragraph
-                    content='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur nihil soluta quidem animi obcaecati nam sequi aut
-                    delectus beatae reprehenderit. Rerum perferendis illum
-                    blanditiis minus et temporibus! Ad molestiae nesciunt iste
-                    modi quos debitis omnis. Ullam itaque, quisquam laudantium,
-                    eos ad amet, nostrum alias cupiditate maiores architecto non
-                    eaque nulla vero vitae animi reiciendis molestiae odio
-                    obcaecati earum reprehenderit eum! Fugit illum dignissimos,
-                    sed earum pariatur totam quasi cupiditate, eius facere
-                    animi, quo dolorem ab repudiandae et doloremque sunt ipsam?
-                    Aspernatur nesciunt quidem vitae, culpa quisquam corrupti
-                    tempora quam mollitia ipsa praesentium voluptate itaque
-                    officia dolorem. At consequatur dolorem, voluptate nihil
-                    laudantium error dolore quis ratione minima mollitia
-                    laboriosam tempora voluptas beatae inventore debitis porro
-                    et, illum possimus autem deleniti cumque temporibus ad.
-                    Debitis, eius.'
-                />
+                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
+                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
+                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
+                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
             </Modal>
         </>
     );

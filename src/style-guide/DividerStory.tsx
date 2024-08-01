@@ -1,11 +1,12 @@
 import Divider from '@/components/Divider';
+import Paragraph from '@/components/Paragraph';
 
 const DividerStory = () => {
     return (
         <>
-            <p>This is a dark divider!</p>
+            <Paragraph>This is a dark divider!</Paragraph>
             <Divider isDark={true} />
-            <p>This is a light divider!</p>
+            <Paragraph>This is a light divider!</Paragraph>
             <Divider isDark={false} />
         </>
     );
