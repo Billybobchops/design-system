@@ -6,9 +6,7 @@
 	color: variables.$ic-neutral-100;
 	font-size: 17px;
 	font-weight: 700;
-	// padding: 15px 25px;
 	margin: 0 25px 15px 25px;
-	text-decoration: underline;
 
 	&:focus-visible {
 		outline: 2.5px solid variables.$ic-blue-50;
@@ -32,6 +30,14 @@
 
 	&:hover {
 		color: variables.$ic-green-80;
+	}
+}
+
+.red {
+	color: variables.$ic-red-60;
+
+	&:hover {
+		color: variables.$ic-red-80;
 	}
 }
 

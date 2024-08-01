@@ -2,7 +2,7 @@ import classes from "./ButtonSimple.module.scss";
 
 interface IconButtonProps {
 	clickHandler: () => void;
-	disabled: boolean;
+	disabled?: boolean;
 	text: string;
 	variant: "blue" | "green" | "red";
 }

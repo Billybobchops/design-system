@@ -20,6 +20,8 @@ import TabsStory from '@/style-guide/TabsStory';
 import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
 import InputStory from '@/style-guide/InputStory';
 import TypographyStory from '@/style-guide/TypographyStory';
+import ICLink from '@/components/ICLink';
+import ButtonSimpleStory from '@/style-guide/ButtonSimpleStory';
 
 export default function Home() {
     return (
@@ -27,6 +29,14 @@ export default function Home() {
             <Providers>
 				<ComponentDisplayArea title='Typography (Fluid)'>
 					<TypographyStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Inline Link'>
+					<ICLink>This is a link</ICLink>
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Simple Button'>
+					<ButtonSimpleStory />
 				</ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Primary Buttons'>
@@ -93,14 +103,14 @@ export default function Home() {
 					<EnrollStatusStory />
 				</ComponentDisplayArea>
 
-                <Image
+                {/* <Image
                     src='/vercel.svg'
                     alt='Vercel Logo'
                     className={styles.vercelLogo}
                     width={100}
                     height={24}
                     priority
-                />
+                /> */}
             </Providers>
         </main>
     );

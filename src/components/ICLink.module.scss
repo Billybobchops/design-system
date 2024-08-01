@@ -2,7 +2,11 @@
 
 .link {
 	color: variables.$ic-blue-70;
-	font-weight: 700;
 	margin: 0 15px 15px 0;
 	text-decoration: underline;
+
+	&:hover {
+		color: variables.$ic-blue-50;
+		text-decoration: none;
+	}
 }
