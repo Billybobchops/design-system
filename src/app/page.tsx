@@ -65,7 +65,7 @@ export default function Home() {
 				</ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Date Picker'>
-                    <DatePickerInput />
+                    <DatePickerInput label='Start date of first payment' required={true} />
                 </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Checkboxes'>

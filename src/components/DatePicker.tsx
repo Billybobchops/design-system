@@ -1,32 +1,50 @@
 import { DatePicker } from '@mui/x-date-pickers';
-import type {} from '@mui/x-date-pickers/themeAugmentation';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { useId } from 'react';
+import variables from '@/app/variables.module.scss';
+import Label from './Label';
+import InputHelperText from './InputHelperText';
 
-// const theme = createTheme({
-//     components: {
-//         MuiIconButton: {
-//             styleOverrides: {
-//                 root: {
-//                     backgroundColor: '#e8e8e8',
-//                     borderRadius: '0',
-//                 },
-//             },
-//         },
-//     },
-// });
+interface DatePickerInputProps {
+    label: string;
+    required: boolean;
+}
 
-const DatePickerInput = () => {
+const DatePickerInput: React.FC<DatePickerInputProps> = ({
+    label,
+    required,
+}) => {
+    const inputID = useId();
+    const helperID = useId();
+
     return (
-        // <ThemeProvider theme={theme}>
-        <DatePicker
-            // slotProps={{
-            //     openPickerIcon: { fontSize: 'large' },
-            // }}
-            // sx={{
-            //     backgroundColor: '#e8e8e8',
-            // }}
-        />
-        // </ThemeProvider>
+        <>
+            <Label inputID={inputID} label={label} required={required} />
+            <DatePicker
+                sx={{
+                    '& .MuiInputBase-root': {
+                        border: `1px solid ${variables.icNeutral50}`,
+						margin: '6px 6px 6px 0',
+                        width: '250px',
+                    },
+                    '& .MuiInputBase-root:hover': {
+                        border: `1px solid ${variables.icBlue50}`,
+                    },
+                    '& .MuiOutlinedInput-input:focus-visible': {
+                        border: `2px solid ${variables.icBlue50}`,
+                    },
+                    '& .MuiOutlinedInput-input': {
+                        padding: '8px 0 8px 8px',
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                        border: 'none',
+                    },
+                }}
+            />
+            <InputHelperText
+                helperID={helperID}
+                helperText='Hardcoded helper text here - rewire me!'
+            />
+        </>
     );
 };
 

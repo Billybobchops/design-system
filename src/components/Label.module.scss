@@ -1,0 +1,11 @@
+@use '../app/variables.module.scss';
+
+.label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.required {
+	color: variables.$ic-red-50;
+}

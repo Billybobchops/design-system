@@ -1,5 +1,7 @@
 import classes from './Input.module.scss';
 import { useId } from 'react';
+import Label from './Label';
+import InputHelperText from './InputHelperText';
 
 interface InputProps {
     disabled?: boolean;
@@ -17,14 +19,11 @@ const Input: React.FC<InputProps> = ({
     const inputID = useId();
     const helperID = useId();
 
-    const helperText = 'Please enter a valid billing address.';
+    const helperText = 'Please enter a valid billing address.'; // temp
 
     return (
         <>
-            <label className={classes.label} htmlFor={inputID}>
-                {label}
-                {required && <span className={classes.required}> *</span>}
-            </label>
+			<Label inputID={inputID} label={label} required={required} />
             <input
                 aria-invalid={false}
                 aria-describedby={helperID}
@@ -34,9 +33,7 @@ const Input: React.FC<InputProps> = ({
                 name={name}
                 type='text'
             />
-            <span className={classes.helperText} id={helperID}>
-                {helperText}
-            </span>
+			<InputHelperText helperID={helperID} helperText={helperText} />
         </>
     );
 };
