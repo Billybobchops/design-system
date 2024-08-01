@@ -30,7 +30,7 @@ const ModalStory = () => {
                 title='Ready to Update Scholarship Fund Form?'
                 actionButtonText='Yes, Apply Changes'
                 hasAction={true}
-                handleModalAction={() => {console.log('Action taken...');}}
+                handleModalAction={() => { console.log('Action taken...')}}
                 TriggerElement={(props) => (
                     <ButtonSecondary
                         {...props}
@@ -43,19 +43,19 @@ const ModalStory = () => {
                     content='Text will be updated on the following pages:'
                     icon={<Warning fill={variables.icYellow60} />}
                 />
-				<UnorderedList items={['Scholarship Fund']} />
+                <UnorderedList items={['Scholarship Fund']} />
                 <IconParagraph
                     content='The following languages will not be updated:'
                     icon={<ErrorLarge fill={variables.icRed60} />}
                 />
-				<UnorderedList items={['French', 'Arabic', 'Swahili']} />
+                <UnorderedList items={['French', 'Arabic', 'Swahili']} />
             </Modal>
 
             <Modal
                 title='Ready to Update this Long Text?'
                 actionButtonText='Yes, Apply Changes'
                 hasAction={true}
-                handleModalAction={() => {console.log('Action taken...');}}
+                handleModalAction={() => { console.log('Action taken...') }}
                 TriggerElement={(props) => (
                     <ButtonSecondary
                         {...props}
@@ -64,10 +64,76 @@ const ModalStory = () => {
                         variant='blue'
                     />
                 )}>
-                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
-                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
-                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
-                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos repellat ipsum esse amet totam hic incidunt molestiae consectetur velit nemo fugiat nostrum consequuntur, asperiores laborum aliquam assumenda blanditiis vitae eligendi iusto. Officia beatae doloremque ex aperiam tempora minus nesciunt. Totam, id quasi, eos, sint temporibus maxime odit iste dolorum pariatur eaque sunt.</Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos
+                    repellat ipsum esse amet totam hic incidunt molestiae
+                    consectetur velit nemo fugiat nostrum consequuntur,
+                    asperiores laborum aliquam assumenda blanditiis vitae
+                    eligendi iusto. Officia beatae doloremque ex aperiam tempora
+                    minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
+                    odit iste dolorum pariatur eaque sunt.
+                </Paragraph>
             </Modal>
         </>
     );

@@ -19,6 +19,8 @@
 	&:hover {
 		border: 1px solid variables.$ic-blue-50;
 	}
+
+	@include mobile-100-w;
 }
 
 .input[aria-invalid='true'] {
