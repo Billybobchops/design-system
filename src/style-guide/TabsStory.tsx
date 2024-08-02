@@ -2,6 +2,7 @@ import Tabs from '@/components/Tabs';
 import TabList from '@/components/TabList';
 import Tab from '@/components/Tab';
 import TabPanel from '@/components/TabPanel';
+import Paragraph from '@/components/Paragraph';
 
 const TabsStory = () => {
     return (
@@ -12,11 +13,35 @@ const TabsStory = () => {
                 <Tab tab='tab3'>Tab 3</Tab>
                 <Tab tab='tab4'>Tab 4</Tab>
             </TabList>
-			
-			<TabPanel tab='tab1'>Content for tab 1</TabPanel>
-			<TabPanel tab='tab2'>Content for tab 2</TabPanel>
-			<TabPanel tab='tab3'>Content for tab 3</TabPanel>
-			<TabPanel tab='tab4'>Content for tab 4</TabPanel>
+
+            <TabPanel tab='tab1'>
+                <Paragraph>
+                    Content for tab 1. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Suscipit, soluta error. Id dignissimos
+                    dolorum facere.
+                </Paragraph>
+            </TabPanel>
+            <TabPanel tab='tab2'>
+                <Paragraph>
+                    Content for tab 2. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Suscipit, soluta error. Id dignissimos
+                    dolorum facere.
+                </Paragraph>
+            </TabPanel>
+            <TabPanel tab='tab3'>
+                <Paragraph>
+                    Content for tab 3. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Suscipit, soluta error. Id dignissimos
+                    dolorum facere.
+                </Paragraph>
+            </TabPanel>
+            <TabPanel tab='tab4'>
+                <Paragraph>
+                    Content for tab 4. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Suscipit, soluta error. Id dignissimos
+                    dolorum facere.
+                </Paragraph>
+            </TabPanel>
         </Tabs>
     );
 };

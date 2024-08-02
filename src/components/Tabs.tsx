@@ -1,3 +1,4 @@
+import classes from './Tabs.module.scss';
 import { TabsProvider } from './TabsContext';
 import { useId } from 'react';
 
@@ -14,7 +15,7 @@ const Tabs: React.FC<TabsProps> = ({ children, defaultSelectedTab }) => {
             defaultSelectedTab={defaultSelectedTab}
             tabsPrefix={tabsPrefix}
 		>
-            {children}
+            <div className={classes.tabContainer}>{children}</div>
         </TabsProvider>
     );
 };

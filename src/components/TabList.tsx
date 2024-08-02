@@ -1,4 +1,3 @@
-// import classes from './TabList.module.scss';
 import { useRef, useCallback } from 'react';
 
 interface TabListProps {

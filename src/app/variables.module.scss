@@ -19,72 +19,71 @@ $theme-blue-hover: #286090;
 $theme-grey: #7f7f7f;
 
 // IC Product Colors
-$ic-blue-10: #e9eff7;
+$ic-blue-10: #e9eff7; // gets used
 $ic-blue-20: #a5c0e1;
-$ic-blue-30: #79a0d1;
+$ic-blue-30: #79a0d1; // gets used
 $ic-blue-40: #4c81c2;
-$ic-blue-50: #1f61b3;
+$ic-blue-50: #1f61b3; // gets used a lot
 $ic-blue-60: #194e8f;
-$ic-blue-70: #133a6b;
+$ic-blue-70: #133a6b; // gets used
 $ic-blue-80: #0c2748;
 $ic-blue-90: #061324;
 
-$ic-green-10: #dbf1de;
-$ic-green-20: #b8e3bd;
+$ic-green-10: #dbf1de; // gets used
+$ic-green-20: #b8e3bd; // gets used
 $ic-green-30: #94d49b;
 $ic-green-40: #71c67a;
 $ic-green-50: #4db859;
-$ic-green-60: #3e9347;
-$ic-green-70: #2e6e35;
-$ic-green-80: #1f4a24;
+$ic-green-60: #3e9347; // gets used
+$ic-green-70: #2e6e35; // gets used
+$ic-green-80: #1f4a24; // gets used
 $ic-green-90: #0f2512;
 
-$ic-red-10: #f3d4d4;
-$ic-red-20: #e7a9a9;
+$ic-red-10: #f3d4d4; // gets used
+$ic-red-20: #e7a9a9; // gets used
 $ic-red-30: #dc7e7d;
 $ic-red-40: #d05352;
-$ic-red-50: #c42827;
-$ic-red-60: #9d201f;
-$ic-red-70: #761817;
-$ic-red-80: #4e1010;
+$ic-red-50: #c42827; // gets used
+$ic-red-60: #9d201f; // gets used
+$ic-red-70: #761817; // gets used
+$ic-red-80: #4e1010; // gets used
 $ic-red-90: #270808;
 
-$ic-yellow-10: #fdf8db;
+$ic-yellow-10: #fdf8db; // gets used
 $ic-yellow-20: #fcf3c3;
-$ic-yellow-30: #faeda4;
+$ic-yellow-30: #faeda4; // gets used
 $ic-yellow-40: #f9e886;
 $ic-yellow-50: #f7e268;
 $ic-yellow-60: #cdb73e;
 $ic-yellow-70: #a49331;
 $ic-yellow-80: #7b6e25;
-$ic-yellow-90: #524919;
+$ic-yellow-90: #524919; // gets used
 
-$ic-neutral-0: #fff;
+$ic-neutral-0: #fff; // gets used
 $ic-neutral-05: #f3f3f3;
-$ic-neutral-10: #e8e8e8;
-$ic-neutral-20: #d1d1d1;
-$ic-neutral-30: #bababa;
+$ic-neutral-10: #e8e8e8; // gets used
+$ic-neutral-20: #d1d1d1; // gets used
+$ic-neutral-30: #bababa; // gets used
 $ic-neutral-40: #a3a3a3;
-$ic-neutral-50: #a3a3a3;
-$ic-neutral-60: #707070;
+$ic-neutral-50: #a3a3a3; // gets used
+$ic-neutral-60: #707070; // gets used
 $ic-neutral-70: #545454;
-$ic-neutral-80: #383838;
+$ic-neutral-80: #383838; // gets used
 $ic-neutral-90: #1c1c1c;
-$ic-neutral-100: #000;
+$ic-neutral-100: #000; // gets used
 
 // Spacing
 $heading-margin: 0 0 15px 0;
 $button-margin: 15px;
 
 // Typography
-// $h1-font-size: clamp(20px, 4vw + 1rem, 31px);
 $h1-font-size: clamp(1.25rem, 4vw + 1rem, 2rem); 
 $h2-font-size: clamp(1.125rem, 2vw + 1rem, 1.5625rem);
 $h3-font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
 $h4-font-size: 1rem;
 $h5-font-size: 0.875rem;
 $h6-font-size: 0.75rem;
-$body-font-size: clamp(0.75rem, 2vw + 1rem, 1.125rem);
+$body-font-size: clamp(0.75rem, 2vw + .55rem, 1rem);
 
 // export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {

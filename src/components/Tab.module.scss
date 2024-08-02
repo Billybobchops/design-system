@@ -5,20 +5,31 @@
 	border: none;
 	border-bottom: 2px solid variables.$ic-neutral-20;
 	color: variables.$ic-blue-70;
-	font-size: 20px;
+	font-size: clamp(.8rem, 2vw + 0.5rem, 1.15rem);
 	font-weight: 700;
 	padding: 15px 20px;
 
 	&:hover {
 		color: variables.$ic-blue-50;
 	}
+
+	@media (max-width: 500px) {
+		display: block;
+		border: none;
+		border-right: 2px solid variables.$ic-neutral-20;
+		padding: 12px 15px;
+	}
 }
 
 .tab[aria-selected="true"] {
-	border-top: 2px solid variables.$ic-neutral-20;
-	border-left: 2px solid variables.$ic-neutral-20;
-	border-right: 2px solid variables.$ic-neutral-20;
+	border: 2px solid variables.$ic-neutral-20;
 	border-bottom: none;
 	border-radius: 10px 10px 0 0;
 	color: variables.$ic-neutral-80;
+
+	@media (max-width: 500px) {
+		border: 2px solid variables.$ic-neutral-20;
+		border-right: none;
+		border-radius: 10px 0 0 10px;
+	}
 }
