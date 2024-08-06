@@ -15,15 +15,15 @@ const Alert: React.FC<AlertProps> = ({ content, isDismissable, variant }) => {
 	const getFillColor = (variant: string) => {
 		switch (variant) {
 			case "default":
-				return variables.icBlue70;
+				return variables.themeA4;
 			case "warning":
-				return variables.icYellow80;
+				return variables.utilityYellow80;
 			case "error":
-				return variables.icRed60;
+				return variables.utilityRed60;
 			case "success":
-				return variables.icGreen80;
+				return variables.utilityGreen80;
 			default:
-				return variables.icBlue70;
+				return variables.themeA4;
 		}
 	};
 

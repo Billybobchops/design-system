@@ -17,13 +17,13 @@ type EnrollmentType = 'AutoPay' | 'Paperless' | 'Pay By Text';
 
 const getEnrollmentIcon = (status: EnrollmentStatus) => {
     if (status === 'Not Enrolled') {
-        return <NotEnrolled fill={variables.icBlue70} />;
+        return <NotEnrolled fill={variables.themeA4} />;
     }
     if (status === 'Partially Enrolled') {
-        return <PartiallyEnrolled fill={variables.icBlue70} />;
+        return <PartiallyEnrolled fill={variables.themeA4} />;
     }
     if (status === 'Enrolled') {
-        return <Enrolled fill={variables.icGreen70} />;
+        return <Enrolled fill={variables.utilityGreen70} />;
     }
 };
 
@@ -55,9 +55,9 @@ const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({
         <a href={link} className={classes.gridRow}>
             <div className={classes.gridItems}>
                 <div className={classes.gridItem1}>
-                    {serviceType === 'AutoPay' && (<AutoPay fill={variables.icBlue70} />)}
-                    {serviceType === 'Paperless' && (<Paperless fill={variables.icBlue70} />)}
-                    {serviceType === 'Pay By Text' && (<PayByText fill={variables.icBlue70} />)}
+                    {serviceType === 'AutoPay' && (<AutoPay fill={variables.themeA4} />)}
+                    {serviceType === 'Paperless' && (<Paperless fill={variables.themeA4} />)}
+                    {serviceType === 'Pay By Text' && (<PayByText fill={variables.themeA4} />)}
                     <p className={classes.serviceTitle}>{serviceType}</p>
                 </div>
                 <div className={classes.gridItem2}>
@@ -69,7 +69,7 @@ const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({
                 </span>
             </div>
             <div className={classes.chevron}>
-                <ChevronLarge fill={variables.icNeutral80} />
+                <ChevronLarge fill={variables.utilityNeutral80} />
             </div>
         </a>
     );

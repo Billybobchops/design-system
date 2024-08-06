@@ -17,7 +17,7 @@
 	height: 20px;
 	margin: 6px;
 	padding: 0;
-	border: 2px solid variables.$ic-neutral-50;
+	border: 2px solid variables.$utility-neutral-50;
 	border-radius: 50%;
 	appearance: none;
 	background-color: transparent;
@@ -25,41 +25,41 @@
 	transition: outline 0.1s;
 
 	&:not(:disabled):checked {
-		border-color: variables.$ic-blue-50;
-		background-color: variables.$ic-blue-50;
+		border-color: variables.$theme-a-3;
+		background-color: variables.$theme-a-3;
 		background-clip: content-box;
 		padding: 2px;
 		background-image: radial-gradient(
 			circle,
-			variables.$ic-blue-50 0%,
-			variables.$ic-blue-50 50%,
+			variables.$theme-a-3 0%,
+			variables.$theme-a-3 50%,
 			transparent 60%,
 			transparent 100%
 		);
 	}
 
 	&:disabled {
-		background-color: variables.$ic-neutral-50;
+		background-color: variables.$utility-neutral-50;
 	}
 
 	&:disabled:checked {
 		background-image: radial-gradient(
 			circle,
-			variables.$ic-neutral-50 0%,
-			variables.$ic-neutral-50 50%,
+			variables.$utility-neutral-50 0%,
+			variables.$utility-neutral-50 50%,
 			transparent 50%,
 			transparent 100%
 		);
 	}
 
 	&:focus-visible:not(:checked) {
-		outline: 2px solid variables.$ic-blue-50;
-		border: 2px solid variables.$ic-neutral-50;
+		outline: 2px solid variables.$theme-a-3;
+		border: 2px solid variables.$utility-neutral-50;
 		transform: scale(1.05);
 	}
 
 	&:not(:disabled):hover {
-		border: 2px solid variables.$ic-blue-50;
+		border: 2px solid variables.$theme-a-3;
 		transform: scale(1.05);
 	}
 

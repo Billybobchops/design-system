@@ -4,7 +4,7 @@
 .button {
     border-radius: 5px;
     border: none;
-    color: variables.$ic-neutral-0;
+    color: variables.$utility-neutral-0;
     font-size: 17px;
     font-weight: 700;
     padding: 12px 20px;
@@ -12,7 +12,7 @@
     width: fit-content;
 
     &:focus-visible {
-        outline: 2.5px solid variables.$ic-blue-50;
+        outline: 2.5px solid variables.$theme-a-3;
     }
 
     span:first-of-type {
@@ -27,22 +27,22 @@
 }
 
 .blue {
-    background-color: variables.$ic-blue-70;
+    background-color: variables.$theme-a-4;
 
     &:hover {
-        background-color: variables.$ic-blue-50;
+        background-color: variables.$theme-a-3;
     }
 }
 
 .green {
-    background-color: variables.$ic-green-60;
+    background-color: variables.$utility-green-60;
 
     &:hover {
-        background-color: variables.$ic-green-80;
+        background-color: variables.$utility-green-80;
     }
 }
 
 .disabled {
-    background-color: variables.$ic-neutral-10;
-    color: variables.$ic-neutral-60;
+    background-color: variables.$utility-neutral-10;
+    color: variables.$utility-neutral-60;
 }

@@ -41,12 +41,12 @@ const ModalStory = () => {
                 )}>
                 <IconParagraph
                     content='Text will be updated on the following pages:'
-                    icon={<Warning fill={variables.icYellow60} />}
+                    icon={<Warning fill={variables.utilityYellow60} />}
                 />
                 <UnorderedList items={['Scholarship Fund']} />
                 <IconParagraph
                     content='The following languages will not be updated:'
-                    icon={<ErrorLarge fill={variables.icRed60} />}
+                    icon={<ErrorLarge fill={variables.utilityRed60} />}
                 />
                 <UnorderedList items={['French', 'Arabic', 'Swahili']} />
             </Modal>

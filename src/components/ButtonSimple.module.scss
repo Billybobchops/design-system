@@ -3,13 +3,13 @@
 .button {
 	background-color: transparent;
 	border: none;
-	color: variables.$ic-neutral-100;
+	color: variables.$utility-neutral-100;
 	font-size: 17px;
 	font-weight: 700;
 	margin: 0 25px 15px 25px;
 
 	&:focus-visible {
-		outline: 2.5px solid variables.$ic-blue-50;
+		outline: 2.5px solid variables.$theme-a-3;
 	}
 
 	span {
@@ -18,29 +18,29 @@
 }
 
 .blue {
-	color: variables.$ic-blue-70;
+	color: variables.$theme-a-4;
 
 	&:hover {
-		color: variables.$ic-blue-50;
+		color: variables.$theme-a-3;
 	}
 }
 
 .green {
-	color: variables.$ic-green-60;
+	color: variables.$utility-green-60;
 
 	&:hover {
-		color: variables.$ic-green-80;
+		color: variables.$utility-green-80;
 	}
 }
 
 .red {
-	color: variables.$ic-red-60;
+	color: variables.$utility-red-60;
 
 	&:hover {
-		color: variables.$ic-red-80;
+		color: variables.$utility-red-80;
 	}
 }
 
 .disabled {
-	color: variables.$ic-neutral-10;
+	color: variables.$utility-neutral-10;
 }

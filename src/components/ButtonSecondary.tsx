@@ -19,15 +19,15 @@ const ButtonSecondary: React.FC<ButtonProps> = ({
 }) => {
 	const getFillColor = (disabled: boolean, variant?: string) => {
 		if (disabled) {
-			return variables.icNeutral60;
+			return variables.utilityNeutral60;
 		}
 		switch (variant) {
 			case "blue":
-				return variables.icNeutral0;
+				return variables.utilityNeutral0;
 			case "green":
-				return variables.icNeutral0;
+				return variables.utilityNeutral0;
 			default:
-				return variables.icNeutral60;
+				return variables.utilityNeutral60;
 		}
 	};
 

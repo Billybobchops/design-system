@@ -1,12 +1,12 @@
 @use '../app/variables.module.scss';
 
 .link {
-	color: variables.$ic-blue-70;
+	color: variables.$theme-a-4;
 	margin: 0 15px 15px 0;
 	text-decoration: underline;
 
 	&:hover {
-		color: variables.$ic-blue-50;
+		color: variables.$theme-a-3;
 		text-decoration: none;
 	}
 }

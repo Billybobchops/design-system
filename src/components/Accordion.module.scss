@@ -9,11 +9,11 @@
 }
 
 .button {
-	background-color: variables.$ic-neutral-10;
+	background-color: variables.$utility-neutral-10;
 	border-radius: 6px;
 	border: none;
-	border-bottom: 2px solid variables.$ic-neutral-20;
-	color: variables.$ic-blue-70;
+	border-bottom: 2px solid variables.$utility-neutral-20;
+	color: variables.$theme-a-4;
 	font-size: 16px;
 	font-weight: 700;
 	padding: 14px 18px;
@@ -22,15 +22,15 @@
 
 	&:hover,
 	&:focus-visible {
-		background-color: variables.$ic-blue-10;
-		border-bottom: 2.5px solid variables.$ic-blue-50;
-		color: variables.$ic-blue-50;
+		background-color: variables.$theme-a-1;
+		border-bottom: 2.5px solid variables.$theme-a-3;
+		color: variables.$theme-a-3;
 	}
 }
 
 .activeButton {
 	border-radius: 6px 6px 0 0;
-	border: 1px solid variables.$ic-blue-50;
+	border: 1px solid variables.$theme-a-3;
 	border-bottom: none;
 }
 
@@ -40,7 +40,7 @@
 
 .content {
 	border-radius: 0 0 6px 6px;
-	border: 1px solid variables.$ic-blue-50;
+	border: 1px solid variables.$theme-a-3;
 	padding: 20px;
 	text-align: left;
 }

@@ -3,32 +3,32 @@
 .tab {
 	background-color: transparent;
 	border: none;
-	border-bottom: 2px solid variables.$ic-neutral-20;
-	color: variables.$ic-blue-70;
+	border-bottom: 2px solid variables.$utility-neutral-20;
+	color: variables.$theme-a-4;
 	font-size: clamp(.8rem, 2vw + 0.5rem, 1.15rem);
 	font-weight: 700;
 	padding: 15px 20px;
 
 	&:hover {
-		color: variables.$ic-blue-50;
+		color: variables.$theme-a-3;
 	}
 
 	@media (max-width: 500px) {
 		display: block;
 		border: none;
-		border-right: 2px solid variables.$ic-neutral-20;
+		border-right: 2px solid variables.$utility-neutral-20;
 		padding: 12px 15px;
 	}
 }
 
 .tab[aria-selected="true"] {
-	border: 2px solid variables.$ic-neutral-20;
+	border: 2px solid variables.$utility-neutral-20;
 	border-bottom: none;
 	border-radius: 10px 10px 0 0;
-	color: variables.$ic-neutral-80;
+	color: variables.$utility-neutral-80;
 
 	@media (max-width: 500px) {
-		border: 2px solid variables.$ic-neutral-20;
+		border: 2px solid variables.$utility-neutral-20;
 		border-right: none;
 		border-radius: 10px 0 0 10px;
 	}

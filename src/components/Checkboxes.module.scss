@@ -27,7 +27,7 @@
 }
 
 .form-control:disabled {
-	color: variables.$ic-neutral-50;
+	color: variables.$utility-neutral-50;
 	cursor: not-allowed;
 }
 
@@ -35,7 +35,7 @@
 	appearance: none;
 	background-color: transparent;
 	border-radius: 4px;
-	border: 2px solid variables.$ic-neutral-50;
+	border: 2px solid variables.$utility-neutral-50;
 	display: grid;
 	height: 20px;
 	margin: 0 10px 0 0;
@@ -43,12 +43,12 @@
 	width: 20px;
 
 	&:checked {
-		background-color: variables.$ic-blue-50;
+		background-color: variables.$theme-a-3;
 	}
 
 	&:hover,
 	&:not(:disabled):checked {
-		border-color: variables.$ic-blue-50;
+		border-color: variables.$theme-a-3;
 	}
 }
 
@@ -60,21 +60,21 @@
 	transform: scale(0);
 	transform-origin: bottom left;
 	transition: 120ms transform ease-in-out;
-	background-color: variables.$ic-neutral-0;
+	background-color: variables.$utility-neutral-0;
 }
 
 .checkbox:checked::before {
 	transform: scale(1);
-	background-color: variables.$ic-neutral-0;
+	background-color: variables.$utility-neutral-0;
 }
 
 .checkbox:focus-visible {
 	border-radius: 2px;
-	outline: 2px solid variables.$ic-blue-50;
+	outline: 2px solid variables.$theme-a-3;
 	transform: scale(1.05);
 }
 
 .checkbox:disabled {
-	color: variables.$ic-neutral-50;
+	color: variables.$utility-neutral-50;
 	cursor: not-allowed;
 }

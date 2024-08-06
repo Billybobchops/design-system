@@ -22,6 +22,7 @@ import InputStory from '@/style-guide/InputStory';
 import TypographyStory from '@/style-guide/TypographyStory';
 import ICLink from '@/components/ICLink';
 import ButtonSimpleStory from '@/style-guide/ButtonSimpleStory';
+import ProgressIndicatorStory from '@/style-guide/ProgressIndicatorStory';
 
 export default function Home() {
     return (
@@ -101,6 +102,10 @@ export default function Home() {
 
 				<ComponentDisplayArea title='Enrollment Status'>
 					<EnrollStatusStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Progress Indicator'>
+					<ProgressIndicatorStory />
 				</ComponentDisplayArea>
 
                 {/* <Image

@@ -1,0 +1,18 @@
+@use '../app/variables.module.scss';
+
+.stepList {
+    display: flex;
+    list-style-type: none;
+}
+
+.step {
+    color: variables.$utility-neutral-70;
+    margin-right: 40px;
+    padding: 10px 0;
+}
+
+.active {
+    color: variables.$utility-neutral-80;
+    border-bottom: 4px solid variables.$utility-green-20;
+    font-weight: 600;
+}

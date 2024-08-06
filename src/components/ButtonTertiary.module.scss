@@ -10,7 +10,7 @@
     padding: 12px 20px;
 
     &:focus-visible {
-        outline: 2px solid variables.$ic-blue-50;
+        outline: 2px solid variables.$theme-a-3;
     }
 
     span:first-of-type {
@@ -27,47 +27,47 @@
 .blue,
 .green,
 .red {
-    background-color: variables.$ic-neutral-0;
+    background-color: variables.$utility-neutral-0;
 }
 
 .blue:hover,
 .green:hover,
 .red:hover {
-    color: variables.$ic-neutral-0;
+    color: variables.$utility-neutral-0;
 }
 
 .blue {
-    border: 2px solid variables.$ic-blue-70;
-    color: variables.$ic-blue-70;
+    border: 2px solid variables.$theme-a-4;
+    color: variables.$theme-a-4;
 
     &:hover {
-        background-color: variables.$ic-blue-50;
-        border: 2px solid variables.$ic-blue-50;
-        color: variables.$ic-neutral-0;
+        background-color: variables.$theme-a-3;
+        border: 2px solid variables.$theme-a-3;
+        color: variables.$utility-neutral-0;
     }
 }
 
 .green {
-    border: 2px solid variables.$ic-green-70;
-    color: variables.$ic-green-70;
+    border: 2px solid variables.$utility-green-70;
+    color: variables.$utility-green-70;
 
     &:hover {
-        border: 2px solid variables.$ic-green-80;
-        background-color: variables.$ic-green-80;
+        border: 2px solid variables.$utility-green-80;
+        background-color: variables.$utility-green-80;
     }
 }
 
 .red {
-    border: 2px solid variables.$ic-red-50;
-    color: variables.$ic-red-50;
+    border: 2px solid variables.$utility-red-50;
+    color: variables.$utility-red-50;
 
     &:hover {
-        border: 2px solid variables.$ic-red-70;
-        background-color: variables.$ic-red-70;
+        border: 2px solid variables.$utility-red-70;
+        background-color: variables.$utility-red-70;
     }
 }
 
 .disabled {
-    background-color: variables.$ic-neutral-10;
-    color: variables.$ic-neutral-60;
+    background-color: variables.$utility-neutral-10;
+    color: variables.$utility-neutral-60;
 }

@@ -22,15 +22,15 @@ const DatePickerInput: React.FC<DatePickerInputProps> = ({
             <DatePicker
                 sx={{
                     '& .MuiInputBase-root': {
-                        border: `1px solid ${variables.icNeutral50}`,
+                        border: `1px solid ${variables.utilityNeutral50}`,
 						margin: '6px 6px 6px 0',
                         width: '250px',
                     },
                     '& .MuiInputBase-root:hover': {
-                        border: `1px solid ${variables.icBlue50}`,
+                        border: `1px solid ${variables.themeA3}`,
                     },
                     '& .MuiOutlinedInput-input:focus-visible': {
-                        border: `2px solid ${variables.icBlue50}`,
+                        border: `2px solid ${variables.themeA3}`,
                     },
                     '& .MuiOutlinedInput-input': {
                         padding: '8px 0 8px 8px',

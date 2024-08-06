@@ -6,25 +6,25 @@
 }
 
 .input {
-	border: 1px solid variables.$ic-neutral-50;
+	border: 1px solid variables.$utility-neutral-50;
 	border-radius: 4px;
 	margin: 6px 6px 6px 0;
 	padding: 10px;
 	width: 250px;
 
 	&:focus-visible {
-		border: 2px solid variables.$ic-blue-50;
+		border: 2px solid variables.$theme-a-3;
 	}
 
 	&:hover {
-		border: 1px solid variables.$ic-blue-50;
+		border: 1px solid variables.$theme-a-3;
 	}
 
 	@include mobile-100-w;
 }
 
 .input[aria-invalid='true'] {
-	border-color: variables.$ic-red-50;
+	border-color: variables.$utility-red-50;
 	border-left-width: 3px;
 }
 

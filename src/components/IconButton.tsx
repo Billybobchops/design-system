@@ -21,17 +21,17 @@ const IconButton: React.FC<IconButtonProps> = ({
     const [isHovered, setIsHovered] = useState(false);
     const getFillColor = (variant: string, disabled: boolean) => {
         if (disabled) {
-            return { fill: variables.icNeutral60, hoverFill: variables.icNeutral60 };
+            return { fill: variables.utilityNeutral60, hoverFill: variables.utilityNeutral60 };
         }
         switch (variant) {
             case 'blue':
-                return { fill: variables.icBlue70, hoverFill: variables.icBlue50 };
+                return { fill: variables.themeA4, hoverFill: variables.themeA3 };
             case 'green':
-                return { fill: variables.icGreen70, hoverFill: variables.icGreen80 };
+                return { fill: variables.utilityGreen70, hoverFill: variables.utilityGreen80 };
             case 'red':
-                return { fill: variables.icRed50, hoverFill: variables.icRed70 };
+                return { fill: variables.utilityRed50, hoverFill: variables.utilityRed70 };
             default:
-                return { fill: variables.icNeutral60, hoverFill: variables.icNeutral60 };
+                return { fill: variables.utilityNeutral60, hoverFill: variables.utilityNeutral60 };
         }
     };
 

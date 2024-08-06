@@ -9,7 +9,7 @@
 }
 
 .dialog dialog::backdrop {
-    background-color: variables.$ic-neutral-80;
+    background-color: variables.$utility-neutral-80;
     transition: display 0.7s allow-discrete, overlay 0.7s allow-discrete,
         background-color 0.7s;
     opacity: 0.8;
@@ -25,8 +25,8 @@
 }
 
 .actionBar {
-	background-color: variables.$ic-neutral-0;
-	border-top: 2px solid variables.$ic-neutral-30;
+	background-color: variables.$utility-neutral-0;
+	border-top: 2px solid variables.$utility-neutral-30;
 	bottom: 0;
 	display: grid;
 	justify-content: end;
