@@ -7,6 +7,7 @@
 
 .step {
     color: variables.$utility-neutral-70;
+	font-size: clamp(0.75rem, 2vw + 0.25rem, 1rem);
     margin-right: 40px;
     padding: 10px 0;
 }
