@@ -28,7 +28,6 @@ const DatePickerInput: React.FC<DatePickerInputProps> = ({
                     '& .MuiInputBase-root': {
                         border: `1px solid ${variables.utilityNeutral50}`,
 						margin: '6px 6px 6px 0',
-                        // width: '250px',
                         width: '100%',
                     },
                     '& .MuiInputBase-root:hover': {

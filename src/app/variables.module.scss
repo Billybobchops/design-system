@@ -76,6 +76,19 @@ $h5-font-size: 0.875rem;
 $h6-font-size: 0.75rem;
 $body-font-size: clamp(0.75rem, 2vw + .55rem, 1rem);
 
+// Forms
+$input-border-radius: 4px;
+$input-border: 1px solid $utility-neutral-50;
+$input-border-focus: 2px solid $theme-a-3;
+$input-border-hover: 1px solid $theme-a-3;
+$input-container-margin-bottom: 1rem;
+$input-desktop-width: 325px;
+$input-font-size: 1rem;
+$input-margin: 6px 6px 6px 0;
+$input-padding: 10px;
+$input-invalid-border-color: $utility-red-50;
+$input-invalid-border-left-width: 3px;
+
 // export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {
 	themeA1: $ic-blue-10;

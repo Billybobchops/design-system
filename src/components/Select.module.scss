@@ -1,11 +1,11 @@
 @use '../app/variables.module.scss';
 @use '../app/mixins.scss' as *;
 
-.inputContainer {
+.selectContainer {
 	margin-bottom: variables.$input-container-margin-bottom;
 }
 
-.input {
+.select {
 	border: variables.$input-border;
 	border-radius: variables.$input-border-radius;
 	font-size: variables.$input-font-size;
