@@ -14,7 +14,6 @@ import AlertStory from '@/style-guide/AlertStory';
 import CheckboxesStory from '@/style-guide/CheckboxesStory';
 import RadioGroupStory from '@/style-guide/RadioGroupStory';
 import DividerStory from '@/style-guide/DividerStory';
-import DatePickerInput from '@/components/DatePicker';
 import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
 import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
@@ -76,17 +75,9 @@ export default function Home() {
                     <AlertStory />
                 </ComponentDisplayArea>
 
-				<ComponentDisplayArea title='Text Input'>
+				<ComponentDisplayArea title='Inputs'>
 					<InputStory />
 				</ComponentDisplayArea>
-
-				<ComponentDisplayArea title='Phone Number Input'>
-					
-				</ComponentDisplayArea>
-
-                <ComponentDisplayArea title='Date Picker'>
-                    <DatePickerInput label='Start date of first payment' required={true} />
-                </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Checkboxes'>
                     <CheckboxesStory />

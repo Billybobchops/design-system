@@ -1,6 +1,10 @@
 @use '../app/variables.module.scss';
 @use '../app/mixins.scss' as *;
 
+.inputContainer {
+	margin-bottom: 1rem;
+}
+
 .input {
 	font-size: 1rem;
 }
