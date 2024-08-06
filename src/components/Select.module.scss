@@ -5,12 +5,31 @@
 	margin-bottom: variables.$input-container-margin-bottom;
 }
 
+.chevronPositioning {
+	position: relative;
+    align-items: center;
+    display: flex; // causing width issue
+	width: fit-content;
+
+	@include mobile-100-w;
+
+	svg {
+		pointer-events: none;
+		position: absolute;
+		right: 1rem;
+	}
+}
+
 .select {
+	appearance: none;
+    background: none;
 	border: variables.$input-border;
 	border-radius: variables.$input-border-radius;
 	font-size: variables.$input-font-size;
 	margin: variables.$input-margin;
+	margin-right: 0;
 	padding: variables.$input-padding;
+	padding-right: 30px; // override for select
 	width: variables.$input-desktop-width;
 
 	&:focus-visible {
