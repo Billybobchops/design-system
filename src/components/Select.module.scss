@@ -8,7 +8,7 @@
 .chevronPositioning {
 	position: relative;
     align-items: center;
-    display: flex; // causing width issue
+    display: flex;
 	width: fit-content;
 
 	@include mobile-100-w;
@@ -27,9 +27,9 @@
 	border-radius: variables.$input-border-radius;
 	font-size: variables.$input-font-size;
 	margin: variables.$input-margin;
-	margin-right: 0;
+	margin-right: 0; // override
 	padding: variables.$input-padding;
-	padding-right: 30px; // override for select
+	padding-right: 30px; // override
 	width: variables.$input-desktop-width;
 
 	&:focus-visible {
@@ -47,5 +47,3 @@
 	border-color: variables.$input-invalid-border-color;
 	border-left-width: variables.$input-invalid-border-left-width;
 }
-
-

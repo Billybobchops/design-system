@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import Input from '@/components/Input';
 import DatePickerInput from '@/components/DatePicker';
 import Select from '@/components/Select';
+import MultiSelect from '@/components/MultiSelect';
 
 const InputStory = () => {
+	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate']); // temp
+
     return (
         <>
             <Input
@@ -34,6 +38,19 @@ const InputStory = () => {
                 ]}
                 required={true}
                 helperText='Select your account from the options.'
+            />
+            <MultiSelect
+                label='Select Invoice Type(s)'
+                name='selectInvoiceType'
+                options={[
+                    { value: 'Utility' },
+                    { value: 'Real Estate' },
+                    { value: 'Electric' },
+                    { value: 'Property Taxes' },
+                    { value: 'Pizza Tax' },
+                ]}
+				selectedValues={selectedValues}
+				onChange={setSelectValues}
             />
         </>
     );
