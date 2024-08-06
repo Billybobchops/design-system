@@ -3,15 +3,15 @@ $display-border: 3px dashed skyblue;
 $component-area-border: 2px dashed #b511b5;
 
 // IC Product Colors
-$utility-blue-10: #e9eff7; // gets used
-$utility-blue-20: #a5c0e1;
-$utility-blue-30: #79a0d1; // gets used
-$utility-blue-40: #4c81c2;
-$utility-blue-50: #1f61b3; // gets used
-$utility-blue-60: #194e8f;
-$utility-blue-70: #133a6b; // gets used
-$utility-blue-80: #0c2748;
-$utility-blue-90: #061324;
+$ic-blue-10: #e9eff7; // gets used
+$ic-blue-20: #a5c0e1;
+$ic-blue-30: #79a0d1; // gets used
+$ic-blue-40: #4c81c2;
+$ic-blue-50: #1f61b3; // gets used
+$ic-blue-60: #194e8f;
+$ic-blue-70: #133a6b; // gets used
+$ic-blue-80: #0c2748;
+$ic-blue-90: #061324;
 
 // Utility colors (theme-agnostic)
 $utility-green-10: #dbf1de; // gets used
@@ -58,10 +58,10 @@ $utility-neutral-90: #1c1c1c;
 $utility-neutral-100: #000; // gets used
 
 // Theme Vars
-$theme-a-1: $utility-blue-10;
-$theme-a-2: $utility-blue-30;
-$theme-a-3: $utility-blue-50;
-$theme-a-4: $utility-blue-70;
+$theme-a-1: $ic-blue-10;
+$theme-a-2: $ic-blue-30;
+$theme-a-3: $ic-blue-50;
+$theme-a-4: $ic-blue-70;
 
 // Spacing
 $heading-margin: 0 0 15px 0;
@@ -78,10 +78,10 @@ $body-font-size: clamp(0.75rem, 2vw + .55rem, 1rem);
 
 // export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {
-	themeA1: $utility-blue-10;
-	themeA2: $utility-blue-30;
-	themeA3: $utility-blue-50;
-	themeA4: $utility-blue-70;
+	themeA1: $ic-blue-10;
+	themeA2: $ic-blue-30;
+	themeA3: $ic-blue-50;
+	themeA4: $ic-blue-70;
 	
 	utilityGreen10: $utility-green-10;
 	utilityGreen20: $utility-green-20;

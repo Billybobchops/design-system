@@ -76,8 +76,12 @@ export default function Home() {
                     <AlertStory />
                 </ComponentDisplayArea>
 
-				<ComponentDisplayArea title='Input'>
+				<ComponentDisplayArea title='Text Input'>
 					<InputStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Phone Number Input'>
+					
 				</ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Date Picker'>
