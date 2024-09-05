@@ -25,7 +25,7 @@ const Checkboxes: React.FC<CheckboxesProps> = ({ legend, options }) => {
 				{checkedItems.map((item, i) => {
 					return (
 						<li key={item.id}>
-							<label className={classes.formControl}>
+							<label>
 								<input
 									checked={item.checked}
 									className={classes.checkbox}

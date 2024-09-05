@@ -2,10 +2,10 @@
 
 .label {
 	display: block;
-	font-size: 1rem;
-	font-weight: 700;
+	font-size: variables.$label-font-size;
+	font-weight: variables.$label-font-weight;
 }
 
 .required {
-	color: variables.$utility-red-50;
+	color: variables.$required-color;
 }

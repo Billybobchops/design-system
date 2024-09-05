@@ -25,7 +25,10 @@ const CheckboxesStory = () => {
                     id: 'interstellar',
                     checked: false,
                 },
-                { text: 'Inception', id: 'inception', checked: false },
+                { 	text: 'Inception',
+					id: 'inception',
+					checked: false
+				},
             ]}
         />
     );

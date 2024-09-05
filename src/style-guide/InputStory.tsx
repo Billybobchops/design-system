@@ -39,8 +39,9 @@ const InputStory = () => {
                 required={true}
                 helperText='Select your account from the options.'
             />
-            <MultiSelect
-                label='Select Invoice Type(s)'
+			{/* Hide Multi-select until we better understand if it's 2 sep components */}
+            {/* <MultiSelect
+                label='Multi-select Invoice Type(s)'
                 name='selectInvoiceType'
                 options={[
                     { value: 'Utility' },
@@ -51,7 +52,7 @@ const InputStory = () => {
                 ]}
 				selectedValues={selectedValues}
 				onChange={setSelectValues}
-            />
+            /> */}
         </>
     );
 };

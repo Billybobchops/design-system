@@ -7,28 +7,15 @@
 	label {
 		align-items: center;
 		display: grid;
+		font-size: variables.$label-font-size;
 		grid-template-columns: auto 1fr;
 		margin-bottom: 12px;
+
+		&:disabled {
+			color: variables.$utility-neutral-50;
+			cursor: not-allowed;
+		}
 	}
-}
-
-.form-control {
-	font-family: system-ui, sans-serif;
-	font-size: 2rem;
-	font-weight: bold;
-	line-height: 1.1;
-	display: grid;
-	grid-template-columns: 1em auto;
-	gap: 0.5em;
-}
-
-.form-control + .form-control {
-	margin-top: 1em;
-}
-
-.form-control:disabled {
-	color: variables.$utility-neutral-50;
-	cursor: not-allowed;
 }
 
 .checkbox {
@@ -46,7 +33,7 @@
 		background-color: variables.$theme-a-3;
 	}
 
-	&:hover,
+	&:hover:not(:disabled),
 	&:not(:disabled):checked {
 		border-color: variables.$theme-a-3;
 	}

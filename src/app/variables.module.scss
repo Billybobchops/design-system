@@ -88,6 +88,9 @@ $input-margin: 6px 6px 6px 0;
 $input-padding: 10px;
 $input-invalid-border-color: $utility-red-50;
 $input-invalid-border-left-width: 3px;
+$label-font-size: 1rem;
+$label-font-weight: 700;
+$required-color: $utility-red-50;
 
 // export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {
