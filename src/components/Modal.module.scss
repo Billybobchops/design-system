@@ -2,9 +2,11 @@
 @use '../app/mixins.scss' as *;
 
 .dialog dialog {
+	border: none;
+	border-radius: variables.$border-radius-m;
 	max-height: 600px;
     max-width: 1200px;
-    padding: 30px 30px 0px 30px;
+    padding: variables.$spacing-l;
     width: calc(100% - 120px);
 }
 
@@ -39,7 +41,7 @@
 }
 
 .actions {
-    margin-top: 15px;
+    margin-top:variables.$spacing-s;;
 
     @include mobile-100-w;
 
@@ -50,7 +52,7 @@
 }
 
 .menuClose {
-    margin: 15px;
+    margin:variables.$spacing-s;;
     position: absolute;
     right: 0;
     top: 0;

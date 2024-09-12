@@ -1,3 +1,5 @@
+@use '../app/variables.module.scss';
+
 .list {
-    margin: 0 0 15px 25px;
+    margin: 0 0 variables.$spacing-s variables.$spacing-m;
 }

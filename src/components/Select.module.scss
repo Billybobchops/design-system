@@ -29,7 +29,7 @@
 	margin: variables.$input-margin;
 	margin-right: 0; // override
 	padding: variables.$input-padding;
-	padding-right: 30px; // override
+	padding-right: variables.$spacing-l; // override
 	width: variables.$input-desktop-width;
 
 	&:focus-visible {

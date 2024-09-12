@@ -37,7 +37,7 @@ const DatePickerInput: React.FC<DatePickerInputProps> = ({
                         border: `2px solid ${variables.themeA3}`,
                     },
                     '& .MuiOutlinedInput-input': {
-                        padding: '8px 0 8px 8px',
+                        padding: `${variables.spacingXS} 0 ${variables.spacingXS} ${variables.spacingXS}`,
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
                         border: 'none',

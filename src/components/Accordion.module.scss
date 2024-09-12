@@ -6,7 +6,7 @@
 
 .focusedSection {
 	outline: 1px solid variables.$theme-a-3;
-	outline-offset: 4px;
+	outline-offset: variables.$outline-offset-m;
 }
 
 .title {

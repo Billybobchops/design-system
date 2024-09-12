@@ -1,7 +1,7 @@
 @use '../app/variables.module.scss';
 
 .grid {
-	border-radius: 8px;	
+	border-radius: variables.$border-radius-m;	
 	border: 1px solid variables.$utility-neutral-20;
 	display: grid;
 	grid-template-rows: repeat(3, auto);
@@ -38,7 +38,7 @@
 .gridItem1,
 .gridItem2 {
 	display: grid;
-	grid-template-columns: 25px auto;
+	grid-template-columns: variables.$spacing-m auto;
 	font-weight: 400;
 }
 

@@ -3,7 +3,7 @@
 .componentDisplayArea {
     border-radius: 10px;
     border: variables.$component-area-border;
-    margin: 25px auto;
+    margin: variables.$spacing-m auto;
     max-width: 1170px;
-    padding: 25px;
+    padding: variables.$spacing-m;
 }

@@ -28,7 +28,7 @@
     font-size: variables.$input-font-size;
     margin: variables.$input-margin;
     padding: variables.$input-padding;
-    padding-right: 30px;
+    padding-right: variables.$spacing-l;
     width: variables.$input-desktop-width;
     text-align: left;
 
@@ -55,8 +55,8 @@
 
 .multiSelectSearch {
     width: calc(100% - 16px);
-    padding: 8px;
-    margin: 8px;
+    padding: variables.$spacing-xs;
+    margin: variables.$spacing-xs;
     border: 1px solid #ccc;
 }
 
@@ -69,14 +69,14 @@
 }
 
 .multiSelectItem {
-    padding: 8px;
+    padding: variables.$spacing-xs;
 
     label {
         display: flex;
         align-items: center;
 
         input {
-            margin-right: 8px;
+            margin-right: variables.$spacing-xs;
         }
     }
 }

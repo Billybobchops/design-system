@@ -10,7 +10,7 @@
 	padding: 12px 20px;
 
 	&:focus-visible {
-		border-radius: 5px;
+		border-radius: variables.$border-radius-s;
 		outline: 2.5px solid variables.$theme-a-3;
 	}
 
