@@ -1,6 +1,5 @@
 'use client';
 import Providers from '@/components/Providers';
-import Image from 'next/image';
 import styles from './page.module.css';
 import ComponentDisplayArea from '@/style-guide/ComponentDisplayArea';
 import ButtonPrimaryStory from '@/style-guide/ButtonPrimaryStory';
@@ -102,15 +101,6 @@ export default function Home() {
 				<ComponentDisplayArea title='Progress Indicator'>
 					<ProgressIndicatorStory />
 				</ComponentDisplayArea>
-
-                {/* <Image
-                    src='/vercel.svg'
-                    alt='Vercel Logo'
-                    className={styles.vercelLogo}
-                    width={100}
-                    height={24}
-                    priority
-                /> */}
             </Providers>
         </main>
     );

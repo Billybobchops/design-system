@@ -4,10 +4,10 @@ import Paragraph from '@/components/Paragraph';
 const AccordionStory = () => {
     return (
         <>
-            <Accordion title='Filters'>
+            <Accordion title='Accordion Heading'>
                 <Paragraph>Dummy content, yay!</Paragraph>
             </Accordion>
-            <Accordion title='Filters'>
+            <Accordion title='Accordion Heading'>
                 <Paragraph>Dummy content, yay!</Paragraph>
             </Accordion>
         </>

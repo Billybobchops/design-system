@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 import classes from "./Accordion.module.scss";
 import variables from '@/app/variables.module.scss';
 import { Chevron } from "./Symbols";
@@ -11,20 +11,27 @@ interface AccordionProps {
 const Accordion: React.FC<AccordionProps> = ({ children, title }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
+	const [isFocused, setIsFocused] = useState(false);
+	const accordionID = useId();
+
 	const buttonClasses = `${classes.button} ${isOpen ? classes.activeButton : ""}`;
-	const iconClasses = `${isOpen ? classes.activeIcon : ""}`;
+	const iconClasses = `${isOpen ? classes.activeIcon : classes.icon}`;
+	const sectionClasses = `${classes.section} ${isFocused ? classes.focusedSection : classes.section}`;
 
 	return (
-		<section className={classes.section}>
+		<section className={sectionClasses}>
 			<h2 className={classes.title}>
 				<button
 					aria-controls="sect1"
 					aria-expanded={isOpen}
 					className={buttonClasses}
-					id="accordion1id"
-					onBlur={() => setIsHovered(false)}
+					id={accordionID}
+					onBlur={() => {
+						setIsHovered(false);
+						setIsFocused(false); 
+					}}
 					onClick={() => setIsOpen(!isOpen)}
-					onFocus={() => setIsHovered(true)}
+					onFocus={() => setIsFocused(true)}
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
@@ -36,9 +43,8 @@ const Accordion: React.FC<AccordionProps> = ({ children, title }) => {
 			</h2>
 			{isOpen && (
 				<div
-					aria-labelledby="accordion1id"
+					aria-labelledby={accordionID}
 					className={classes.content}
-					id="sect1"
 					role="region"
 				>
 					{children}

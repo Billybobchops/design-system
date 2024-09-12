@@ -4,13 +4,22 @@
 	margin-bottom: 20px;
 }
 
+.focusedSection {
+	outline: 1px solid variables.$theme-a-3;
+	outline-offset: 4px;
+}
+
 .title {
 	margin-bottom: 0;
 }
 
+.section,
 .button {
-	background-color: variables.$utility-neutral-10;
 	border-radius: 6px;
+}
+
+.button {
+	background-color: variables.$utility-neutral-05;
 	border: none;
 	border-bottom: 2px solid variables.$utility-neutral-20;
 	color: variables.$theme-a-4;
@@ -20,11 +29,14 @@
 	text-align: left;
 	width: 100%;
 
-	&:hover,
-	&:focus-visible {
+	&:hover {
 		background-color: variables.$theme-a-1;
 		border-bottom: 2.5px solid variables.$theme-a-3;
 		color: variables.$theme-a-3;
+	}
+
+	&:focus-visible {
+		border: 1px solid variables.$theme-a-3;
 	}
 }
 
@@ -32,6 +44,11 @@
 	border-radius: 6px 6px 0 0;
 	border: 1px solid variables.$theme-a-3;
 	border-bottom: none;
+}
+
+.icon,
+.activeIcon {
+	margin: 0 12px;
 }
 
 .activeIcon svg {
