@@ -64,8 +64,21 @@ $theme-a-3: $ic-blue-50;
 $theme-a-4: $ic-blue-70;
 
 // Spacing
-$heading-margin: 0 0 15px 0;
-$button-margin: 15px;
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 16px;
+$spacing-m: 24px;
+$spacing-l: 32px;
+$spacing-xl: 40px;
+$spacing-xxl: 48px;
+
+$heading-margin: 0 0 $spacing-s 0;
+$button-margin: $spacing-s;
+
+// Border Radius
+$border-radius-s: $spacing-xxs;
+$border-radius-m: $spacing-xs;
+$border-radius-l: $spacing-l;
 
 // Typography
 $h1-font-size: clamp(1.25rem, 4vw + 1rem, 2rem); 
@@ -77,20 +90,24 @@ $h6-font-size: 0.75rem;
 $body-font-size: clamp(0.75rem, 2vw + .55rem, 1rem);
 
 // Forms
-$input-border-radius: 4px;
+$input-border-radius: $border-radius-s;
 $input-border: 1px solid $utility-neutral-50;
 $input-border-focus: 2px solid $theme-a-3;
 $input-border-hover: 1px solid $theme-a-3;
 $input-container-margin-bottom: 1rem;
 $input-desktop-width: 325px;
 $input-font-size: 1rem;
-$input-margin: 6px 6px 6px 0;
-$input-padding: 10px;
+$input-margin: $spacing-xxs $spacing-xxs $spacing-xxs 0;
+$input-padding: $spacing-xs;
 $input-invalid-border-color: $utility-red-50;
 $input-invalid-border-left-width: 3px;
 $label-font-size: 1rem;
 $label-font-weight: 700;
 $required-color: $utility-red-50;
+
+// Focus
+$outline-offset-s: 3px;
+$outline-offset-m: 4px;
 
 // export for access within .tsx files not just .scss -- so we don't have to hardcode any vars!
 :export {

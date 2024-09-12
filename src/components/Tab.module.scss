@@ -24,12 +24,12 @@
 .tab[aria-selected="true"] {
 	border: 2px solid variables.$utility-neutral-20;
 	border-bottom: none;
-	border-radius: 10px 10px 0 0;
+	border-radius: variables.$border-radius-s variables.$border-radius-s 0 0;
 	color: variables.$utility-neutral-80;
 
 	@media (max-width: 500px) {
 		border: 2px solid variables.$utility-neutral-20;
 		border-right: none;
-		border-radius: 10px 0 0 10px;
+		border-radius: variables.$border-radius-s 0 0 variables.$border-radius-s;
 	}
 }

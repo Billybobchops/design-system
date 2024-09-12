@@ -16,15 +16,20 @@ const ButtonPrimaryStory = () => {
                 variant='green'
             />
             <ButtonSecondary
-                disabled={false}
-                functionality='register'
-                text='Register'
-                variant='green'
-            />
-            <ButtonSecondary
                 disabled={true}
                 text='Search Invoices'
                 functionality='search'
+            />
+			<ButtonSecondary
+                disabled={false}
+                functionality='register'
+                text='Register Now'
+                variant='blue'
+            />
+			<ButtonSecondary
+                disabled={true}
+                functionality='register'
+                text='Register Now'
             />
         </>
     );

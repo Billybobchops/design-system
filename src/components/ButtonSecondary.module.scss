@@ -2,7 +2,7 @@
 @use '../app/mixins.scss' as *;
 
 .button {
-    border-radius: 5px;
+    border-radius: variables.$border-radius-s;
     border: none;
     color: variables.$utility-neutral-0;
     font-size: 17px;
@@ -13,14 +13,15 @@
 
     &:focus-visible {
         outline: 2.5px solid variables.$theme-a-3;
+		outline-offset: variables.$outline-offset-s;
     }
 
-    span:first-of-type {
-        margin-right: 6px;
+    .first {
+        margin-right: variables.$spacing-xs;
     }
 
-    span:last-of-type {
-        margin-left: 6px;
+    .second {
+        margin-left: variables.$spacing-xs;
     }
 
 	@include mobile-100-w;

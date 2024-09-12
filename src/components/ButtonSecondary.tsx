@@ -38,13 +38,13 @@ const ButtonSecondary: React.FC<ButtonProps> = ({
 			onClick={onClick}
 		>
 			{functionality === "search" && (
-				<span aria-hidden="true" >
+				<span className={classes.first} aria-hidden="true" >
 					<Search fill={getFillColor(disabled, variant)} />
 				</span>
 			)}
 			{text}
 			{functionality === "register" && (
-				<span aria-hidden="true" >
+				<span className={classes.second} aria-hidden="true" >
 					<Chevron fill={getFillColor(disabled, variant)} />
 				</span>
 			)}

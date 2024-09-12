@@ -1,7 +1,7 @@
 @use "../app/variables.module.scss";
 
 .alert {
-	border-radius: 4px;
+	border-radius: variables.$border-radius-s;
 	display: grid;
 	font-size: 14px;
 	grid-template-columns: auto 1fr 20px;
@@ -10,7 +10,7 @@
 	padding: 16px;
 
 	span:first-of-type {
-		margin-right: 10px;
+		margin-right: variables.$spacing-xs;
 	}
 
 	span:last-of-type {

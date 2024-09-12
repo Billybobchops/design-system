@@ -3,6 +3,7 @@
 .button {
 	background-color: transparent;
 	border: none;
+	border-radius: 4px;
 	color: variables.$utility-neutral-100;
 	font-size: 17px;
 	font-weight: 700;
@@ -10,6 +11,7 @@
 
 	&:focus-visible {
 		outline: 2.5px solid variables.$theme-a-3;
+		outline-offset: variables.$outline-offset-m;
 	}
 
 	span {

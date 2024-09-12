@@ -6,7 +6,7 @@ import { Chevron, NewWindow, Remove, Plus } from './Symbols';
 interface IconButtonProps {
     clickHandler?: () => void;
     disabled: boolean;
-    size: 'small' | 'large';
+    newWindowIcon?: boolean;
     text: string;
     variant: 'blue' | 'green' | 'red';
 }
@@ -14,7 +14,7 @@ interface IconButtonProps {
 const IconButton: React.FC<IconButtonProps> = ({
     clickHandler,
     disabled = false,
-    size,
+    newWindowIcon = false,
     text,
     variant,
 }) => {
@@ -39,10 +39,10 @@ const IconButton: React.FC<IconButtonProps> = ({
         ? getFillColor(variant, disabled).hoverFill
         : getFillColor(variant, disabled).fill;
 
-    const buttonClasses = `${classes.button} ${size === 'small' ? classes.small : ''} ${disabled ? classes.disabled : classes[variant]}`;
+    const buttonClasses = `${classes.button} ${disabled ? classes.disabled : classes[variant]}`;
 
     let firstIcon = null;
-    if (variant === 'blue' && size === 'small') {
+    if (variant === 'blue' && newWindowIcon) {
         firstIcon = (
             <span aria-hidden="true">
                 <NewWindow fill={fillColor} />
@@ -63,7 +63,7 @@ const IconButton: React.FC<IconButtonProps> = ({
     }
 
     let secondIcon = null;
-    if (variant === 'blue' && size === 'large') {
+    if (variant === 'blue' && !newWindowIcon) {
         secondIcon = (
             <span aria-hidden="true">
                 <Chevron fill={fillColor} />

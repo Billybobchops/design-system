@@ -16,14 +16,12 @@ const ActionButtonStory = () => {
 			/>
             <ActionButton
                 disabled={false}
-				hasSymbol={true}
-                text='Process Payment'
+                text='Process Payment $4,428.83'
                 variant='success'
             />
             <ActionButton
 				disabled={true}
-				hasSymbol={true}
-				text='Process Payment'
+				text='Process Payment $4,428.83'
 			/>
         </>
     );

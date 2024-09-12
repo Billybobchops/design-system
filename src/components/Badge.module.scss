@@ -1,7 +1,7 @@
 @use "../app/variables.module.scss";
 
 .badge {
-	border-radius: 30px;
+	border-radius: variables.$border-radius-l;
 	display: inline-block;
 	font-size: 12px;
 	font-weight: 700;
