@@ -3,7 +3,7 @@ import ButtonSecondary from '@/components/ButtonSecondary';
 import IconParagraph from '@/components/IconParagraph';
 import Paragraph from '@/components/Paragraph';
 import UnorderedList from '@/components/UnorderedList';
-import { Warning, ErrorLarge } from '@/components/Symbols';
+import { WarningLarge, ErrorLarge } from '@/components/Symbols';
 import variables from '@/app/variables.module.scss';
 
 const ModalStory = () => {
@@ -41,7 +41,7 @@ const ModalStory = () => {
                 )}>
                 <IconParagraph
                     content='Text will be updated on the following pages:'
-                    icon={<Warning fill={variables.utilityYellow60} />}
+                    icon={<WarningLarge fill={variables.utilityYellow60} />}
                 />
                 <UnorderedList items={['Scholarship Fund']} />
                 <IconParagraph

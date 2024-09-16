@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./Alert.module.scss";
 import variables from '@/app/variables.module.scss';
-import { Info, MenuClose, Error, Success } from "./Symbols";
+import { Info, MenuClose, Error, Success, Warning } from "./Symbols";
 import VisuallyHidden from "./VisuallyHidden";
 
 interface AlertProps {
@@ -30,6 +30,8 @@ const Alert: React.FC<AlertProps> = ({ content, isDismissable, variant }) => {
 	let symbol = <Info fill={getFillColor(variant)} />;
 	if (variant === "error") {
 		symbol = <Error fill={getFillColor(variant)} />;
+	} else if (variant === "warning") {
+		symbol = <Warning fill={getFillColor(variant)} />;
 	} else if (variant === "success") {
 		symbol = <Success fill={getFillColor(variant)} />;
 	}
