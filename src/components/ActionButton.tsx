@@ -37,12 +37,14 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 			disabled={disabled}
 			onClick={clickHandler}
 		>
-			{hasSymbol && (
-				<span aria-hidden="true">
-					<Remove fill={getFillColor(disabled, variant)} />
-				</span>
-			)}
-			{text}
+			<div className={classes.innerButton}>
+				{hasSymbol && (
+					<span aria-hidden="true">
+						<Remove fill={getFillColor(disabled, variant)} />
+					</span>
+				)}
+				{text}
+			</div>
 		</button>
 	);
 };

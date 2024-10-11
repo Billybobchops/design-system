@@ -13,6 +13,7 @@ const Accordion: React.FC<AccordionProps> = ({ children, title }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const [isFocused, setIsFocused] = useState(false);
 	const accordionID = useId();
+	const accordionContentID = useId();
 
 	const buttonClasses = `${classes.button} ${isOpen ? classes.activeButton : ""}`;
 	const iconClasses = `${isOpen ? classes.activeIcon : classes.icon}`;
@@ -22,7 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ children, title }) => {
 		<section className={sectionClasses}>
 			<h2 className={classes.title}>
 				<button
-					aria-controls="sect1"
+					aria-controls={accordionContentID}
 					aria-expanded={isOpen}
 					className={buttonClasses}
 					id={accordionID}
@@ -45,6 +46,7 @@ const Accordion: React.FC<AccordionProps> = ({ children, title }) => {
 				<div
 					aria-labelledby={accordionID}
 					className={classes.content}
+					id={accordionContentID}
 					role="region"
 				>
 					{children}

@@ -5,8 +5,8 @@
 	border: none;
 	border-radius: variables.$border-radius-s;
 	color: variables.$utility-neutral-100;
-	font-size: 17px;
-	font-weight: 700;
+	font-size: variables.$button-font-size;
+	font-weight: variables.$button-font-weight;
 	margin: 0 variables.$spacing-m variables.$spacing-s variables.$spacing-m;
 
 	&:focus-visible {

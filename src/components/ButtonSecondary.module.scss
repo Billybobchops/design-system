@@ -5,8 +5,8 @@
     border-radius: variables.$border-radius-s;
     border: none;
     color: variables.$utility-neutral-0;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: variables.$button-font-size;
+    font-weight: variables.$button-font-weight;
     padding: 12px 20px;
     margin: 0 variables.$button-margin variables.$button-margin 0;
     width: fit-content;

@@ -4,8 +4,8 @@
 	background: none;
 	border: none;
 	color: variables.$theme-a-4;
-	font-size: 20px;
-	font-weight: 700;
+	font-size: variables.$button-font-size;
+    font-weight: variables.$button-font-weight;
 	margin: 0 variables.$button-margin variables.$button-margin 0;
 	padding: 12px 20px;
 

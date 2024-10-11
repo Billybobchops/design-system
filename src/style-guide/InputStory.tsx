@@ -9,6 +9,11 @@ const InputStory = () => {
 
     return (
         <>
+			<DatePickerInput
+                label='Start date of first payment'
+                helperText='Please select a date for your first payment.'
+                required={true}
+            />
             <Input
                 helperText='Please enter a valid billing address.'
                 label='Billing Address'
@@ -22,11 +27,6 @@ const InputStory = () => {
                 name='phoneNumber'
                 required={true}
                 type='tel'
-            />
-            <DatePickerInput
-                label='Start date of first payment'
-                helperText='Please select a date for your first payment.'
-                required={true}
             />
             <Select
                 label='Select an account'
