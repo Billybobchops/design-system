@@ -37,7 +37,7 @@ const getBadgeVariant = (status: EnrollmentStatus) => {
     if (status === 'Enrolled') {
         return 'success';
     }
-    return 'default';
+    return 'neutral';
 };
 
 interface EnrollmentGridRowProps {
