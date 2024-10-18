@@ -3,7 +3,7 @@ import classes from './Badge.module.scss';
 interface BadgeProps {
     content: string;
     hasMargin?: boolean;
-    variant: 'error' | 'success' | 'warning';
+    variant: 'error' | 'success' | 'warning' | 'neutral';
 }
 
 const Badge: React.FC<BadgeProps> = ({
