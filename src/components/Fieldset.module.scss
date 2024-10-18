@@ -7,6 +7,8 @@
 }
 
 .legend {
-	padding: 0 12px;
+	font-size: variables.$label-font-size;
+	font-weight: variables.$label-font-weight;
 	margin: 0 0 variables.$spacing-s variables.$spacing-s;
+	padding: 0 12px;
 }

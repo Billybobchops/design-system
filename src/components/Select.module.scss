@@ -28,6 +28,7 @@
 	font-size: variables.$input-font-size;
 	margin: variables.$input-margin;
 	margin-right: 0; // override
+	height: variables.$input-height;
 	padding: variables.$input-padding;
 	padding-right: variables.$spacing-l; // override
 	width: variables.$input-desktop-width;

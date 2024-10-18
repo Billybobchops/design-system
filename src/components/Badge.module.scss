@@ -13,12 +13,6 @@
 	margin: 0 12px 12px 0;
 }
 
-.error {
-	background-color: variables.$utility-red-10;
-	border: 1px solid variables.$utility-red-20;
-	color: variables.$utility-red-70;
-}
-
 .success {
 	background-color: variables.$utility-green-10;
 	border: 1px solid variables.$utility-green-20;
@@ -29,4 +23,22 @@
 	background-color: variables.$utility-yellow-10;
 	border: 1px solid variables.$utility-yellow-30;
 	color: variables.$utility-yellow-90;
+}
+
+.error {
+	background-color: variables.$utility-red-10;
+	border: 1px solid variables.$utility-red-20;
+	color: variables.$utility-red-70;
+}
+
+.neutral {
+	background-color: variables.$utility-neutral-05;
+	border: 1px solid variables.$utility-neutral-20;
+	color: variables.$utility-neutral-70;
+}
+
+.beta {
+	background-color: variables.$ic-blue-10;
+	border: 1px solid variables.$ic-blue-30;
+	color: variables.$ic-blue-70;
 }

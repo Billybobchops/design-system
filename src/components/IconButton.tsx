@@ -49,9 +49,7 @@ const IconButton: React.FC<IconButtonProps> = ({
         <button
             className={buttonClasses}
             disabled={disabled}
-            onBlur={() => setIsHovered(false)}
             onClick={clickHandler}
-            onFocus={() => setIsHovered(true)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
 		>

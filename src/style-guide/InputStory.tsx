@@ -15,15 +15,21 @@ const InputStory = () => {
                 required={true}
             />
             <Input
+                label='First name'
+                name='firstName'
+                required={true}
+                type='text'
+            />
+            <Input
                 helperText='Please enter a valid billing address.'
-                label='Billing Address'
+                label='Billing address'
                 name='billingAddress'
                 required={true}
                 type='text'
             />
             <Input
                 helperText='Please enter a valid phone number.'
-                label='Phone Number'
+                label='Phone number'
                 name='phoneNumber'
                 required={true}
                 type='tel'

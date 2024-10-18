@@ -21,7 +21,7 @@ const Modal: React.FC<ModalProps> = ({
     actionButtonText,
     hasAction = false,
     children,
-    color = variables.icBlue80,
+    color = variables.themeA4,
     title,
     TriggerElement,
 }) => {

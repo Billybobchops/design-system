@@ -278,7 +278,7 @@ export const MenuCloseLarge: React.FC<SymbolProps> = ({ fill = variables.$utilit
     return (
         <svg
             aria-hidden='true'
-            fill='none'
+            fill={fill}
             height='16'
             viewBox='0 0 16 16'
             width='16'

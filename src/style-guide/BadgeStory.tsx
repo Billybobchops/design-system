@@ -6,6 +6,8 @@ const BadgeStory = () => {
             <Badge content='Approved' variant='success' />
             <Badge content='Declined' variant='error' />
             <Badge content='Inactive' variant='warning' />
+            <Badge content='Neutral' variant='neutral' />
+            <Badge content='Beta' variant='beta' />
         </>
     );
 };
