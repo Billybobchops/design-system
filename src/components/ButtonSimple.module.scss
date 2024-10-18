@@ -1,25 +1,38 @@
 @use "../app/variables.module.scss";
+@use '../app/mixins.scss' as *;
 
 .button {
-	background-color: transparent;
+	@include buttons;
+
+	background: none;
 	border: none;
 	border-radius: variables.$border-radius-s;
 	color: variables.$utility-neutral-100;
-	font-size: variables.$button-font-size;
-	font-weight: variables.$button-font-weight;
-	margin: 0 variables.$spacing-m variables.$spacing-s variables.$spacing-m;
+	margin: 12px 20px;
+	padding: 0;
 
-	&:focus-visible {
-		outline: 2.5px solid variables.$theme-a-3;
-		outline-offset: variables.$outline-offset-m;
+	&.red,
+	&.green,
+	&.blue,
+	&.disabled {
+		background: none;
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	&.disabled {
+		background: none;
+		color: variables.$utility-neutral-10;
 	}
 }
 
-.blue {
-	color: variables.$theme-a-4;
+.red {
+	color: variables.$utility-red-50;
 
 	&:hover {
-		color: variables.$theme-a-3;
+		color: variables.$utility-red-70;
 	}
 }
 
@@ -31,14 +44,11 @@
 	}
 }
 
-.red {
-	color: variables.$utility-red-60;
+.blue {
+	color: variables.$theme-a-4;
 
 	&:hover {
-		color: variables.$utility-red-80;
+		color: variables.$theme-a-3;
 	}
 }
 
-.disabled {
-	color: variables.$utility-neutral-10;
-}

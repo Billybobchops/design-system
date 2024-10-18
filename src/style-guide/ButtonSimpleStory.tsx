@@ -18,6 +18,12 @@ const ButtonSimpleStory = () => {
                 text='cancel'
                 variant='red'
             />
+            <ButtonSimple
+                clickHandler={() => { console.log('test') }}
+				disabled={true}
+                text='cancel'
+                variant='red'
+            />
         </>
     );
 };

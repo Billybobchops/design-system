@@ -39,6 +39,11 @@
 		}
 	}
 
+	&:focus-visible {
+        outline: 2.5px solid variables.$theme-a-3;
+		outline-offset: variables.$outline-offset-s
+    }
+
 	&.disabled {
 		background-color: variables.$utility-neutral-10;
 		color: variables.$utility-neutral-60;

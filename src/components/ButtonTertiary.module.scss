@@ -5,11 +5,6 @@
     @include mobile-100-w;
     @include buttons;
 
-    &:focus-visible {
-        outline: 2px solid variables.$theme-a-3;
-        outline-offset: variables.$outline-offset-s;
-    }
-
     &.blue,
     &.green,
     &.red {

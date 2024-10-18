@@ -18,7 +18,8 @@ const ModalStory = () => {
                         text='Info Modal'
                         variant='blue'
                     />
-                )}>
+                )}
+			>
                 <Paragraph>
                     This account has an active loan. This account is not
                     eligible to enroll in AutoPay and will be immediately
@@ -38,7 +39,8 @@ const ModalStory = () => {
                         text='Action Modal'
                         variant='blue'
                     />
-                )}>
+                )}
+			>
                 <IconParagraph
                     content='Text will be updated on the following pages:'
                     icon={<WarningLarge fill={variables.utilityYellow60} />}
@@ -63,7 +65,8 @@ const ModalStory = () => {
                         text='Action Modal Scrollable'
                         variant='blue'
                     />
-                )}>
+                )}
+			>
                 <Paragraph>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Nulla, sed. Optio nam earum ipsa quibusdam nesciunt eos

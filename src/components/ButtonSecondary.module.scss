@@ -6,9 +6,4 @@
 	@include buttons;
 
 	border-radius: variables.$border-radius-s;
-
-    &:focus-visible {
-        outline: 2.5px solid variables.$theme-a-3;
-		outline-offset: variables.$outline-offset-s;
-    }
 }

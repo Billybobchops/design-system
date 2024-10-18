@@ -13,7 +13,7 @@ interface ModalProps {
     color?: string;
     hasAction?: boolean;
     title?: string;
-    TriggerElement: React.FC<{ onClick: () => void }>;
+    TriggerElement: React.FC<{ clickHandler: () => void }>;
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -69,7 +69,7 @@ const Modal: React.FC<ModalProps> = ({
 
     return (
         <div className={classes.dialog}>
-            <TriggerElement onClick={openDialog} />
+            <TriggerElement clickHandler={openDialog} />
             <dialog ref={dialogRef}>
                 <button className={classes.menuClose} onClick={closeDialog}>
                     <span aria-hidden="true"><MenuCloseLarge fill={color} /></span>
@@ -93,7 +93,7 @@ const Modal: React.FC<ModalProps> = ({
 									/>
 									<ButtonSecondary
 										disabled={false}
-										onClick={handleModalAction}
+										clickHandler={handleModalAction}
 										text={actionButtonText ? actionButtonText : ''}
 										variant='blue'
 									/>
@@ -102,7 +102,7 @@ const Modal: React.FC<ModalProps> = ({
 							{!hasAction && (
 								<ButtonSecondary
 									disabled={false}
-									onClick={closeDialog}
+									clickHandler={closeDialog}
 									text='Close'
 									variant='blue'
 								/>

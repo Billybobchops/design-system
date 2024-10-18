@@ -7,11 +7,6 @@
     color: variables.$theme-a-4;
 	padding: 4px;
 
-    &:focus-visible {
-        border-radius: variables.$border-radius-s;
-        outline: 2.5px solid variables.$theme-a-3;
-    }
-
 	&.red,
 	&.green,
 	&.blue,

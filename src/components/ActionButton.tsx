@@ -15,7 +15,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 	clickHandler,
 	disabled = false,
 	icon,
-	iconPosition =  'end',
+	iconPosition = 'end',
 	text,
 	variant,
 }) => {

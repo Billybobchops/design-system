@@ -8,9 +8,4 @@
     border-radius: variables.$border-radius-l;
     border: 2px solid variables.$utility-neutral-10;
     padding: variables.$button-padding-large;
-
-    &:focus-visible {
-        outline: 2.5px solid variables.$theme-a-3;
-		outline-offset: variables.$outline-offset-s;
-    }
 }
