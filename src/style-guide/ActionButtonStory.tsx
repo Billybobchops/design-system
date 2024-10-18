@@ -20,7 +20,6 @@ const ActionButtonStory = () => {
             <ActionButton
                 disabled={false}
                 text='Process Payment $4,428.83'
-                variant='green'
             />
             <ActionButton
 				disabled={true}

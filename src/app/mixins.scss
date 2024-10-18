@@ -47,6 +47,11 @@
 	&.disabled {
 		background-color: variables.$utility-neutral-10;
 		color: variables.$utility-neutral-60;
+
+		&:hover {
+			background-color: variables.$utility-neutral-10;
+			color: variables.$utility-neutral-60;
+		}
 	}
 
 	.iconStart {

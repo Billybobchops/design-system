@@ -17,7 +17,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
     icon,
     iconPosition = 'end',
     text,
-    variant,
+    variant = 'blue',
 }) => {
     const fillColor = disabled ? variables.utilityNeutral60 : variables.utilityNeutral0;
 

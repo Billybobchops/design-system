@@ -8,7 +8,7 @@ interface ActionButtonProps {
 	icon?: React.ReactNode;
 	iconPosition?: 'start' | 'end';
 	text: string;
-	variant?: 'red' | 'green';
+	variant?: 'green' | 'red';
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({
@@ -17,7 +17,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 	icon,
 	iconPosition = 'end',
 	text,
-	variant,
+	variant = 'green',
 }) => {
 	const fillColor = disabled ? variables.utilityNeutral60 : variables.utilityNeutral0;
 

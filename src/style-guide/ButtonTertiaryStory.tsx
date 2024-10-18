@@ -6,7 +6,6 @@ const ButtonTertiaryStory = () => {
             <ButtonTertiary
                 disabled={false}
                 text='Cancel Payment'
-                variant='blue'
             />
             <ButtonTertiary
                 disabled={false}

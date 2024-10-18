@@ -5,7 +5,7 @@
 }
 
 .focusedSection {
-	outline: 1px solid variables.$theme-a-3;
+	outline: 2px solid variables.$theme-a-3;
 	outline-offset: variables.$outline-offset-m;
 }
 
@@ -23,8 +23,11 @@
 	border: none;
 	border-bottom: 2px solid variables.$utility-neutral-20;
 	color: variables.$theme-a-4;
+	display: grid;
 	font-size: 16px;
 	font-weight: 700;
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-between;
 	padding: 14px 18px;
 	text-align: left;
 	width: 100%;
@@ -36,7 +39,7 @@
 	}
 
 	&:focus-visible {
-		border: 1px solid variables.$theme-a-3;
+		border: 2px solid variables.$theme-a-3;
 	}
 }
 
@@ -49,10 +52,11 @@
 .icon,
 .activeIcon {
 	margin: 0 12px;
+	transform: rotate(90deg);
 }
 
 .activeIcon svg {
-	transform: rotate(90deg);
+	transform: rotate(180deg);
 }
 
 .content {

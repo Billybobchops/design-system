@@ -6,7 +6,6 @@ const ButtonSimpleStory = () => {
             <ButtonSimple
                 clickHandler={() => { console.log('test') }}
                 text='cancel'
-                variant='blue'
             />
             <ButtonSimple
                 clickHandler={() => { console.log('test') }}

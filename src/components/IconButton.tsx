@@ -11,7 +11,7 @@ interface IconButtonProps {
     iconPosition?: 'start' | 'end';
     newWindowIcon?: boolean;
     text: string;
-    variant: 'blue' | 'green' | 'red';
+    variant?: 'blue' | 'green' | 'red';
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -20,7 +20,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 	icon,
     iconPosition = 'end',
     text,
-    variant,
+    variant = 'blue',
 }) => {
     const [isHovered, setIsHovered] = useState(false);
     const getFillColor = (variant: string, disabled: boolean) => {

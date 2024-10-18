@@ -11,7 +11,7 @@ const ButtonTertiary: React.FC<ButtonProps> = ({
     clickHandler,
     disabled = false,
     text,
-    variant,
+    variant = 'blue',
 }) => {
     return (
         <button

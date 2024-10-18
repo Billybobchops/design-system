@@ -9,7 +9,6 @@ const ButtonPrimaryStory = () => {
                 icon={<Search />}
 				iconPosition='start'
                 text='Search Invoices'
-                variant='blue'
             />
             <ButtonSecondary
                 disabled={false}
@@ -28,7 +27,6 @@ const ButtonPrimaryStory = () => {
                 disabled={false}
                 icon={<Chevron />}
                 text='Register Now'
-                variant='blue'
             />
 			<ButtonSecondary
                 disabled={true}
