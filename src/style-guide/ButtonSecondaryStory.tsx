@@ -1,34 +1,38 @@
 import ButtonSecondary from '@/components/ButtonSecondary';
+import { Chevron, Search } from '@/components/Symbols';
 
 const ButtonPrimaryStory = () => {
     return (
         <>
             <ButtonSecondary
                 disabled={false}
-                functionality='search'
+                icon={<Search />}
+				iconPosition='start'
                 text='Search Invoices'
                 variant='blue'
             />
             <ButtonSecondary
                 disabled={false}
-                functionality='search'
+                icon={<Search />}
+				iconPosition='start'
                 text='Search Invoices'
                 variant='green'
             />
             <ButtonSecondary
                 disabled={true}
+                icon={<Search />}
+				iconPosition='start'
                 text='Search Invoices'
-                functionality='search'
             />
 			<ButtonSecondary
                 disabled={false}
-                functionality='register'
+                icon={<Chevron />}
                 text='Register Now'
                 variant='blue'
             />
 			<ButtonSecondary
                 disabled={true}
-                functionality='register'
+                icon={<Chevron />}
                 text='Register Now'
             />
         </>
@@ -36,3 +40,4 @@ const ButtonPrimaryStory = () => {
 };
 
 export default ButtonPrimaryStory;
+``

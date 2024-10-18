@@ -1,53 +1,43 @@
+import React from 'react';
 import classes from "./ButtonSecondary.module.scss";
 import variables from '@/app/variables.module.scss';
-import { Chevron, Search } from "./Symbols";
 
 interface ButtonProps {
-	onClick?: () => void;
+	clickHandler?: () => void;
 	disabled: boolean;
-	functionality?: "search" | "register";
+	icon?: React.ReactNode;
+    iconPosition?: 'start' | 'end';
 	text: string;
-	variant?: "blue" | "green";
+	variant?: 'blue' | 'green';
 }
 
 const ButtonSecondary: React.FC<ButtonProps> = ({
-	onClick,
+	clickHandler,
 	disabled = false,
-	functionality,
+	icon,
+    iconPosition = 'end',
 	text,
 	variant,
 }) => {
-	const getFillColor = (disabled: boolean, variant?: string) => {
-		if (disabled) {
-			return variables.utilityNeutral60;
-		}
-		switch (variant) {
-			case "blue":
-				return variables.utilityNeutral0;
-			case "green":
-				return variables.utilityNeutral0;
-			default:
-				return variables.utilityNeutral60;
-		}
-	};
+	const fillColor = disabled ? variables.utilityNeutral60 : variables.utilityNeutral0;
 
 	return (
 		<button
-			className={`${classes.button} ${variant ? classes[variant] : ""} ${disabled ? classes.disabled : ""}`}
+			className={`${classes.button} ${variant ? classes[variant] : ''} ${disabled ? classes.disabled : ''}`}
 			disabled={disabled}
-			onClick={onClick}
+			onClick={clickHandler}
 		>
-			{functionality === "search" && (
-				<span className={classes.first} aria-hidden="true" >
-					<Search fill={getFillColor(disabled, variant)} />
-				</span>
-			)}
-			{text}
-			{functionality === "register" && (
-				<span className={classes.second} aria-hidden="true" >
-					<Chevron fill={getFillColor(disabled, variant)} />
-				</span>
-			)}
+			{icon && iconPosition === 'start' && (
+                <span aria-hidden='true' className={classes.iconStart}>
+                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+                </span>
+            )}
+            {text}
+            {icon && iconPosition === 'end' && (
+                <span aria-hidden='true' className={classes.iconEnd}>
+                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+                </span>
+            )}
 		</button>
 	);
 };

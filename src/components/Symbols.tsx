@@ -1,8 +1,9 @@
+import variables from '@/app/variables.module.scss';
 interface SymbolProps {
-    fill: string;
+    fill?: string;
 }
 
-export const AutoPay: React.FC<SymbolProps> = ({ fill }) => {
+export const AutoPay: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
 			aria-hidden='true'
@@ -42,7 +43,7 @@ export const AutoPay: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Paperless: React.FC<SymbolProps> = ({ fill }) => {
+export const Paperless: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -60,7 +61,7 @@ export const Paperless: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const PayByText: React.FC<SymbolProps> = ({ fill }) => {
+export const PayByText: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -90,7 +91,7 @@ export const PayByText: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Enrolled: React.FC<SymbolProps> = ({ fill }) => {
+export const Enrolled: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
 			aria-hidden='true'
@@ -108,7 +109,7 @@ export const Enrolled: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const NotEnrolled: React.FC<SymbolProps> = ({ fill }) => {
+export const NotEnrolled: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
 			aria-hidden='true'
@@ -142,7 +143,7 @@ export const NotEnrolled: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const PartiallyEnrolled: React.FC<SymbolProps> = ({ fill }) => {
+export const PartiallyEnrolled: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
 			aria-hidden='true'
@@ -172,7 +173,7 @@ export const PartiallyEnrolled: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const ChevronLarge: React.FC<SymbolProps> = ({ fill }) => {
+export const ChevronLarge: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -201,7 +202,7 @@ export const ChevronLarge: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Minus: React.FC<SymbolProps> = ({ fill }) => {
+export const Minus: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -219,7 +220,7 @@ export const Minus: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Plus: React.FC<SymbolProps> = ({ fill }) => {
+export const Plus: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -237,7 +238,7 @@ export const Plus: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Info: React.FC<SymbolProps> = ({ fill }) => {
+export const Info: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -255,7 +256,7 @@ export const Info: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const MenuClose: React.FC<SymbolProps> = ({ fill }) => {
+export const MenuClose: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -273,7 +274,7 @@ export const MenuClose: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const MenuCloseLarge: React.FC<SymbolProps> = ({ fill }) => {
+export const MenuCloseLarge: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -291,7 +292,7 @@ export const MenuCloseLarge: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Error: React.FC<SymbolProps> = ({ fill }) => {
+export const Error: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -308,7 +309,7 @@ export const Error: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const ErrorLarge: React.FC<SymbolProps> = ({ fill }) => {
+export const ErrorLarge: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
 			aria-hidden='true'
@@ -326,7 +327,7 @@ export const ErrorLarge: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Success: React.FC<SymbolProps> = ({ fill }) => {
+export const Success: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -344,7 +345,7 @@ export const Success: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Chevron: React.FC<SymbolProps> = ({ fill }) => {
+export const Chevron: React.FC<SymbolProps> = ({ fill = variables.utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -363,7 +364,7 @@ export const Chevron: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Search: React.FC<SymbolProps> = ({ fill }) => {
+export const Search: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -383,7 +384,7 @@ export const Search: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Remove: React.FC<SymbolProps> = ({ fill }) => {
+export const Remove: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -400,7 +401,7 @@ export const Remove: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const NewWindow: React.FC<SymbolProps> = ({ fill }) => {
+export const NewWindow: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -418,7 +419,7 @@ export const NewWindow: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const Warning: React.FC<SymbolProps> = ({ fill }) => {
+export const Warning: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -435,7 +436,7 @@ export const Warning: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const WarningLarge: React.FC<SymbolProps> = ({ fill }) => {
+export const WarningLarge: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             aria-hidden='true'
@@ -453,7 +454,7 @@ export const WarningLarge: React.FC<SymbolProps> = ({ fill }) => {
     );
 };
 
-export const SelectChevron: React.FC<SymbolProps> = ({ fill }) => {
+export const SelectChevron: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
             fill={fill}

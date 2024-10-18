@@ -1,5 +1,54 @@
+@use '../app/variables.module.scss';
+
 @mixin mobile-100-w {
     @media (max-width: 500px) {
         width: 100%;
     }
+}
+
+@mixin buttons {
+	border: variables.$button-border;
+	border-radius: variables.$spacing-xxs;
+	color: variables.$utility-neutral-0;
+	font-size: variables.$button-font-size;
+    font-weight: variables.$button-font-weight;
+	margin: variables.$button-margin;
+	padding: variables.$button-padding-small;
+
+	&.red {
+		background-color: variables.$utility-red-50;
+	
+		&:hover {
+			background-color: variables.$utility-red-70;
+		}
+	}
+	
+	&.green {
+		background-color: variables.$utility-green-60;
+	
+		&:hover {
+			background-color: variables.$utility-green-80;
+		}
+	}
+
+	&.blue {
+		background-color: variables.$theme-a-4;
+	
+		&:hover {
+			background-color: variables.$theme-a-3;
+		}
+	}
+
+	&.disabled {
+		background-color: variables.$utility-neutral-10;
+		color: variables.$utility-neutral-60;
+	}
+
+	.iconStart {
+		margin-right: variables.$spacing-xs;
+	}
+
+	.iconEnd {
+		margin-left: variables.$spacing-xs;
+	}
 }

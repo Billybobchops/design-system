@@ -1,49 +1,44 @@
+import React from "react";
 import classes from "./ActionButton.module.scss";
 import variables from '@/app/variables.module.scss';
-import { Remove } from "./Symbols";
 
 interface ActionButtonProps {
 	clickHandler?: () => void;
 	disabled: boolean;
-	hasSymbol?: boolean;
+	icon?: React.ReactNode;
+	iconPosition?: 'start' | 'end';
 	text: string;
-	variant?: "danger" | "success";
+	variant?: 'red' | 'green';
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({
 	clickHandler,
 	disabled = false,
-	hasSymbol = false,
+	icon,
+	iconPosition =  'end',
 	text,
 	variant,
 }) => {
-	const getFillColor = (disabled: boolean, variant?: string) => {
-		if (disabled) {
-			return variables.utilityNeutral60;
-		}
-		switch (variant) {
-			case "danger":
-				return variables.utilityNeutral0;
-			case "success":
-				return variables.utilityNeutral0;
-			default:
-				return variables.utilityNeutral60;
-		}
-	};
+	const fillColor = disabled ? variables.utilityNeutral60 : variables.utilityNeutral0;
 
 	return (
 		<button
-			className={`${classes.button} ${variant ? classes[variant] : ""} ${disabled ? classes.disabled : ""}`}
+			className={`${classes.button} ${variant ? classes[variant] : ''} ${disabled ? classes.disabled : ''}`}
 			disabled={disabled}
 			onClick={clickHandler}
 		>
 			<div className={classes.innerButton}>
-				{hasSymbol && (
-					<span aria-hidden="true">
-						<Remove fill={getFillColor(disabled, variant)} />
+				{icon && iconPosition === 'start' && (
+					<span aria-hidden='true' className={classes.iconStart}>
+						{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
 					</span>
 				)}
 				{text}
+				{icon && iconPosition === 'end' && (
+					<span aria-hidden='true' className={classes.iconEnd}>
+						{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+					</span>
+				)}
 			</div>
 		</button>
 	);

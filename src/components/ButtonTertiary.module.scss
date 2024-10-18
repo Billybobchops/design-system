@@ -2,73 +2,59 @@
 @use '../app/mixins.scss' as *;
 
 .button {
-    border-radius: variables.$spacing-xxs;
-    border: none;
-    font-size: variables.$button-font-size;
-    font-weight: variables.$button-font-weight;
-    margin: 0 variables.$button-margin variables.$button-margin 0;
-    padding: 12px 20px;
+    @include mobile-100-w;
+    @include buttons;
 
     &:focus-visible {
         outline: 2px solid variables.$theme-a-3;
-		outline-offset: variables.$outline-offset-s;
+        outline-offset: variables.$outline-offset-s;
     }
 
-    span:first-of-type {
-        margin-right: 6px;
+    &.blue,
+    &.green,
+    &.red {
+        background-color: variables.$utility-neutral-0;
     }
 
-    span:last-of-type {
-        margin-left: 6px;
-    }
-
-    @include mobile-100-w;
-}
-
-.blue,
-.green,
-.red {
-    background-color: variables.$utility-neutral-0;
-}
-
-.blue:hover,
-.green:hover,
-.red:hover {
-    color: variables.$utility-neutral-0;
-}
-
-.blue {
-    border: 2px solid variables.$theme-a-4;
-    color: variables.$theme-a-4;
-
-    &:hover {
-        background-color: variables.$theme-a-3;
-        border: 2px solid variables.$theme-a-3;
+    &.blue:hover,
+    &.green:hover,
+    &.red:hover {
         color: variables.$utility-neutral-0;
     }
-}
 
-.green {
-    border: 2px solid variables.$utility-green-70;
-    color: variables.$utility-green-70;
+    &.blue {
+        border: 2px solid variables.$theme-a-4;
+        color: variables.$theme-a-4;
 
-    &:hover {
-        border: 2px solid variables.$utility-green-80;
-        background-color: variables.$utility-green-80;
+        &:hover {
+            background-color: variables.$theme-a-3;
+            border: 2px solid variables.$theme-a-3;
+            color: variables.$utility-neutral-0;
+        }
     }
-}
 
-.red {
-    border: 2px solid variables.$utility-red-50;
-    color: variables.$utility-red-50;
+    &.green {
+        border: 2px solid variables.$utility-green-70;
+        color: variables.$utility-green-70;
 
-    &:hover {
-        border: 2px solid variables.$utility-red-70;
-        background-color: variables.$utility-red-70;
+        &:hover {
+            border: 2px solid variables.$utility-green-80;
+            background-color: variables.$utility-green-80;
+        }
     }
-}
 
-.disabled {
-    background-color: variables.$utility-neutral-10;
-    color: variables.$utility-neutral-60;
+    &.red {
+        border: 2px solid variables.$utility-red-50;
+        color: variables.$utility-red-50;
+
+        &:hover {
+            border: 2px solid variables.$utility-red-70;
+            background-color: variables.$utility-red-70;
+        }
+    }
+
+    &.disabled {
+        background-color: variables.$utility-neutral-10;
+        color: variables.$utility-neutral-60;
+    }
 }

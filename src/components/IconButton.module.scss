@@ -1,52 +1,53 @@
-@use "../app/variables.module.scss";
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
 
 .button {
-	background: none;
-	border: none;
-	color: variables.$theme-a-4;
-	font-size: variables.$button-font-size;
-    font-weight: variables.$button-font-weight;
-	margin: 0 variables.$button-margin variables.$button-margin 0;
-	padding: 12px 20px;
+    @include buttons;
 
-	&:focus-visible {
-		border-radius: variables.$border-radius-s;
-		outline: 2.5px solid variables.$theme-a-3;
+    color: variables.$theme-a-4;
+	padding: 4px;
+
+    &:focus-visible {
+        border-radius: variables.$border-radius-s;
+        outline: 2.5px solid variables.$theme-a-3;
+    }
+
+	&.red,
+	&.green,
+	&.blue,
+	&.disabled {
+		background: none;
+
+		&:hover {
+			background: none;
+		}
 	}
 
-	span:last-of-type {
-		margin-left: 6px;
-	}
+    &.red {
+        color: variables.$utility-red-50;
 
-	span:first-of-type {
-		margin-right: 6px;
-	}
-}
+        &:hover {
+            color: variables.$utility-red-70;
+        }
+    }
 
-.blue {
-	color: variables.$theme-a-4;
+    &.green {
+        color: variables.$utility-green-70;
 
-	&:hover {
-		color: variables.$theme-a-3;
-	}
-}
+        &:hover {
+            color: variables.$utility-green-80;
+        }
+    }
 
-.green {
-	color: variables.$utility-green-70;
+    &.blue {
+        color: variables.$theme-a-4;
 
-	&:hover {
-		color: variables.$utility-green-80;
-	}
-}
+        &:hover {
+            color: variables.$theme-a-3;
+        }
+    }
 
-.red {
-	color: variables.$utility-red-50;
-
-	&:hover {
-		color: variables.$utility-red-70;
-	}
-}
-
-.disabled {
-	color: variables.$utility-neutral-60;
+    &.disabled {
+        color: variables.$utility-neutral-60;
+    }
 }

@@ -2,48 +2,13 @@
 @use '../app/mixins.scss' as *;
 
 .button {
-    border-radius: variables.$border-radius-s;
-    border: none;
-    color: variables.$utility-neutral-0;
-    font-size: variables.$button-font-size;
-    font-weight: variables.$button-font-weight;
-    padding: 12px 20px;
-    margin: 0 variables.$button-margin variables.$button-margin 0;
-    width: fit-content;
+    @include mobile-100-w;
+	@include buttons;
+
+	border-radius: variables.$border-radius-s;
 
     &:focus-visible {
         outline: 2.5px solid variables.$theme-a-3;
 		outline-offset: variables.$outline-offset-s;
     }
-
-    .first {
-        margin-right: variables.$spacing-xs;
-    }
-
-    .second {
-        margin-left: variables.$spacing-xs;
-    }
-
-	@include mobile-100-w;
-}
-
-.blue {
-    background-color: variables.$theme-a-4;
-
-    &:hover {
-        background-color: variables.$theme-a-3;
-    }
-}
-
-.green {
-    background-color: variables.$utility-green-60;
-
-    &:hover {
-        background-color: variables.$utility-green-80;
-    }
-}
-
-.disabled {
-    background-color: variables.$utility-neutral-10;
-    color: variables.$utility-neutral-60;
 }

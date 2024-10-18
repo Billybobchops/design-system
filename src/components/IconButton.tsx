@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import classes from './IconButton.module.scss';
 import variables from '@/app/variables.module.scss';
@@ -6,6 +7,8 @@ import { Chevron, NewWindow, Remove, Plus } from './Symbols';
 interface IconButtonProps {
     clickHandler?: () => void;
     disabled: boolean;
+	icon?: React.ReactNode;
+    iconPosition?: 'start' | 'end';
     newWindowIcon?: boolean;
     text: string;
     variant: 'blue' | 'green' | 'red';
@@ -14,7 +17,8 @@ interface IconButtonProps {
 const IconButton: React.FC<IconButtonProps> = ({
     clickHandler,
     disabled = false,
-    newWindowIcon = false,
+	icon,
+    iconPosition = 'end',
     text,
     variant,
 }) => {
@@ -41,36 +45,6 @@ const IconButton: React.FC<IconButtonProps> = ({
 
     const buttonClasses = `${classes.button} ${disabled ? classes.disabled : classes[variant]}`;
 
-    let firstIcon = null;
-    if (variant === 'blue' && newWindowIcon) {
-        firstIcon = (
-            <span aria-hidden="true">
-                <NewWindow fill={fillColor} />
-            </span>
-        );
-    } else if (variant === 'red') {
-        firstIcon = (
-            <span aria-hidden="true">
-                <Remove fill={fillColor} />
-            </span>
-        );
-    } else if (variant === 'green') {
-        firstIcon = (
-            <span aria-hidden="true">
-                <Plus fill={fillColor} />
-            </span>
-        );
-    }
-
-    let secondIcon = null;
-    if (variant === 'blue' && !newWindowIcon) {
-        secondIcon = (
-            <span aria-hidden="true">
-                <Chevron fill={fillColor} />
-            </span>
-        );
-    }
-
     return (
         <button
             className={buttonClasses}
@@ -79,10 +53,19 @@ const IconButton: React.FC<IconButtonProps> = ({
             onClick={clickHandler}
             onFocus={() => setIsHovered(true)}
             onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}>
-            {firstIcon}
+            onMouseLeave={() => setIsHovered(false)}
+		>
+            {icon && iconPosition === 'start' && (
+                <span aria-hidden='true' className={classes.iconStart}>
+                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+                </span>
+            )}
             {text}
-            {secondIcon}
+            {icon && iconPosition === 'end' && (
+                <span aria-hidden='true' className={classes.iconEnd}>
+                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+                </span>
+            )}
         </button>
     );
 };
