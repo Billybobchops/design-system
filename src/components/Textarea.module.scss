@@ -2,3 +2,7 @@
 @use '../app/mixins.scss' as *;
 
 @include inputs;
+
+.input {
+	height: 120px;
+}

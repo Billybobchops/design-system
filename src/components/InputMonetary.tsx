@@ -3,7 +3,7 @@ import { useId } from 'react';
 import Label from './Label';
 import InputHelperText from './InputHelperText';
 
-interface InputProps {
+interface InputMonetaryProps {
     disabled?: boolean;
     helperText?: string;
     label: string;
@@ -11,7 +11,7 @@ interface InputProps {
     required: boolean;
 }
 
-const Input: React.FC<InputProps> = ({
+const InputMonetary: React.FC<InputMonetaryProps> = ({
     disabled = false,
     helperText = '',
     label,
@@ -42,4 +42,4 @@ const Input: React.FC<InputProps> = ({
     );
 };
 
-export default Input;
+export default InputMonetary;

@@ -2,8 +2,9 @@ import { useState } from 'react';
 import Input from '@/components/Input';
 import DatePickerInput from '@/components/DatePicker';
 import Select from '@/components/Select';
-import MultiSelect from '@/components/MultiSelect';
 import InputMonetary from '@/components/InputMonetary';
+import Textarea from '@/components/Textarea';
+import MultiSelect from '@/components/MultiSelect';
 
 const InputStory = () => {
 	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate']); // temp
@@ -59,6 +60,12 @@ const InputStory = () => {
 				label='How much do you wish to pay?'
 				name='paymentAmount'
 				required={true}
+			/>
+			<Textarea
+				helperText='The quick brown fox jumps over the lazy dog.'
+				label='This is a textarea'
+				name='textareaExample'
+				required={false}
 			/>
 			{/* Hide Multi-select until we better understand if it's 2 sep components */}
             {/* <MultiSelect
