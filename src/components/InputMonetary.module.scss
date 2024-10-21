@@ -1,10 +1,11 @@
 @use '../app/variables.module.scss';
 @use '../app/mixins.scss' as *;
 
+@include inputs;
+
 .inputContainer,
 .inputInnerContainer,
 .input {
-	@include mobile-100-w;
 	width: variables.$input-desktop-width;
 }
 
@@ -22,37 +23,6 @@
 			height: 100%;
 			margin: 0 variables.$spacing-s;
 			position: absolute;
-        }
-
-        .input {
-            border: variables.$input-border;
-            border-radius: variables.$input-border-radius;
-			font-size: variables.$input-font-size;
-            height: variables.$input-height;
-			margin-right: variables.$spacing-xs;
-            padding: variables.$input-padding;
-			padding-left: variables.$spacing-l;
-
-            &:focus-visible {
-                border: variables.$input-border-focus;
-            }
-
-            &:hover {
-                border: variables.$input-border-hover;
-            }
-
-            &:disabled {
-                background-color: variables.$utility-neutral-05;
-
-                &:hover {
-                    border: variables.$input-border;
-                }
-            }
-        }
-
-        .input[aria-invalid='true'] {
-            border-color: variables.$input-invalid-border-color;
-            border-left-width: variables.$input-invalid-border-left-width;
         }
     }
 }
