@@ -25,9 +25,7 @@ const Input: React.FC<InputProps> = ({
         <div className={classes.inputContainer}>
             <Label inputID={inputID} label={label} required={required} />
             <div className={classes.inputInnerContainer}>
-                <div className={classes.inputAdornment}>
-                    <p>$</p>
-                </div>
+                <div className={classes.inputAdornment}>$</div>
                 <input
                     aria-invalid={false}
                     aria-describedby={helperID}
@@ -38,8 +36,8 @@ const Input: React.FC<InputProps> = ({
                     required={required}
                     type='number'
                 />
-                <InputHelperText helperID={helperID} helperText={helperText} />
             </div>
+            <InputHelperText helperID={helperID} helperText={helperText} />
         </div>
     );
 };

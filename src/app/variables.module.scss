@@ -82,7 +82,6 @@ $outline-offset-s: 3px;
 $outline-offset-m: 4px;
 $focus-outline: 2.5px solid $theme-a-3;
 
-
 // Buttons
 $button-border: none;
 $button-focus-offset: $outline-offset-s;
@@ -111,7 +110,7 @@ $input-container-margin-bottom: 1rem;
 $input-desktop-width: 325px;
 $input-font-size: 1rem;
 $input-margin: $spacing-xxs $spacing-xxs $spacing-xxs 0;
-$input-padding: $spacing-xs;
+$input-padding: $spacing-xs $spacing-s;
 $input-height: $spacing-xl;
 $input-invalid-border-color: $utility-red-50;
 $input-invalid-border-left-width: 3px;

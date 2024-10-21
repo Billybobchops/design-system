@@ -55,6 +55,7 @@ const InputStory = () => {
                 helperText='Select your account from the options.'
             />
 			<InputMonetary
+				helperText='Helper text goes here!'
 				label='How much do you wish to pay?'
 				name='paymentAmount'
 				required={true}
