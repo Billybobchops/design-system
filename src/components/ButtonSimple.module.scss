@@ -22,33 +22,36 @@
 		}
 	}
 
+	&.red {
+		color: variables.$utility-red-50;
+	
+		&:hover {
+			color: variables.$utility-red-70;
+		}
+	}
+	
+	&.green {
+		color: variables.$utility-green-60;
+	
+		&:hover {
+			color: variables.$utility-green-80;
+		}
+	}
+	
+	&.blue {
+		color: variables.$theme-a-4;
+	
+		&:hover {
+			color: variables.$theme-a-3;
+		}
+	}
+	
 	&.disabled {
 		background: none;
 		color: variables.$utility-neutral-60;
 	}
-}
 
-.red {
-	color: variables.$utility-red-50;
-
-	&:hover {
-		color: variables.$utility-red-70;
+	@media (max-width: 500px) {
+		margin: 0 12px 12px 12px;
 	}
 }
-
-.green {
-	color: variables.$utility-green-60;
-
-	&:hover {
-		color: variables.$utility-green-80;
-	}
-}
-
-.blue {
-	color: variables.$theme-a-4;
-
-	&:hover {
-		color: variables.$theme-a-3;
-	}
-}
-

@@ -37,6 +37,7 @@
 
 .gridItem1,
 .gridItem2 {
+	align-items: center;
 	display: grid;
 	grid-template-columns: variables.$spacing-m auto;
 	font-weight: 400;
