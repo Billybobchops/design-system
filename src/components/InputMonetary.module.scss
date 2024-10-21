@@ -24,5 +24,9 @@
 			margin: 0 variables.$spacing-s;
 			position: absolute;
         }
+
+		.input {
+			padding-left: variables.$spacing-l;
+		}
     }
 }
