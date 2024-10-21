@@ -9,7 +9,7 @@ interface InputProps {
     label: string;
     name: string;
     required: boolean;
-	type: 'text' | 'tel';
+	type: 'text' | 'tel' | 'number';
 }
 
 const Input: React.FC<InputProps> = ({

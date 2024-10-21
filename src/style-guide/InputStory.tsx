@@ -21,6 +21,14 @@ const InputStory = () => {
                 type='text'
             />
             <Input
+				disabled={true}
+				helperText='This is a disabled input'
+                label='Last name'
+                name='lastName'
+                required={false}
+                type='text'
+            />
+            <Input
                 helperText='Please enter a valid billing address.'
                 label='Billing address'
                 name='billingAddress'

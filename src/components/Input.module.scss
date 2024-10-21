@@ -6,6 +6,8 @@
 }
 
 .input {
+	@include mobile-100-w;
+
 	border: variables.$input-border;
 	border-radius: variables.$input-border-radius;
 	font-size: variables.$input-font-size;
@@ -22,12 +24,16 @@
 		border: variables.$input-border-hover;
 	}
 
-	@include mobile-100-w;
+	&:disabled {
+		background-color: variables.$utility-neutral-05;
+
+		&:hover {
+			border: variables.$input-border;
+		}
+	}
 }
 
 .input[aria-invalid='true'] {
 	border-color: variables.$input-invalid-border-color;
 	border-left-width: variables.$input-invalid-border-left-width;
 }
-
-
