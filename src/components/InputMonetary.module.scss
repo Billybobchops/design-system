@@ -1,0 +1,57 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.inputContainer {
+    margin-bottom: variables.$input-container-margin-bottom;
+	width: variables.$input-desktop-width;
+	
+    .inputInnerContainer {
+		border: variables.$input-border;
+		border-radius: variables.$input-border-radius;
+		margin: variables.$input-margin;
+        position: relative;
+
+        .inputAdornment {
+			align-items: center;
+			display: flex;
+			height: 100%;
+			margin: 0 variables.$spacing-s;
+			position: absolute;
+        }
+
+        .input {
+            @include mobile-100-w;
+
+            // border: variables.$input-border;
+            // border-radius: variables.$input-border-radius;
+			border: none;
+
+            font-size: variables.$input-font-size;
+            height: variables.$input-height;
+			margin-right: variables.$spacing-xs;
+            padding: variables.$input-padding;
+            // width: variables.$input-desktop-width;
+
+            &:focus-visible {
+                border: variables.$input-border-focus;
+            }
+
+            &:hover {
+                border: variables.$input-border-hover;
+            }
+
+            &:disabled {
+                background-color: variables.$utility-neutral-05;
+
+                &:hover {
+                    border: variables.$input-border;
+                }
+            }
+        }
+
+        .input[aria-invalid='true'] {
+            border-color: variables.$input-invalid-border-color;
+            border-left-width: variables.$input-invalid-border-left-width;
+        }
+    }
+}

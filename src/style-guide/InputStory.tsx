@@ -3,17 +3,13 @@ import Input from '@/components/Input';
 import DatePickerInput from '@/components/DatePicker';
 import Select from '@/components/Select';
 import MultiSelect from '@/components/MultiSelect';
+import InputMonetary from '@/components/InputMonetary';
 
 const InputStory = () => {
 	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate']); // temp
 
     return (
         <>
-			<DatePickerInput
-                label='Start date of first payment'
-                helperText='Please select a date for your first payment.'
-                required={true}
-            />
             <Input
                 label='First name'
                 name='firstName'
@@ -42,6 +38,11 @@ const InputStory = () => {
                 required={true}
                 type='tel'
             />
+			<DatePickerInput
+                label='Start date of first payment'
+                helperText='Please select a date for your first payment.'
+                required={true}
+            />
             <Select
                 label='Select an account'
                 name='selectAccount'
@@ -53,6 +54,11 @@ const InputStory = () => {
                 required={true}
                 helperText='Select your account from the options.'
             />
+			<InputMonetary
+				label='How much do you wish to pay?'
+				name='paymentAmount'
+				required={true}
+			/>
 			{/* Hide Multi-select until we better understand if it's 2 sep components */}
             {/* <MultiSelect
                 label='Multi-select Invoice Type(s)'
