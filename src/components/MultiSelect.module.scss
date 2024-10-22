@@ -14,39 +14,43 @@
     @include mobile-100-w;
 
     svg {
-		transform: rotate(90deg);
+        transform: rotate(90deg);
         pointer-events: none;
         position: absolute;
         right: 1rem;
-		top: 37%;
+        top: 37%;
     }
 
-	.activeChevron svg {
-		transform: rotate(-90deg);
-	}
+    .activeChevron svg {
+        transform: rotate(-90deg);
+    }
 }
 
 .multiSelectButton {
+    @include mobile-100-w;
+
     appearance: none;
     background: none;
     border-radius: variables.$input-border-radius;
     border: variables.$input-border;
     font-size: variables.$input-font-size;
     margin: variables.$input-margin;
-    padding: variables.$input-padding;
-    padding-right: variables.$spacing-l;
-    text-align: left;
-    width: variables.$input-desktop-width;
 
-    &:focus-visible {
-        border: variables.$input-border-focus;
+    input[aria-label='Search options'] {
+        height: variables.$input-height;
+        padding-right: variables.$spacing-l;
+        padding: variables.$input-padding;
+        text-align: left;
+        width: variables.$input-desktop-width;
+
+        &:focus-visible {
+            border: variables.$input-border-focus;
+        }
+
+        &:hover {
+            border: variables.$input-border-hover;
+        }
     }
-
-    &:hover {
-        border: variables.$input-border-hover;
-    }
-
-    @include mobile-100-w;
 }
 
 .multiSelectDropdown {
@@ -57,17 +61,12 @@
     border: 1px solid #ccc;
     background: #fff;
     z-index: 1;
-
-	input[aria-label='Search options'] {
-		height: variables.$input-height;
-	}
 }
 
 .multiSelectSearch {
-    width: calc(100% - 16px);
-    padding: variables.$spacing-xs;
-    margin: variables.$spacing-xs;
     border: 1px solid #ccc;
+    padding: variables.$spacing-xs;
+    width: calc(100% - 16px);
 }
 
 .multiSelectList {
@@ -89,6 +88,11 @@
             margin-right: variables.$spacing-xs;
         }
     }
+}
+
+.selectAll {
+	border-bottom: 1px solid variables.$utility-neutral-20;
+	font-weight: 700;
 }
 
 .input[aria-invalid='true'] {

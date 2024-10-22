@@ -9,7 +9,50 @@ import Checkboxes from '@/components/Checkboxes';
 import MultiSelect from '@/components/MultiSelect';
 
 const InputStory = () => {
+	// dummy data
+	const checkboxOptions = [
+		{
+			text: 'Batman Begins',
+			id: 'batman begins',
+			checked: false,
+		},
+		{
+			text: 'The Dark Knight',
+			id: 'the dark night',
+			checked: false,
+		},
+		{
+			text: 'The Dark Knight Rises',
+			id: 'the dark night rises',
+			checked: false,
+		},
+		{
+			text: 'Interstellar',
+			id: 'interstellar',
+			checked: false,
+		},
+		{ 	text: 'Inception',
+			id: 'inception',
+			checked: false
+		},
+	];
+	const radioGroupOptions = [
+		{ id: 'Bland' },
+		{ id: 'Medium' },
+		{ id: 'Hot' },
+		{ id: 'Absolute Destruction' },
+	];
 	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate']); // temp
+	const multiSelectOptions = [
+		{ value: 'Real Estate' },
+		{ value: 'Utility' },
+		{ value: 'Electric' },
+		{ value: 'Property Taxes' },
+		{ value: 'Pizza Tax' },
+		{ value: 'Surf Tax' },
+		{ value: 'Coffee Tax' },
+		{ value: 'Birth Certificate' },
+	];
 
     return (
         <>
@@ -71,53 +114,16 @@ const InputStory = () => {
 			/>
 			 <Checkboxes
 				legend='What are your favorite Nolan movies?'
-				options={[
-					{
-						text: 'Batman Begins',
-						id: 'batman begins',
-						checked: false,
-					},
-					{
-						text: 'The Dark Knight',
-						id: 'the dark night',
-						checked: false,
-					},
-					{
-						text: 'The Dark Knight Rises',
-						id: 'the dark night rises',
-						checked: false,
-					},
-					{
-						text: 'Interstellar',
-						id: 'interstellar',
-						checked: false,
-					},
-					{ 	text: 'Inception',
-						id: 'inception',
-						checked: false
-					},
-				]}
+				options={checkboxOptions}
 			/>
 			<RadioGroup
 				legend="What's your level of spice?"
-				options={[
-					{ id: 'Bland' },
-					{ id: 'Medium' },
-					{ id: 'Hot' },
-					{ id: 'Absolute Destruction' },
-				]}
+				options={radioGroupOptions}
 			/>
-			{/* Hide Multi-select until we better understand if it's 2 sep components */}
             <MultiSelect
                 label='Multi-select Invoice Type(s)'
                 name='selectInvoiceType'
-                options={[
-                    { value: 'Utility' },
-                    { value: 'Real Estate' },
-                    { value: 'Electric' },
-                    { value: 'Property Taxes' },
-                    { value: 'Pizza Tax' },
-                ]}
+                options={multiSelectOptions}
 				required={true}
 				selectedValues={selectedValues}
 				onChange={setSelectValues}

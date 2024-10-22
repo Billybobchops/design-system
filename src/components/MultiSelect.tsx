@@ -15,11 +15,11 @@ interface MultiSelectProps {
     helperText?: string;
     label: string;
     name: string;
-    required?: boolean;
-    options: MultiSelectOption[];
-    selectedValues: string[];
     onChange: (selectedValues: string[]) => void;
+    options: MultiSelectOption[];
     placeholder?: string;
+    required?: boolean;
+    selectedValues: string[];
 }
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
@@ -27,15 +27,16 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     helperText = '',
     label,
     name,
-    required = false,
-    options,
-    selectedValues,
     onChange,
+    options,
     placeholder = 'Select options...',
+    required = false,
+    selectedValues,
 }) => {
     const selectID = useId();
     const helperID = useId();
     const [isOpen, setIsOpen] = useState(false);
+	const [selectAll, setSelectAll] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredOptions, setFilteredOptions] = useState<MultiSelectOption[]>(options);
     const searchRef = useRef<HTMLInputElement>(null);
@@ -65,6 +66,16 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             searchRef.current.focus();
         }
     };
+	
+	const handleToggleAll = () => {
+		if (selectAll) {
+			onChange([]);
+		} else {
+			const allOptionValues = options.map(option => option.value);
+			onChange(allOptionValues);
+		}
+		setSelectAll(!selectAll);
+	};
 
 	const buttonText = selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder;
 
@@ -73,41 +84,53 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             <Label inputID={selectID} label={label} required={required} />
             <div className={classes.chevronPositioning}>
                 <button
-                    type="button"
-                    onClick={handleToggleOpen}
-                    aria-haspopup="listbox"
                     aria-expanded={isOpen}
-                    disabled={disabled}
+                    aria-haspopup="listbox"
                     className={classes.multiSelectButton}
+                    disabled={disabled}
+                    onClick={handleToggleOpen}
+                    type="button"
                 >
-                    {buttonText}
+					<input
+						aria-label="Search options"
+						className={classes.multiSelectSearch}
+						onChange={handleSearchChange}
+						placeholder={buttonText}
+						ref={searchRef}
+						type="text"
+						value={searchTerm}
+					/>
 					<span aria-hidden="true" className={isOpen ? classes.activeChevron : ''}>
 						<Chevron fill={variables.utilityNeutral70} />
 					</span>
                 </button>
+
                 {isOpen && (
                     <div className={classes.multiSelectDropdown} role="listbox">
-                        <input
-                            type="text"
-                            value={searchTerm}
-                            onChange={handleSearchChange}
-                            ref={searchRef}
-                            placeholder="Type to search..."
-                            aria-label="Search options"
-                            className={classes.multiSelectSearch}
-                        />
                         <ul className={classes.multiSelectList}>
-							{/* Select All will go here */}
+							<li className={`${classes.multiSelectItem} ${classes.selectAll}`}>
+								<label>
+									<input
+										// aria-checked={selectedValues.includes(option.value)}
+										checked={selectAll || selectedValues.length === options.length}
+										onChange={handleToggleAll}
+										type="checkbox"
+										value={'Select All'}
+									/>
+									Select All
+								</label>
+							</li>
+
                             {filteredOptions.map(option => (
-                                <li  className={classes.multiSelectItem} key={option.value}>
+                                <li className={classes.multiSelectItem} key={option.value}>
                                     <label>
                                         <input
+                                            aria-checked={selectedValues.includes(option.value)}
+                                            checked={selectedValues.includes(option.value)}
+                                            disabled={disabled}
+                                            onChange={() => handleCheckboxChange(option.value)}
                                             type="checkbox"
                                             value={option.value}
-                                            checked={selectedValues.includes(option.value)}
-                                            onChange={() => handleCheckboxChange(option.value)}
-                                            aria-checked={selectedValues.includes(option.value)}
-                                            disabled={disabled}
                                         />
                                         {option.value}
                                     </label>
@@ -118,7 +141,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 )}
             </div>
             <InputHelperText helperID={helperID} helperText={helperText} />
-			{/* Chips to go here */}
+			{/* Chips to go here - map over selected items */}
         </div>
     );
 };
