@@ -78,14 +78,6 @@ export default function Home() {
 					<InputStory />
 				</ComponentDisplayArea>
 
-                <ComponentDisplayArea title='Checkboxes'>
-                    <CheckboxesStory />
-                </ComponentDisplayArea>
-
-                <ComponentDisplayArea title='Radio Group'>
-                    <RadioGroupStory />
-                </ComponentDisplayArea>
-
                 <ComponentDisplayArea title='Dividers'>
                     <DividerStory />
                 </ComponentDisplayArea>

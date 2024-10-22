@@ -4,6 +4,8 @@ import DatePickerInput from '@/components/DatePicker';
 import Select from '@/components/Select';
 import InputMonetary from '@/components/InputMonetary';
 import Textarea from '@/components/Textarea';
+import RadioGroup from "@/components/RadioGroup";
+import Checkboxes from '@/components/Checkboxes';
 import MultiSelect from '@/components/MultiSelect';
 
 const InputStory = () => {
@@ -66,6 +68,44 @@ const InputStory = () => {
 				label='This is a textarea'
 				name='textareaExample'
 				required={false}
+			/>
+			 <Checkboxes
+				legend='What are your favorite Christopher Nolan movies?'
+				options={[
+					{
+						text: 'Batman Begins',
+						id: 'batman begins',
+						checked: false,
+					},
+					{
+						text: 'The Dark Knight',
+						id: 'the dark night',
+						checked: false,
+					},
+					{
+						text: 'The Dark Knight Rises',
+						id: 'the dark night rises',
+						checked: false,
+					},
+					{
+						text: 'Interstellar',
+						id: 'interstellar',
+						checked: false,
+					},
+					{ 	text: 'Inception',
+						id: 'inception',
+						checked: false
+					},
+				]}
+			/>
+			<RadioGroup
+				legend="What's your level of spice?"
+				options={[
+					{ id: 'Bland' },
+					{ id: 'Medium' },
+					{ id: 'Hot' },
+					{ id: 'Absolute Destruction' },
+				]}
 			/>
 			{/* Hide Multi-select until we better understand if it's 2 sep components */}
             {/* <MultiSelect
