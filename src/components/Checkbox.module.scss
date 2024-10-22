@@ -1,0 +1,49 @@
+@use "../app/variables.module.scss";
+
+.checkbox {
+	appearance: none;
+	background-color: transparent;
+	border-radius: variables.$border-radius-s;
+	border: 2px solid variables.$utility-neutral-50;
+	display: grid;
+	height: 20px;
+	margin: 0 10px 0 0;
+	place-content: center;
+	width: 20px;
+
+	&:checked {
+		background-color: variables.$theme-a-3;
+	}
+
+	&:hover:not(:disabled),
+	&:not(:disabled):checked {
+		border-color: variables.$theme-a-3;
+	}
+}
+
+.checkbox::before {
+	content: "";
+	width: 0.65em;
+	height: 0.65em;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+	transform: scale(0);
+	transform-origin: bottom left;
+	transition: 120ms transform ease-in-out;
+	background-color: variables.$utility-neutral-0;
+}
+
+.checkbox:checked::before {
+	background-color: variables.$utility-neutral-0;
+	transform: scale(1);
+}
+
+.checkbox:focus-visible {
+	border-radius: 2px;
+	outline: 2px solid variables.$theme-a-3;
+	transform: scale(1.05);
+}
+
+.checkbox:disabled {
+	color: variables.$utility-neutral-50;
+	cursor: not-allowed;
+}

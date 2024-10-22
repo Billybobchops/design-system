@@ -75,6 +75,7 @@ const Modal: React.FC<ModalProps> = ({
                     <span aria-hidden="true"><MenuCloseLarge fill={color} /></span>
                     <VisuallyHidden>Close modal</VisuallyHidden>
                 </button>
+				
                 <div className={`${classes.dialogGrid} ${hasAction ? '' : classes.textCenter}`}>
                     <div>
                         {title && (<h1 className={classes.modalTitle}>{title}</h1>)}

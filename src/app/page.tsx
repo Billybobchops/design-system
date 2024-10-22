@@ -10,8 +10,6 @@ import IconButtonStory from '@/style-guide/IconButtonStory';
 import BadgeStory from '@/style-guide/BadgeStory';
 import AccordionStory from '@/style-guide/AccordionStory';
 import AlertStory from '@/style-guide/AlertStory';
-import CheckboxesStory from '@/style-guide/CheckboxesStory';
-import RadioGroupStory from '@/style-guide/RadioGroupStory';
 import DividerStory from '@/style-guide/DividerStory';
 import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
@@ -74,7 +72,7 @@ export default function Home() {
                     <AlertStory />
                 </ComponentDisplayArea>
 
-				<ComponentDisplayArea title='Inputs'>
+				<ComponentDisplayArea title='Form Inputs'>
 					<InputStory />
 				</ComponentDisplayArea>
 

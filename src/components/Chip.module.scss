@@ -1,0 +1,30 @@
+@use "../app/variables.module.scss";
+
+.chip,
+.chip span {
+	align-items: center;
+	display: inline-flex;
+	height: 100%;
+}
+
+.chip {
+	background-color: variables.$theme-a-1;
+	border-radius: variables.$border-radius-s;
+	border: 1px solid variables.$theme-a-2;
+	color: variables.$theme-a-4;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0;
+	padding: 5px variables.$spacing-xs;
+	width: fit-content;
+
+	span {
+		&:hover {
+			background-color: variables.$theme-a-3;
+		}
+
+		svg:hover {
+			color: variables.$utility-neutral-0;
+		}
+	}
+}

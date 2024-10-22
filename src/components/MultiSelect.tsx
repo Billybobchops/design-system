@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import classes from './MultiSelect.module.scss';
 import { useId } from 'react';
 import Label from './Label';
+import Checkbox from './Checkbox';
+import Chip from './Chip';
 import InputHelperText from './InputHelperText';
 import variables from '@/app/variables.module.scss';
 import { Chevron } from './Symbols';
@@ -60,6 +62,11 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         onChange(newSelectedValues);
     };
 
+	const handleRemoveChip = (chipValue: string) => {
+		const newSelectedValues = selectedValues.filter(value => value !== chipValue);
+		onChange(newSelectedValues);
+	};
+
     const handleToggleOpen = () => {
         setIsOpen(!isOpen);
         if (!isOpen && searchRef.current) {
@@ -110,12 +117,10 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                         <ul className={classes.multiSelectList}>
 							<li className={`${classes.multiSelectItem} ${classes.selectAll}`}>
 								<label>
-									<input
-										// aria-checked={selectedValues.includes(option.value)}
+									<Checkbox
 										checked={selectAll || selectedValues.length === options.length}
 										onChange={handleToggleAll}
-										type="checkbox"
-										value={'Select All'}
+										id={'Select All'}
 									/>
 									Select All
 								</label>
@@ -124,13 +129,11 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                             {filteredOptions.map(option => (
                                 <li className={classes.multiSelectItem} key={option.value}>
                                     <label>
-                                        <input
-                                            aria-checked={selectedValues.includes(option.value)}
+                                        <Checkbox
                                             checked={selectedValues.includes(option.value)}
                                             disabled={disabled}
                                             onChange={() => handleCheckboxChange(option.value)}
-                                            type="checkbox"
-                                            value={option.value}
+                                            id={option.value}
                                         />
                                         {option.value}
                                     </label>
@@ -141,7 +144,12 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 )}
             </div>
             <InputHelperText helperID={helperID} helperText={helperText} />
-			{/* Chips to go here - map over selected items */}
+			
+			<div className={classes.chipContainer}>
+				{selectedValues.length > 0 && selectedValues.map((chip) => {
+					return <Chip title={chip} key={chip} onRemove={() => handleRemoveChip(chip)} />
+				})}
+			</div>
         </div>
     );
 };

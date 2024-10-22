@@ -42,7 +42,7 @@ const InputStory = () => {
 		{ id: 'Hot' },
 		{ id: 'Absolute Destruction' },
 	];
-	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate']); // temp
+	const [selectedValues, setSelectValues] = useState<string[]>(['Real Estate', 'Utility'])
 	const multiSelectOptions = [
 		{ value: 'Real Estate' },
 		{ value: 'Utility' },
@@ -121,12 +121,13 @@ const InputStory = () => {
 				options={radioGroupOptions}
 			/>
             <MultiSelect
+				helperText='Begin typing to search for invoice types'
+				onChange={setSelectValues}
+				required={true}
+				selectedValues={selectedValues}
                 label='Multi-select Invoice Type(s)'
                 name='selectInvoiceType'
                 options={multiSelectOptions}
-				required={true}
-				selectedValues={selectedValues}
-				onChange={setSelectValues}
             />
         </>
     );
