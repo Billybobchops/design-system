@@ -6,31 +6,37 @@
 }
 
 .chevronPositioning {
-    position: relative;
     align-items: center;
     display: flex;
+    position: relative;
     width: fit-content;
 
     @include mobile-100-w;
 
     svg {
+		transform: rotate(90deg);
         pointer-events: none;
         position: absolute;
         right: 1rem;
+		top: 37%;
     }
+
+	.activeChevron svg {
+		transform: rotate(-90deg);
+	}
 }
 
 .multiSelectButton {
     appearance: none;
     background: none;
-    border: variables.$input-border;
     border-radius: variables.$input-border-radius;
+    border: variables.$input-border;
     font-size: variables.$input-font-size;
     margin: variables.$input-margin;
     padding: variables.$input-padding;
     padding-right: variables.$spacing-l;
-    width: variables.$input-desktop-width;
     text-align: left;
+    width: variables.$input-desktop-width;
 
     &:focus-visible {
         border: variables.$input-border-focus;
@@ -51,6 +57,10 @@
     border: 1px solid #ccc;
     background: #fff;
     z-index: 1;
+
+	input[aria-label='Search options'] {
+		height: variables.$input-height;
+	}
 }
 
 .multiSelectSearch {

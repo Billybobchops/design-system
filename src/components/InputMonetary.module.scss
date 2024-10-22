@@ -6,6 +6,8 @@
 .inputContainer,
 .inputInnerContainer,
 .input {
+	@include mobile-100-w;
+	
 	width: variables.$input-desktop-width;
 }
 

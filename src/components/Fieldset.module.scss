@@ -1,10 +1,14 @@
 @use "../app/variables.module.scss";
+@use '../app/mixins.scss' as *;
 
 .fieldset {
+	@include mobile-100-w;
+
 	border-radius: variables.$border-radius-s;
 	border: 2px solid variables.$utility-neutral-20;
 	margin-bottom: variables.$input-container-margin-bottom;
 	padding-bottom: variables.$spacing-s;
+	width: variables.$input-desktop-width;
 }
 
 .legend {

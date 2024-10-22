@@ -70,7 +70,7 @@ const InputStory = () => {
 				required={false}
 			/>
 			 <Checkboxes
-				legend='What are your favorite Christopher Nolan movies?'
+				legend='What are your favorite Nolan movies?'
 				options={[
 					{
 						text: 'Batman Begins',
@@ -108,7 +108,7 @@ const InputStory = () => {
 				]}
 			/>
 			{/* Hide Multi-select until we better understand if it's 2 sep components */}
-            {/* <MultiSelect
+            <MultiSelect
                 label='Multi-select Invoice Type(s)'
                 name='selectInvoiceType'
                 options={[
@@ -118,9 +118,10 @@ const InputStory = () => {
                     { value: 'Property Taxes' },
                     { value: 'Pizza Tax' },
                 ]}
+				required={true}
 				selectedValues={selectedValues}
 				onChange={setSelectValues}
-            /> */}
+            />
         </>
     );
 };

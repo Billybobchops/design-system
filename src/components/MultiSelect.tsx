@@ -3,6 +3,8 @@ import classes from './MultiSelect.module.scss';
 import { useId } from 'react';
 import Label from './Label';
 import InputHelperText from './InputHelperText';
+import variables from '@/app/variables.module.scss';
+import { Chevron } from './Symbols';
 
 interface MultiSelectOption {
     value: string;
@@ -64,6 +66,8 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         }
     };
 
+	const buttonText = selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder;
+
     return (
         <div className={classes.multiSelectContainer}>
             <Label inputID={selectID} label={label} required={required} />
@@ -76,7 +80,10 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                     disabled={disabled}
                     className={classes.multiSelectButton}
                 >
-                    {selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder}
+                    {buttonText}
+					<span aria-hidden="true" className={isOpen ? classes.activeChevron : ''}>
+						<Chevron fill={variables.utilityNeutral70} />
+					</span>
                 </button>
                 {isOpen && (
                     <div className={classes.multiSelectDropdown} role="listbox">
@@ -111,6 +118,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 )}
             </div>
             <InputHelperText helperID={helperID} helperText={helperText} />
+			{/* Chips to go here */}
         </div>
     );
 };
