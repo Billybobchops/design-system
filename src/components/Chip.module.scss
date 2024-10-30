@@ -1,30 +1,36 @@
-@use "../app/variables.module.scss";
+@use '../app/variables.module.scss';
 
 .chip,
-.chip span {
-	align-items: center;
-	display: inline-flex;
-	height: 100%;
+.chip span:first-of-type {
+    align-items: center;
+    display: grid;
 }
 
 .chip {
-	background-color: variables.$theme-a-1;
-	border-radius: variables.$border-radius-s;
-	border: 1px solid variables.$theme-a-2;
-	color: variables.$theme-a-4;
-	font-size: 14px;
-	font-weight: 700;
-	margin: 0;
-	padding: 5px variables.$spacing-xs;
-	width: fit-content;
+    background-color: variables.$theme-a-1;
+    border-radius: variables.$border-radius-s;
+    border: 1px solid variables.$theme-a-2;
+    color: variables.$theme-a-4;
+    font-size: 14px;
+    font-weight: 700;
+	grid-template-columns: repeat(2, auto);
+    margin: 0;
 
-	span {
-		&:hover {
-			background-color: variables.$theme-a-3;
-		}
-
-		svg:hover {
-			color: variables.$utility-neutral-0;
-		}
+	.title {
+		margin: variables.$spacing-xxs variables.$spacing-xs;
 	}
+
+    button {
+        background: none;
+        border: none;
+		height: 100%;
+
+        &:hover {
+            background-color: variables.$theme-a-3;
+        }
+
+		.icon {
+			padding: 0 variables.$spacing-xxs;
+		}
+    }
 }

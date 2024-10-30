@@ -36,6 +36,8 @@
         margin: variables.$input-margin;
 
         input[aria-label='Search options'] {
+			@include mobile-100-w;
+			
             font-family: 'Open Sans';
             font-size: variables.$input-font-size;
             height: variables.$input-height;
