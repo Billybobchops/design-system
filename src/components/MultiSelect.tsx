@@ -40,6 +40,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     const selectID = useId();
     const helperID = useId();
     const [isOpen, setIsOpen] = useState(false);
+	const [isInputActive, setIsInputActive] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 	const containerRef = useRef<HTMLDivElement>(null);
     const searchRef = useRef<HTMLInputElement>(null);
@@ -48,6 +49,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
+		setIsInputActive(event.target.value !== '');
     };
 
     const handleCheckboxChange = (value: string) => {
@@ -115,6 +117,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 					<input
 						aria-label="Search options"
 						className={classes.multiSelectSearch}
+    					onBlur={() => setIsInputActive(searchTerm !== '')}
 						onChange={handleSearchChange}
 						placeholder={buttonText}
 						ref={searchRef}
@@ -141,8 +144,8 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 								</label>
 							</li>
 
-                            {filteredOptions.map(option => (
-                                <li className={classes.multiSelectItem} key={option.value}>
+                            {filteredOptions.map((option, i) => (
+                                <li className={`${classes.multiSelectItem} ${isInputActive && i === 0 ? classes.hoverActive : ''}`} key={option.value}>
                                     <label>
                                         <Checkbox
                                             checked={selectedValues.includes(option.value)}

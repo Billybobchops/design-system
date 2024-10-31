@@ -94,11 +94,16 @@
             }
         }
 
-        &:hover {
-            background-color: variables.$theme-a-1;
+		&:hover {
+			background-color: variables.$theme-a-1;
 			border-bottom: 1px solid variables.$theme-a-3;
-        }
+		}
     }
+
+	.hoverActive {
+		background-color: variables.$theme-a-1;
+		border-bottom: 1px solid variables.$theme-a-3;
+	}
 
     .selectAll {
         border-bottom: 1px solid variables.$utility-neutral-20;
