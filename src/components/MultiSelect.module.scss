@@ -3,6 +3,7 @@
 
 .multiSelectContainer {
     margin-bottom: variables.$input-container-margin-bottom;
+	width: variables.$input-desktop-width;
 
     .chevronPositioning {
         align-items: center;
@@ -36,8 +37,8 @@
         margin: variables.$input-margin;
 
         input[aria-label='Search options'] {
-			@include mobile-100-w;
-			
+            @include mobile-100-w;
+
             font-family: 'Open Sans';
             font-size: variables.$input-font-size;
             height: variables.$input-height;
@@ -94,7 +95,8 @@
         }
 
         &:hover {
-            border-left: 4px solid variables.$theme-a-3;
+            background-color: variables.$theme-a-1;
+			border-bottom: 1px solid variables.$theme-a-3;
         }
     }
 
@@ -108,10 +110,20 @@
         border-left-width: variables.$input-invalid-border-left-width;
     }
 
-	.chipContainer {
-		display: flex;
-		gap: variables.$spacing-s;
-		margin: variables.$spacing-xs 0 variables.$spacing-xxs 0;
-		width: variables.$input-desktop-width;
-	}
+    .chipContainer {
+		align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: variables.$spacing-xs;
+        margin: variables.$spacing-xs 0 variables.$spacing-xxs 0;
+		width: 100%;
+
+		.cancelLink {
+			button {
+				font-weight: 400;
+				margin: 12px variables.$spacing-xxs;
+				text-decoration: underline;
+			}
+		}
+    }
 }

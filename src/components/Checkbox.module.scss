@@ -2,7 +2,7 @@
 
 .checkbox {
 	appearance: none;
-	background-color: transparent;
+	background-color: variables.$utility-neutral-0;
 	border-radius: variables.$border-radius-s;
 	border: 2px solid variables.$utility-neutral-50;
 	display: grid;

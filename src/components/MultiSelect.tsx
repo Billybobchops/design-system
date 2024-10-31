@@ -5,6 +5,7 @@ import Label from './Label';
 import Checkbox from './Checkbox';
 import Chip from './Chip';
 import InputHelperText from './InputHelperText';
+import ButtonSimple from './ButtonSimple';
 import variables from '@/app/variables.module.scss';
 import { Chevron } from './Symbols';
 
@@ -38,22 +39,18 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     const selectID = useId();
     const helperID = useId();
     const [isOpen, setIsOpen] = useState(false);
+    const [isEmpty, setIsEmpty] = useState(selectedValues.length < 1);
 	const [selectAll, setSelectAll] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredOptions, setFilteredOptions] = useState<MultiSelectOption[]>(options);
+	const containerRef = useRef<HTMLDivElement>(null);
     const searchRef = useRef<HTMLInputElement>(null);
-
-    useEffect(() => {
-        setFilteredOptions(
-            options.filter(option =>
-                option.value.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-        );
-    }, [searchTerm, options]);
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
+
+	const setIsEmptyStatus = () => { setIsEmpty(selectedValues.length > 1) };
 
     const handleCheckboxChange = (value: string) => {
         const newSelectedValues = selectedValues.includes(value)
@@ -73,10 +70,15 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             searchRef.current.focus();
         }
     };
+
+	const deselectAll = () => {
+		onChange([])
+		setSelectAll(false);
+	};
 	
 	const handleToggleAll = () => {
 		if (selectAll) {
-			onChange([]);
+			deselectAll();
 		} else {
 			const allOptionValues = options.map(option => option.value);
 			onChange(allOptionValues);
@@ -86,8 +88,41 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 
 	const buttonText = selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder;
 
+	useEffect(() => {
+        setFilteredOptions(
+            options.filter(option =>
+                option.value.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+        );
+    }, [searchTerm, options]);
+
+	// Close dropdown on escape key press
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setIsOpen(false);
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
+    // Close dropdown on outside click
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                containerRef.current &&
+                !containerRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
     return (
-        <div className={classes.multiSelectContainer}>
+        <div className={classes.multiSelectContainer} ref={containerRef}>
             <Label inputID={selectID} label={label} required={required} />
             <div className={classes.chevronPositioning}>
                 <button
@@ -149,6 +184,15 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 				{selectedValues.length > 0 && selectedValues.map((chip) => {
 					return <Chip title={chip} key={chip} onRemove={() => handleRemoveChip(chip)} />
 				})}
+				
+				{selectedValues.length > 0 && (
+                    <div className={classes.cancelLink}>
+                        <ButtonSimple
+                            text='Clear All'
+                            clickHandler={deselectAll}
+                        />
+                    </div>
+                )}
 			</div>
         </div>
     );
