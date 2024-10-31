@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import classes from './MultiSelect.module.scss';
 import { useId } from 'react';
 import Label from './Label';
+import SelectAllCheckbox from './SelectAllCheckbox';
 import Checkbox from './Checkbox';
 import Chip from './Chip';
 import InputHelperText from './InputHelperText';
@@ -39,18 +40,15 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     const selectID = useId();
     const helperID = useId();
     const [isOpen, setIsOpen] = useState(false);
-    const [isEmpty, setIsEmpty] = useState(selectedValues.length < 1);
-	const [selectAll, setSelectAll] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [filteredOptions, setFilteredOptions] = useState<MultiSelectOption[]>(options);
 	const containerRef = useRef<HTMLDivElement>(null);
     const searchRef = useRef<HTMLInputElement>(null);
+	const isEmpty = selectedValues.length === 0;
+	const isAllSelected = selectedValues.length === options.length;
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
-
-	const setIsEmptyStatus = () => { setIsEmpty(selectedValues.length > 1) };
 
     const handleCheckboxChange = (value: string) => {
         const newSelectedValues = selectedValues.includes(value)
@@ -66,59 +64,40 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 
     const handleToggleOpen = () => {
         setIsOpen(!isOpen);
-        if (!isOpen && searchRef.current) {
-            searchRef.current.focus();
-        }
+        if (!isOpen && searchRef.current) searchRef.current.focus();
     };
 
-	const deselectAll = () => {
-		onChange([])
-		setSelectAll(false);
-	};
-	
 	const handleToggleAll = () => {
-		if (selectAll) {
-			deselectAll();
-		} else {
-			const allOptionValues = options.map(option => option.value);
-			onChange(allOptionValues);
-		}
-		setSelectAll(!selectAll);
+		const newSelectedValues = isAllSelected ? [] : options.map(option => option.value);
+		onChange(newSelectedValues);
 	};
+
+	const filteredOptions = useMemo(() => 
+        options.filter(option => 
+            option.value.toLowerCase().includes(searchTerm.toLowerCase())
+        ), 
+        [searchTerm, options]
+    );
 
 	const buttonText = selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder;
+	
 
 	useEffect(() => {
-        setFilteredOptions(
-            options.filter(option =>
-                option.value.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-        );
-    }, [searchTerm, options]);
-
-	// Close dropdown on escape key press
-    useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
+        const handleClose = (event: KeyboardEvent | MouseEvent) => {
+            if (event instanceof KeyboardEvent && event.key === 'Escape') setIsOpen(false);
+            if (event instanceof MouseEvent && containerRef.current && 
+                !containerRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
             }
         };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, []);
 
-    // Close dropdown on outside click
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                containerRef.current &&
-                !containerRef.current.contains(event.target as Node)
-            ) {
-                setIsOpen(false);
-            }
+        window.addEventListener('keydown', handleClose);
+        document.addEventListener('mousedown', handleClose);
+
+        return () => {
+            window.removeEventListener('keydown', handleClose);
+            document.removeEventListener('mousedown', handleClose);
         };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
     return (
@@ -152,10 +131,11 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                         <ul className={classes.multiSelectList}>
 							<li className={`${classes.multiSelectItem} ${classes.selectAll}`}>
 								<label>
-									<Checkbox
-										checked={selectAll || selectedValues.length === options.length}
+									<SelectAllCheckbox
+										checked={isAllSelected}
 										onChange={handleToggleAll}
 										id={'Select All'}
+										partialCheck={!isEmpty && !isAllSelected}
 									/>
 									Select All
 								</label>
@@ -187,11 +167,8 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 				
 				{selectedValues.length > 0 && (
                     <div className={classes.cancelLink}>
-                        <ButtonSimple
-                            text='Clear All'
-                            clickHandler={deselectAll}
-                        />
-                    </div>
+                    	<ButtonSimple text="Clear All" clickHandler={() => onChange([])} />
+                	</div>
                 )}
 			</div>
         </div>

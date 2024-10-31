@@ -1,0 +1,20 @@
+@use '../app/variables.module.scss';
+@use '../app/mixins.scss' as *;
+
+.checkbox {
+	@include checkboxes;
+
+	&.partialCheck {
+		background-color: variables.$theme-a-3;
+		border-color: variables.$theme-a-3;
+	}
+
+	&.partialCheck::before {
+		background-color: variables.$utility-neutral-0;
+		clip-path: none;
+		content: '';
+		height: 2px;
+		transform: scale(1);
+		width: 0.65em;
+	}
+}
