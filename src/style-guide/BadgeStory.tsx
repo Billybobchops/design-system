@@ -3,11 +3,11 @@ import Badge from '@/components/Badge';
 const BadgeStory = () => {
     return (
         <>
-            <Badge content='Approved' variant='success' />
-            <Badge content='Declined' variant='error' />
-            <Badge content='Inactive' variant='warning' />
+            <Badge content='Success' variant='success' />
+            <Badge content='Warning' variant='warning' />
+            <Badge content='Error' variant='error' />
             <Badge content='Neutral' variant='neutral' />
-            <Badge content='Beta' variant='beta' />
+            <Badge content='Informational' variant='informational' />
         </>
     );
 };
