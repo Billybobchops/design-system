@@ -1,5 +1,5 @@
 import ButtonSecondary from '@/components/ButtonSecondary';
-import { Chevron, Search } from '@/components/Symbols';
+import { Chevron, Search, Remove } from '@/components/Symbols';
 
 const ButtonPrimaryStory = () => {
     return (
@@ -32,6 +32,20 @@ const ButtonPrimaryStory = () => {
                 disabled={true}
                 icon={<Chevron />}
                 text='Register Now'
+            />
+			<ButtonSecondary
+                disabled={false}
+                icon={<Remove />}
+				iconPosition={'start'}
+                text='Remove Email Address'
+				variant='red'
+            />
+			<ButtonSecondary
+                disabled={true}
+                icon={<Remove />}
+				iconPosition={'start'}
+                text='Remove Email Address'
+				variant='red'
             />
         </>
     );

@@ -5,7 +5,6 @@ import ComponentDisplayArea from '@/style-guide/ComponentDisplayArea';
 import ButtonPrimaryStory from '@/style-guide/ButtonPrimaryStory';
 import ButtonSecondaryStory from '@/style-guide/ButtonSecondaryStory';
 import ButtonTertiaryStory from '@/style-guide/ButtonTertiaryStory';
-import ActionButtonStory from '@/style-guide/ActionButtonStory';
 import IconButtonStory from '@/style-guide/IconButtonStory';
 import BadgeStory from '@/style-guide/BadgeStory';
 import AccordionStory from '@/style-guide/AccordionStory';
@@ -46,10 +45,6 @@ export default function Home() {
 
                 <ComponentDisplayArea title='Tertiary Buttons'>
                     <ButtonTertiaryStory />
-                </ComponentDisplayArea>
-
-                <ComponentDisplayArea title='Action Buttons'>
-                    <ActionButtonStory />
                 </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Icon Buttons'>

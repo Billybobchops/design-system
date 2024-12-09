@@ -6,4 +6,10 @@
 	@include buttons;
 
 	border-radius: variables.$border-radius-s;
+
+	.innerButton {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
 }

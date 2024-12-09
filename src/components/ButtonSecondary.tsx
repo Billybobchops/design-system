@@ -8,7 +8,7 @@ interface ButtonProps {
 	icon?: React.ReactNode;
     iconPosition?: 'start' | 'end';
 	text: string;
-	variant?: 'blue' | 'green';
+	variant?: 'blue' | 'green' | 'red';
 }
 
 const ButtonSecondary: React.FC<ButtonProps> = ({
@@ -27,17 +27,19 @@ const ButtonSecondary: React.FC<ButtonProps> = ({
 			disabled={disabled}
 			onClick={clickHandler}
 		>
-			{icon && iconPosition === 'start' && (
-                <span aria-hidden='true' className={classes.iconStart}>
-                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
-                </span>
-            )}
-            {text}
-            {icon && iconPosition === 'end' && (
-                <span aria-hidden='true' className={classes.iconEnd}>
-                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
-                </span>
-            )}
+			<div className={classes.innerButton}>
+				{icon && iconPosition === 'start' && (
+					<span aria-hidden='true' className={classes.iconStart}>
+						{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+					</span>
+				)}
+				{text}
+				{icon && iconPosition === 'end' && (
+					<span aria-hidden='true' className={classes.iconEnd}>
+						{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+					</span>
+				)}
+			</div>
 		</button>
 	);
 };
