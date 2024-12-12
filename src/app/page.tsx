@@ -6,6 +6,7 @@ import ButtonPrimaryStory from '@/style-guide/ButtonPrimaryStory';
 import ButtonSecondaryStory from '@/style-guide/ButtonSecondaryStory';
 import ButtonTertiaryStory from '@/style-guide/ButtonTertiaryStory';
 import LinkIconButtonStory from '@/style-guide/LinkIconButtonStory';
+import IconButtonStory from '@/style-guide/IconButtonStory';
 import BadgeStory from '@/style-guide/BadgeStory';
 import AccordionStory from '@/style-guide/AccordionStory';
 import AlertStory from '@/style-guide/AlertStory';
@@ -49,6 +50,10 @@ export default function Home() {
 
                 <ComponentDisplayArea title='Link Icon Buttons'>
                     <LinkIconButtonStory />
+                </ComponentDisplayArea>
+                
+				<ComponentDisplayArea title='Icon Buttons'>
+                    <IconButtonStory />
                 </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Accordions'>
