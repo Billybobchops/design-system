@@ -223,15 +223,14 @@ export const Minus: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0
 export const Plus: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
-            aria-hidden='true'
-            fill='none'
-            height='12'
-            viewBox='0 0 12 12'
-            width='12'
             xmlns='http://www.w3.org/2000/svg'
+            width='14'
+            height='14'
+            viewBox='0 0 14 14'
+            fill='none'
 		>
             <path
-                d='m12 4.90909v2.18182c0 .32727-.2182.54545-.5455.54545h-3.81814v3.81814c0 .3273-.21818.5455-.54545.5455h-2.18182c-.32727 0-.54545-.2182-.54545-.5455v-3.81814h-3.818185c-.327273 0-.545455-.21818-.545455-.54545v-2.18182c0-.32727.218182-.54545.545455-.54545h3.818185v-3.818185c0-.327273.21818-.545455.54545-.545455h2.18182c.32727 0 .54545.218182.54545.545455v3.818185h3.81814c.3273 0 .5455.21818.5455.54545z'
+                d='M13 8H8V13C8 13.55 7.55 14 7 14C6.45 14 6 13.55 6 13V8H1C0.45 8 0 7.55 0 7C0 6.45 0.45 6 1 6H6V1C6 0.45 6.45 0 7 0C7.55 0 8 0.45 8 1V6H13C13.55 6 14 6.45 14 7C14 7.55 13.55 8 13 8Z'
                 fill={fill}
             />
         </svg>
@@ -389,7 +388,7 @@ export const Chevron: React.FC<SymbolProps> = ({ fill = variables.utilityNeutral
             aria-hidden='true'
             fill='none'
             height='12'
-            viewBox='0 0 12 16'
+            viewBox='0 0 16 16'
             width='12'
             xmlns='http://www.w3.org/2000/svg'
 		>
@@ -426,9 +425,9 @@ export const Remove: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
-            width='19'
-            height='19'
-            viewBox='0 0 19 19'
+            width='21'
+            height='21'
+            viewBox='0 0 24 24'
             fill='none'
 		>
 			<path
@@ -442,17 +441,23 @@ export const Remove: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral
 export const NewWindow: React.FC<SymbolProps> = ({ fill = variables.$utilityNeutral0 }) => {
     return (
         <svg
-            aria-hidden='true'
-            fill='none'
-            height='12'
-            viewBox='0 0 12 12'
-            width='12'
             xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
 		>
-            <path
-                d='M9.28472 6.95772L10.7507 5.45091V10.1318C10.7507 11.0603 9.96886 11.8421 9.04039 11.8421H1.71034C0.781871 11.8421 0 11.0603 0 10.1318V2.80174C0 1.87327 0.781871 1.0914 1.71034 1.0914H6.8L5.2 2.55741C4.91619 2.55741 3.47187 2.55753 2.46514 2.55762C1.91289 2.55767 1.46601 3.0053 1.46601 3.55755C1.46601 5.46427 1.46601 7.46947 1.46601 9.37619C1.46601 9.92848 1.91372 10.3761 2.46601 10.3761H8.28472C8.83701 10.3761 9.28472 9.92823 9.28472 9.37594C9.28472 8.58181 9.28472 7.95762 9.28472 6.95772ZM8.4 1.75771L4.4 5.75771L6.4 7.75771L10.4 3.75771L12 5.45091V0.157715H6.8L8.4 1.75771Z'
-                fill={fill}
-            />
+            <g clip-path='url(#clip0_7622_2514)'>
+                <path
+                    d='M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z'
+                    fill={fill}
+                />
+            </g>
+            <defs>
+                <clipPath id='clip0_7622_2514'>
+                    <rect width='24' height='24' fill='white' />
+                </clipPath>
+            </defs>
         </svg>
     );
 };

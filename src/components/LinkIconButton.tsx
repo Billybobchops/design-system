@@ -1,15 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import classes from './IconButton.module.scss';
+import classes from './LinkIconButton.module.scss';
 import variables from '@/app/variables.module.scss';
-import { Chevron, NewWindow, Remove, Plus } from './Symbols';
 
 interface IconButtonProps {
     clickHandler?: () => void;
     disabled: boolean;
 	icon?: React.ReactNode;
     iconPosition?: 'start' | 'end';
-    newWindowIcon?: boolean;
     text: string;
     variant?: 'blue' | 'green' | 'red';
 }
@@ -53,17 +51,17 @@ const IconButton: React.FC<IconButtonProps> = ({
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
 		>
-            {icon && iconPosition === 'start' && (
-                <span aria-hidden='true' className={classes.iconStart}>
-                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
-                </span>
-            )}
-            {text}
-            {icon && iconPosition === 'end' && (
-                <span aria-hidden='true' className={classes.iconEnd}>
-                    {React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
-                </span>
-            )}
+			{icon && iconPosition === 'start' && (
+				<span aria-hidden='true' className={classes.iconStart}>
+					{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+				</span>
+			)}
+			<span>{text}</span>
+			{icon && iconPosition === 'end' && (
+				<span aria-hidden='true' className={classes.iconEnd}>
+					{React.cloneElement(icon as React.ReactElement, { fill: fillColor, })}
+				</span>
+			)}
         </button>
     );
 };

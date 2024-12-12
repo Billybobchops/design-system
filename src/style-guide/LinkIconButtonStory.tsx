@@ -1,57 +1,57 @@
-import IconButton from '@/components/IconButton';
+import LinkIconButton from '@/components/LinkIconButton';
 import { Chevron, NewWindow, Plus, Remove } from '@/components/Symbols';
 
 const IconButtonStory = () => {
     return (
         <>
-            <IconButton
+            <LinkIconButton
                 disabled={false}
 				icon={<Chevron />}
                 text='Recent Open Invoices'
                 variant='blue'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={true}
 				icon={<Chevron />}
                 text='Recent Open Invoices'
                 variant='blue'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={false}
 				icon={<NewWindow />}
 				iconPosition='start'
                 text='View Invoice'
                 variant='blue'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={true}
 				icon={<NewWindow />}
 				iconPosition='start'
                 text='View Invoice'
                 variant='blue'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={false}
 				icon={<Remove />}
 				iconPosition='start'
                 text='Delete Email Address'
                 variant='red'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={true}
 				icon={<Remove />}
 				iconPosition='start'
                 text='Delete Email Address'
                 variant='red'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={false}
 				icon={<Plus />}
 				iconPosition='start'
                 text='Add Account'
                 variant='green'
             />
-            <IconButton
+            <LinkIconButton
                 disabled={true}
 				icon={<Plus />}
 				iconPosition='start'
