@@ -41,10 +41,10 @@
     }
 
     &.blue {
-        color: variables.$theme-a-3;
+        color: variables.$theme-a-4;
 
         &:hover {
-            background-color: variables.$theme-a-4;
+            background-color: variables.$theme-a-3;
             color: variables.$utility-neutral-0;
         }
     }
