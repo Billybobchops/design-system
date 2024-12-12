@@ -1,12 +1,9 @@
-import classes from './EnrollStatus.module.scss';
+import classes from './FeatureStatus.module.scss';
 import variables from '@/app/variables.module.scss';
 import {
     AutoPay,
     Paperless,
     PayByText,
-    Enrolled,
-    PartiallyEnrolled,
-    NotEnrolled,
     ChevronLarge,
 } from './Symbols';
 import Badge from './Badge';
@@ -14,18 +11,6 @@ import Badge from './Badge';
 type EnrollmentStatus = 'Not Enrolled' | 'Partially Enrolled' | 'Enrolled';
 
 type EnrollmentType = 'AutoPay' | 'Paperless' | 'Pay By Text';
-
-const getEnrollmentIcon = (status: EnrollmentStatus) => {
-    if (status === 'Not Enrolled') {
-        return <NotEnrolled fill={variables.themeA4} />;
-    }
-    if (status === 'Partially Enrolled') {
-        return <PartiallyEnrolled fill={variables.themeA4} />;
-    }
-    if (status === 'Enrolled') {
-        return <Enrolled fill={variables.utilityGreen70} />;
-    }
-};
 
 const getBadgeVariant = (status: EnrollmentStatus) => {
     if (status === 'Not Enrolled') {
@@ -54,15 +39,11 @@ const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({
     return (
         <a href={link} className={classes.gridRow}>
             <div className={classes.gridItems}>
-                <div className={classes.gridItem1}>
+                <div className={classes.gridItem}>
                     {serviceType === 'AutoPay' && (<AutoPay fill={variables.themeA4} />)}
                     {serviceType === 'Paperless' && (<Paperless fill={variables.themeA4} />)}
                     {serviceType === 'Pay By Text' && (<PayByText fill={variables.themeA4} />)}
                     <p className={classes.serviceTitle}>{serviceType}</p>
-                </div>
-                <div className={classes.gridItem2}>
-                    {getEnrollmentIcon(status)}
-                    <p className={status === 'Enrolled' ? classes.enrolled : ''}>{status}</p>
                 </div>
                 <span className={classes.mobileBadge}>
                     <Badge content={status} hasMargin={false} variant={getBadgeVariant(status)} />

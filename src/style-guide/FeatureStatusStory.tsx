@@ -1,9 +1,9 @@
-import EnrollStatus from '@/components/EnrollStatus';
+import FeatureStatus from '@/components/FeatureStatus';
 
-const EnrollStatusStory = () => {
+const FeatureStatusStory = () => {
     return (
         <>
-            <EnrollStatus 
+            <FeatureStatus 
 				autoPayStatus='Not Enrolled'
 				autoPayLink='#'
 				paperlessStatus='Partially Enrolled'
@@ -15,4 +15,4 @@ const EnrollStatusStory = () => {
     );
 };
 
-export default EnrollStatusStory;
+export default FeatureStatusStory;

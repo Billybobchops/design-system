@@ -5,7 +5,7 @@
 	border: 1px solid variables.$utility-neutral-20;
 	display: grid;
 	grid-template-rows: repeat(3, auto);
-	max-width: 400px;
+	max-width: 375px;
 }
 
 .gridRow {
@@ -27,26 +27,19 @@
 
 .gridItems {
 	display: grid;
-	grid-template-columns: 160px auto;
+	grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
 
 	@media (max-width: 500px) {
-		grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
 		gap: 10px;
 	}
 }
 
-.gridItem1,
-.gridItem2 {
+.gridItem {
 	align-items: center;
 	display: grid;
+	gap: variables.$spacing-xs;
 	grid-template-columns: variables.$spacing-m auto;
 	font-weight: 400;
-}
-
-.gridItem2 {
-	@media (max-width: 500px) {
-		display: none;
-	}
 }
 
 .enrolled {
@@ -63,11 +56,11 @@
 }
 
 .mobileBadge {
-	display: none;
+	display: block;
+	margin-right: variables.$spacing-s;
+	justify-self: end;
 
 	@media (max-width: 500px) {
-		display: block;
-		margin-right: 10px;
 		justify-self: start;
 	}
 }

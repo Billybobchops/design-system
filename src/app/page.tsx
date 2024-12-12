@@ -13,7 +13,7 @@ import AlertStory from '@/style-guide/AlertStory';
 import DividerStory from '@/style-guide/DividerStory';
 import ModalStory from '@/style-guide/ModalStory';
 import TabsStory from '@/style-guide/TabsStory';
-import EnrollStatusStory from '@/style-guide/EnrollStatusStory';
+import FeatureStatusStory from '@/style-guide/FeatureStatusStory';
 import InputStory from '@/style-guide/InputStory';
 import TypographyStory from '@/style-guide/TypographyStory';
 import ICLink from '@/components/ICLink';
@@ -84,8 +84,8 @@ export default function Home() {
 					<ModalStory />
 				</ComponentDisplayArea>
 
-				<ComponentDisplayArea title='Enrollment Status'>
-					<EnrollStatusStory />
+				<ComponentDisplayArea title='Feature Status'>
+					<FeatureStatusStory />
 				</ComponentDisplayArea>
 
 				<ComponentDisplayArea title='Progress Indicator'>
