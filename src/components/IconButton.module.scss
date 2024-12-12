@@ -3,6 +3,9 @@
 
 .button {
     @include buttons;
+
+	align-items: center;
+	display: inline-flex;
     padding: variables.$spacing-xs;
 
     svg {
@@ -19,35 +22,29 @@
 		background: none;
 	}
 
-    &.blue {
-        border: 2px solid variables.$theme-a-4;
-        color: variables.$theme-a-4;
+	&.red {
+        color: variables.$utility-red-70;
 
         &:hover {
-            background-color: variables.$theme-a-3;
-            border-color: variables.$theme-a-3;
+            background-color: variables.$utility-red-50;
             color: variables.$utility-neutral-0;
         }
     }
 
     &.green {
-        border: 2px solid variables.$utility-green-70;
-        color: variables.$utility-green-70;
+        color: variables.$utility-green-80;
 
         &:hover {
-            background-color: variables.$utility-green-80;
-            border-color: variables.$utility-green-80;
+            background-color: variables.$utility-green-60;
             color: variables.$utility-neutral-0;
         }
     }
 
-    &.red {
-        border: 2px solid variables.$utility-red-50;
-        color: variables.$utility-red-50;
+    &.blue {
+        color: variables.$theme-a-3;
 
         &:hover {
-            background-color: variables.$utility-red-70;
-            border-color: variables.$utility-red-70;
+            background-color: variables.$theme-a-4;
             color: variables.$utility-neutral-0;
         }
     }
