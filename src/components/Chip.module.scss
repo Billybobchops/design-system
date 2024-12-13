@@ -1,7 +1,7 @@
 @use '../app/variables.module.scss';
 
 .chip,
-.chip span:first-of-type {
+.chip .icon {
     align-items: center;
     display: grid;
 }
@@ -20,17 +20,15 @@
 		margin: variables.$spacing-xxs variables.$spacing-xs;
 	}
 
-    button {
-        background: none;
-        border: none;
-		height: 100%;
+	.icon {
+		padding: 0 variables.$spacing-xxs;
+	}
 
-        &:hover {
-            background-color: variables.$theme-a-3;
-        }
+	.iconHover {
+		background-color: variables.$theme-a-3;
+	}
+}
 
-		.icon {
-			padding: 0 variables.$spacing-xxs;
-		}
-    }
+.chipHover {
+	border: 1px solid variables.$theme-a-3;
 }

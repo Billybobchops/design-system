@@ -126,7 +126,7 @@
 		.cancelLink {
 			button {
 				font-weight: 400;
-				margin: 12px variables.$spacing-xxs;
+				margin: variables.$spacing-xxs 12px;
 				text-decoration: underline;
 			}
 		}
