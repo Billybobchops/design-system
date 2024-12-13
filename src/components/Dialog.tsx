@@ -1,13 +1,13 @@
 import { useRef, useEffect } from 'react';
-import classes from './Modal.module.scss';
+import classes from './Dialog.module.scss';
 import variables from '@/app/variables.module.scss';
 import { MenuCloseLarge, Chevron } from './Symbols';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonSimple from './ButtonSimple';
 import VisuallyHidden from './VisuallyHidden';
 
-interface ModalProps {
-    handleModalAction?: () => void;
+interface DialogProps {
+    handleDialogAction?: () => void;
     actionButtonText?: string;
     children: React.ReactNode;
     color?: string;
@@ -16,8 +16,8 @@ interface ModalProps {
     TriggerElement: React.FC<{ clickHandler: () => void }>;
 }
 
-const Modal: React.FC<ModalProps> = ({
-    handleModalAction,
+const Dialog: React.FC<DialogProps> = ({
+    handleDialogAction,
     actionButtonText,
     hasAction = false,
     children,
@@ -73,12 +73,12 @@ const Modal: React.FC<ModalProps> = ({
             <dialog ref={dialogRef}>
                 <button className={classes.menuClose} onClick={closeDialog}>
                     <span aria-hidden="true"><MenuCloseLarge fill={color} /></span>
-                    <VisuallyHidden>Close modal</VisuallyHidden>
+                    <VisuallyHidden>Close Dialog</VisuallyHidden>
                 </button>
 				
                 <div className={`${classes.dialogGrid} ${hasAction ? '' : classes.textCenter}`}>
                     <div>
-                        {title && (<h1 className={classes.modalTitle}>{title}</h1>)}
+                        {title && (<h1 className={classes.dialogTitle}>{title}</h1>)}
                         {children}
                     </div>
 
@@ -94,7 +94,7 @@ const Modal: React.FC<ModalProps> = ({
 									/>
 									<ButtonPrimary
 										disabled={false}
-										clickHandler={handleModalAction}
+										clickHandler={handleDialogAction}
 										icon={<Chevron />}
 										text={actionButtonText ? actionButtonText : ''}
 										variant='blue'
@@ -118,4 +118,4 @@ const Modal: React.FC<ModalProps> = ({
     );
 };
 
-export default Modal;
+export default Dialog;

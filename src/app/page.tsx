@@ -11,7 +11,7 @@ import BadgeStory from '@/style-guide/BadgeStory';
 import AccordionStory from '@/style-guide/AccordionStory';
 import AlertStory from '@/style-guide/AlertStory';
 import DividerStory from '@/style-guide/DividerStory';
-import ModalStory from '@/style-guide/ModalStory';
+import DialogStory from '@/style-guide/DialogStory';
 import TabsStory from '@/style-guide/TabsStory';
 import FeatureStatusStory from '@/style-guide/FeatureStatusStory';
 import InputStory from '@/style-guide/InputStory';
@@ -64,6 +64,10 @@ export default function Home() {
 					<TabsStory />
 				</ComponentDisplayArea>
 
+				<ComponentDisplayArea title='Dialog'>
+					<DialogStory />
+				</ComponentDisplayArea>
+
                 <ComponentDisplayArea title='Badges'>
                     <BadgeStory />
                 </ComponentDisplayArea>
@@ -79,10 +83,6 @@ export default function Home() {
                 <ComponentDisplayArea title='Dividers'>
                     <DividerStory />
                 </ComponentDisplayArea>
-
-                <ComponentDisplayArea title='Modals/Dialogs'>
-					<ModalStory />
-				</ComponentDisplayArea>
 
 				<ComponentDisplayArea title='Feature Status'>
 					<FeatureStatusStory />

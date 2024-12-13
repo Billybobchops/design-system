@@ -1,4 +1,4 @@
-import Modal from '@/components/Modal';
+import Dialog from '@/components/Dialog';
 import ButtonSecondary from '@/components/ButtonPrimary';
 import IconParagraph from '@/components/IconParagraph';
 import Paragraph from '@/components/Paragraph';
@@ -6,16 +6,16 @@ import UnorderedList from '@/components/UnorderedList';
 import { WarningLarge, ErrorLarge } from '@/components/Symbols';
 import variables from '@/app/variables.module.scss';
 
-const ModalStory = () => {
+const DialogStory = () => {
     return (
         <>
-            <Modal
+            <Dialog
                 title='Account has a loan'
                 TriggerElement={(props) => (
                     <ButtonSecondary
                         {...props}
                         disabled={false}
-                        text='Info Modal'
+                        text='Info Dialog'
                         variant='blue'
                     />
                 )}
@@ -25,18 +25,18 @@ const ModalStory = () => {
                     eligible to enroll in AutoPay and will be immediately
                     disenrolled upon signup.
                 </Paragraph>
-            </Modal>
+            </Dialog>
 
-            <Modal
+            <Dialog
                 title='Ready to Update Scholarship Fund Form?'
                 actionButtonText='Yes, Apply Changes'
                 hasAction={true}
-                handleModalAction={() => { console.log('Action taken...')}}
+                handleDialogAction={() => { console.log('Action taken...')}}
                 TriggerElement={(props) => (
                     <ButtonSecondary
                         {...props}
                         disabled={false}
-                        text='Action Modal'
+                        text='Action Dialog'
                         variant='blue'
                     />
                 )}
@@ -51,18 +51,18 @@ const ModalStory = () => {
                     icon={<ErrorLarge fill={variables.utilityRed60} />}
                 />
                 <UnorderedList items={['French', 'Arabic', 'Swahili']} />
-            </Modal>
+            </Dialog>
 
-            <Modal
+            <Dialog
                 title='Ready to Update this Long Text?'
                 actionButtonText='Yes, Apply Changes'
                 hasAction={true}
-                handleModalAction={() => { console.log('Action taken...') }}
+                handleDialogAction={() => { console.log('Action taken...') }}
                 TriggerElement={(props) => (
                     <ButtonSecondary
                         {...props}
                         disabled={false}
-                        text='Action Modal Scrollable'
+                        text='Action Dialog Scrollable'
                         variant='blue'
                     />
                 )}
@@ -137,9 +137,9 @@ const ModalStory = () => {
                     minus nesciunt. Totam, id quasi, eos, sint temporibus maxime
                     odit iste dolorum pariatur eaque sunt.
                 </Paragraph>
-            </Modal>
+            </Dialog>
         </>
     );
 };
 
-export default ModalStory;
+export default DialogStory;
