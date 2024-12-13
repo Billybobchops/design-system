@@ -2,7 +2,9 @@
 @use '../app/mixins.scss' as *;
 
 .multiSelectContainer {
-    margin-bottom: variables.$input-container-margin-bottom;
+    @include mobile-100-w;
+	
+	margin-bottom: variables.$input-container-margin-bottom;
 	width: variables.$input-desktop-width;
 
     .chevronPositioning {
