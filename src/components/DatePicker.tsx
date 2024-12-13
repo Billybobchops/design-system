@@ -23,7 +23,7 @@ const DatePickerInput: React.FC<DatePickerInputProps> = ({
         <div className={classes.inputContainer}>
             <Label inputID={inputID} label={label} required={required} />
             <DatePicker
-				slotProps={{ textField: { fullWidth: true } }}
+				slotProps={{ textField: { fullWidth: true, placeholder: '' } }}
                 sx={{
                     '& .MuiInputBase-root': {
                         border: `1px solid ${variables.utilityNeutral50}`,
