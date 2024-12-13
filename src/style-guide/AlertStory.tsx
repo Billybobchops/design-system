@@ -30,7 +30,17 @@ const AlertStory = () => {
             />
             <Alert
                 content='Please enter a valid Phone Number to receive TEXT notifications.'
+                isDismissable={false}
+                variant='error'
+            />
+            <Alert
+                content='Please enter a valid Phone Number to receive TEXT notifications.'
                 isDismissable={true}
+                variant='success'
+            />
+            <Alert
+                content='Please enter a valid Phone Number to receive TEXT notifications.'
+                isDismissable={false}
                 variant='success'
             />
         </>
