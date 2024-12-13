@@ -110,7 +110,7 @@
 	border: 2px solid variables.$utility-neutral-50;
 	display: grid;
 	height: 20px;
-	margin: 0 10px 0 0;
+	margin: variables.$spacing-xs;
 	place-content: center;
 	width: 20px;
 

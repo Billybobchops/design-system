@@ -17,19 +17,17 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ legend, options }) => {
         <Fieldset legend={legend}>
 			{options.map((option, i) => {
 				return (
-					<div key={option.id}>
-						<label className={classes.radioOption}>
-							<input
-								checked={selected.id === option.id}
-								className={classes.radio}
-								id={option.id}
-								onChange={() => onOptionChange(i)}
-								type='radio'
-								value={option.id}
-							/>
-							{option.id}
-						</label>
-					</div>
+					<label className={classes.radioOption} key={option.id}>
+						<input
+							checked={selected.id === option.id}
+							className={classes.radio}
+							id={option.id}
+							onChange={() => onOptionChange(i)}
+							type='radio'
+							value={option.id}
+						/>
+						{option.id}
+					</label>
 				);
 			})}
         </Fieldset>

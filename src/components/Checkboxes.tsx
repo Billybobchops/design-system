@@ -22,22 +22,18 @@ const Checkboxes: React.FC<CheckboxesProps> = ({ legend, options }) => {
 
     return (
         <Fieldset legend={legend}>
-            <ul className={classes.list}>
-                {checkedItems.map((item, i) => {
-                    return (
-                        <li key={item.id}>
-                            <label>
-                                <Checkbox
-                                    checked={item.checked}
-                                    id={item.id}
-                                    onChange={() => handleChange(i)}
-                                />
-                                {item.text}
-                            </label>
-                        </li>
-                    );
-                })}
-            </ul>
+			{checkedItems.map((item, i) => {
+				return (
+					<label key={item.id} className={classes.checkboxOption}>
+						<Checkbox
+							checked={item.checked}
+							id={item.id}
+							onChange={() => handleChange(i)}
+						/>
+						{item.text}
+					</label>
+				);
+			})}
         </Fieldset>
     );
 };

@@ -4,6 +4,8 @@
 .checkbox {
 	@include checkboxes;
 
+	// margin: 0 10px 0 0;
+
 	&.partialCheck {
 		background-color: variables.$theme-a-3;
 		border-color: variables.$theme-a-3;
