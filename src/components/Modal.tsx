@@ -1,8 +1,8 @@
 import { useRef, useEffect } from 'react';
 import classes from './Modal.module.scss';
 import variables from '@/app/variables.module.scss';
-import { MenuCloseLarge } from './Symbols';
-import ButtonSecondary from './ButtonPrimary';
+import { MenuCloseLarge, Chevron } from './Symbols';
+import ButtonPrimary from './ButtonPrimary';
 import ButtonSimple from './ButtonSimple';
 import VisuallyHidden from './VisuallyHidden';
 
@@ -92,18 +92,20 @@ const Modal: React.FC<ModalProps> = ({
 										disabled={false}
 										variant='blue'
 									/>
-									<ButtonSecondary
+									<ButtonPrimary
 										disabled={false}
 										clickHandler={handleModalAction}
+										icon={<Chevron />}
 										text={actionButtonText ? actionButtonText : ''}
 										variant='blue'
 									/>
 								</>
 							)}
 							{!hasAction && (
-								<ButtonSecondary
+								<ButtonPrimary
 									disabled={false}
 									clickHandler={closeDialog}
+									icon={<Chevron />}
 									text='Close'
 									variant='blue'
 								/>

@@ -28,14 +28,6 @@ export default function Home() {
 					<TypographyStory />
 				</ComponentDisplayArea>
 
-				<ComponentDisplayArea title='Inline Link'>
-					<ICLink>This is a link</ICLink>
-				</ComponentDisplayArea>
-
-				<ComponentDisplayArea title='Simple Button'>
-					<ButtonSimpleStory />
-				</ComponentDisplayArea>
-
                 <ComponentDisplayArea title='CTA Buttons'>
                     <ButtonCTAStory />
                 </ComponentDisplayArea>
@@ -55,6 +47,14 @@ export default function Home() {
 				<ComponentDisplayArea title='Icon Buttons'>
                     <IconButtonStory />
                 </ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Simple Button'>
+					<ButtonSimpleStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Inline Link'>
+					<ICLink>This is a link</ICLink>
+				</ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Accordions'>
                     <AccordionStory />
