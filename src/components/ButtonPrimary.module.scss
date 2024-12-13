@@ -5,7 +5,11 @@
     @include mobile-100-w;
 	@include buttons;
 
-    border-radius: variables.$border-radius-l;
-    border: 2px solid variables.$utility-neutral-10;
-    padding: variables.$button-padding-large;
+	border-radius: variables.$border-radius-s;
+
+	.innerButton {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
 }

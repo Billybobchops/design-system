@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import classes from './Modal.module.scss';
 import variables from '@/app/variables.module.scss';
 import { MenuCloseLarge } from './Symbols';
-import ButtonSecondary from './ButtonSecondary';
+import ButtonSecondary from './ButtonPrimary';
 import ButtonSimple from './ButtonSimple';
 import VisuallyHidden from './VisuallyHidden';
 

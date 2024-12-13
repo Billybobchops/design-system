@@ -1,5 +1,5 @@
 import Modal from '@/components/Modal';
-import ButtonSecondary from '@/components/ButtonSecondary';
+import ButtonSecondary from '@/components/ButtonPrimary';
 import IconParagraph from '@/components/IconParagraph';
 import Paragraph from '@/components/Paragraph';
 import UnorderedList from '@/components/UnorderedList';

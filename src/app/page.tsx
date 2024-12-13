@@ -2,9 +2,9 @@
 import Providers from '@/components/Providers';
 import styles from './page.module.css';
 import ComponentDisplayArea from '@/style-guide/ComponentDisplayArea';
+import ButtonCTAStory from '@/style-guide/ButtonCTAStory';
 import ButtonPrimaryStory from '@/style-guide/ButtonPrimaryStory';
 import ButtonSecondaryStory from '@/style-guide/ButtonSecondaryStory';
-import ButtonTertiaryStory from '@/style-guide/ButtonTertiaryStory';
 import LinkIconButtonStory from '@/style-guide/LinkIconButtonStory';
 import IconButtonStory from '@/style-guide/IconButtonStory';
 import BadgeStory from '@/style-guide/BadgeStory';
@@ -36,16 +36,16 @@ export default function Home() {
 					<ButtonSimpleStory />
 				</ComponentDisplayArea>
 
+                <ComponentDisplayArea title='CTA Buttons'>
+                    <ButtonCTAStory />
+                </ComponentDisplayArea>
+
                 <ComponentDisplayArea title='Primary Buttons'>
                     <ButtonPrimaryStory />
                 </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Secondary Buttons'>
                     <ButtonSecondaryStory />
-                </ComponentDisplayArea>
-
-                <ComponentDisplayArea title='Tertiary Buttons'>
-                    <ButtonTertiaryStory />
                 </ComponentDisplayArea>
 
                 <ComponentDisplayArea title='Link Icon Buttons'>

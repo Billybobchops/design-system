@@ -1,6 +1,6 @@
 import Accordion from '@/components/Accordion';
 import Paragraph from '@/components/Paragraph';
-import ButtonSecondary from '@/components/ButtonSecondary';
+import ButtonSecondary from '@/components/ButtonPrimary';
 
 const AccordionStory = () => {
     return (
