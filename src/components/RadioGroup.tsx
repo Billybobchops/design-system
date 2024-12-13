@@ -15,25 +15,23 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ legend, options }) => {
 
     return (
         <Fieldset legend={legend}>
-            <ul className={classes.list}>
-                {options.map((option, i) => {
-                    return (
-                        <li key={option.id}>
-                            <label>
-                                <input
-                                    checked={selected.id === option.id}
-                                    className={classes.radio}
-                                    id={option.id}
-                                    onChange={() => onOptionChange(i)}
-                                    type='radio'
-                                    value={option.id}
-                                />
-                                {option.id}
-                            </label>
-                        </li>
-                    );
-                })}
-            </ul>
+			{options.map((option, i) => {
+				return (
+					<div key={option.id}>
+						<label className={classes.radioOption}>
+							<input
+								checked={selected.id === option.id}
+								className={classes.radio}
+								id={option.id}
+								onChange={() => onOptionChange(i)}
+								type='radio'
+								value={option.id}
+							/>
+							{option.id}
+						</label>
+					</div>
+				);
+			})}
         </Fieldset>
     );
 };

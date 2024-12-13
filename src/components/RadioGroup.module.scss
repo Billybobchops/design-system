@@ -1,14 +1,8 @@
 @use "../app/variables.module.scss";
 
-.list {
-	list-style-type: none;
-	padding: 0 0 0 variables.$spacing-m;
-
-	label {
-		align-items: center;
-		display: grid;
-		grid-template-columns: auto 1fr;
-	}
+.radioOption {
+	align-items: center;
+	display: flex;
 }
 
 .radio {

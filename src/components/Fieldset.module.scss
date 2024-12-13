@@ -7,13 +7,13 @@
 	border-radius: variables.$border-radius-s;
 	border: 2px solid variables.$utility-neutral-20;
 	margin-bottom: variables.$input-container-margin-bottom;
-	padding-bottom: variables.$spacing-s;
+	padding: variables.$spacing-xs variables.$spacing-s variables.$spacing-s variables.$spacing-s;
 	width: variables.$input-desktop-width;
 }
 
 .legend {
 	font-size: variables.$label-font-size;
 	font-weight: variables.$label-font-weight;
-	margin: 0 0 variables.$spacing-s variables.$spacing-s;
+	margin-left: variables.$spacing-s;
 	padding: 0 12px;
 }
