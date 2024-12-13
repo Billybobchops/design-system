@@ -15,7 +15,6 @@ const SelectAllCheckbox: React.FC<SelectAllCheckboxProps> = ({
     onChange,
 	partialCheck = false,
 }) => {
-	console.log(`partialCheck: ${partialCheck}`);
     return (
         <input
             aria-checked={checked}
