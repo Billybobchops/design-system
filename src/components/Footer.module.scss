@@ -1,0 +1,54 @@
+@use '../app/variables.module.scss';
+
+.container {
+	align-items: center;
+    background-color: variables.$utility-neutral-10;
+    color: variables.$utility-neutral-70;
+	display: grid;
+    font-size: variables.$spacing-s;
+	grid-template-columns: repeat(auto-fill, minmax(0, auto));
+    padding: variables.$spacing-m;
+    row-gap: variables.$spacing-s;
+
+    .logo {
+        padding-right: variables.$spacing-m;
+    }
+
+    > :not(.logo) {
+        border-left: 1px solid variables.$utility-neutral-20;
+    }
+
+    > :not(.logo):not(.flex) {
+        padding: 0 variables.$spacing-m;
+    }
+
+    @media (max-width: 800px) {
+		grid-template-columns: 1fr;
+
+		> * {
+			width: 100%;
+		}
+
+		> :not(.logo) {
+			border-left: none;
+		}
+
+		> :not(.logo):not(.flex) {
+			padding: 0;
+		}
+	}
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+	padding-left: variables.$spacing-m;
+
+	img {
+		padding-right: variables.$spacing-s;
+	}
+
+	@media (max-width: 800px) {
+		padding: 0;
+	}
+}

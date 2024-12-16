@@ -19,6 +19,7 @@ import TypographyStory from '@/style-guide/TypographyStory';
 import ICLink from '@/components/ICLink';
 import ButtonSimpleStory from '@/style-guide/ButtonSimpleStory';
 import ProgressIndicatorStory from '@/style-guide/ProgressIndicatorStory';
+import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
@@ -90,6 +91,10 @@ export default function Home() {
 
 				<ComponentDisplayArea title='Progress Indicator'>
 					<ProgressIndicatorStory />
+				</ComponentDisplayArea>
+
+				<ComponentDisplayArea title='Footer'>
+					<Footer />
 				</ComponentDisplayArea>
             </Providers>
         </main>

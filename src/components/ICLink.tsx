@@ -5,6 +5,7 @@ interface LinkProps {
     onClick?: () => void;
     href?: string;
     target?: string;
+	variant?: 'blue' | 'grey';
 }
 
 const ICLink: React.FC<LinkProps> = ({
@@ -12,10 +13,11 @@ const ICLink: React.FC<LinkProps> = ({
     onClick,
     href = '#',
     target = '_blank',
+	variant = 'blue'
 }) => {
     return (
         <a
-            className={classes.link}
+			className={`${classes.link} ${classes[variant] || ''}`}
             href={href}
             onClick={onClick}
             target={target}

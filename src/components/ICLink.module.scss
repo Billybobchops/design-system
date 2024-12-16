@@ -2,11 +2,18 @@
 
 .link {
 	color: variables.$theme-a-4;
-	margin: 0 variables.$spacing-s variables.$spacing-s 0;
 	text-decoration: underline;
 
 	&:hover {
 		color: variables.$theme-a-3;
 		text-decoration: none;
+	}
+}
+
+.grey {
+	color: variables.$utility-neutral-70;
+
+	&:hover {
+		color: variables.$utility-neutral-90;
 	}
 }
